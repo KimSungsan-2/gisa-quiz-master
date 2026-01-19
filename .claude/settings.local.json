@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install:*)",
+      "Skill(superpowers:using-superpowers)",
+      "Skill(superpowers:using-superpowers:*)",
+      "Skill(superpowers:requesting-code-review)",
+      "Skill(superpowers:requesting-code-review:*)",
+      "Bash(git rev-parse:*)"
+    ]
+  }
+}
