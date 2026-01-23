@@ -6,7 +6,9 @@
       "Skill(superpowers:using-superpowers:*)",
       "Skill(superpowers:requesting-code-review)",
       "Skill(superpowers:requesting-code-review:*)",
-      "Bash(git rev-parse:*)"
+      "Bash(git rev-parse:*)",
+      "Bash(tree:*)",
+      "Bash(npm run dev:*)"
     ]
   }
 }
