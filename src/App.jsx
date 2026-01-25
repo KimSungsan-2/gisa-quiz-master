@@ -9,6 +9,7 @@ import { AuthProvider, useAuth } from './contexts/AuthContext';
 import ChapterSelector from './components/quiz/ChapterSelector';
 import LoginScreen from './components/auth/LoginScreen';
 import UserProfile from './components/auth/UserProfile';
+import AllStructuredData from './components/seo/StructuredData';
 
 // 유틸리티 import
 import {
@@ -20,6 +21,9 @@ import {
   getDifficultyBg,
   getWeakestTopics
 } from './utils/quizUtils';
+
+// SEO hook
+import { useSEO, getScreenSEO } from './hooks/useSEO';
 
 // Buy Me a Coffee 후원 버튼 컴포넌트
 const BuyMeCoffeeButton = () => {
@@ -91,6 +95,11 @@ function CertificationQuizApp() {
 
   // 현재 문제
   const currentQuestion = currentQuestions[currentQuestionIndex];
+
+  // SEO 메타 태그 동적 업데이트
+  const currentCert = certificates.find(c => c.id === selectedCert);
+  const seoData = getScreenSEO(screen, currentCert);
+  useSEO(seoData);
 
   // 문제 시작 시간 기록
   useEffect(() => {
@@ -1029,6 +1038,7 @@ function CertificationQuizApp() {
 export default function App() {
   return (
     <AuthProvider>
+      <AllStructuredData />
       <CertificationQuizApp />
       <BuyMeCoffeeButton />
     </AuthProvider>

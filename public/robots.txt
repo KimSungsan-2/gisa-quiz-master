@@ -1,0 +1,27 @@
+# robots.txt for 기사 자격증 마스터
+
+# Allow all search engines to crawl the site
+User-agent: *
+Allow: /
+
+# Disallow crawling of private/user pages
+Disallow: /login
+Disallow: /profile
+Disallow: /settings
+
+# Allow Google, Naver, Bing specifically
+User-agent: Googlebot
+Allow: /
+
+User-agent: Yeti
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Sitemap location
+Sitemap: https://gisa-quiz-master.web.app/sitemap.xml
+
+# Crawl-delay for general bots (not Google/Naver)
+User-agent: *
+Crawl-delay: 10
