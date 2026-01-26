@@ -1499,6 +1499,506 @@ export const refrigerationQuestions = [
     explanation: '기화 냉각은 물이 증발할 때 주변에서 잠열을 흡수하여 공기를 냉각시키는 원리입니다.',
     difficulty: '중',
     tags: ['기화냉각', '냉각방식']
+  },
+  {
+    id: 'REF_151',
+    subject: '냉동공조이론',
+    question: '혼합 냉매(Blend Refrigerant)의 특징이 아닌 것은?',
+    options: ['여러 냉매의 혼합물', '온도 변화 시 조성 변화 가능', '단일 냉매와 동일한 증발 특성', '공비 혼합물과 비공비 혼합물로 구분'],
+    answer: 2,
+    explanation: '혼합 냉매는 증발/응축 시 온도 변화가 발생하여 단일 냉매와 다른 특성을 가집니다.',
+    difficulty: '중',
+    tags: ['혼합냉매', '냉매']
+  },
+  {
+    id: 'REF_152',
+    subject: '냉동공조이론',
+    question: '공비 혼합물(Azeotropic Mixture)의 특징은?',
+    options: ['증발 시 조성 변화', '비등점에서 액상과 기상의 조성이 동일', '단일 성분만 증발', '압력에 따라 분리'],
+    answer: 1,
+    explanation: '공비 혼합물은 증발/응축 시 조성이 변하지 않아 단일 냉매처럼 사용할 수 있습니다. R-507A가 대표적입니다.',
+    difficulty: '상',
+    tags: ['공비혼합물', '냉매']
+  },
+  {
+    id: 'REF_153',
+    subject: '냉동공조이론',
+    question: '비공비 혼합물(Zeotropic Mixture)에서 발생하는 온도 글라이드(Temperature Glide)란?',
+    options: ['압력 변화', '증발/응축 과정의 온도 변화 범위', '냉매 충전량', '압축비'],
+    answer: 1,
+    explanation: '비공비 혼합물은 증발/응축 시 성분별로 다른 비등점 때문에 온도 변화가 발생하며, 이를 온도 글라이드라 합니다.',
+    difficulty: '상',
+    tags: ['온도글라이드', '혼합냉매']
+  },
+  {
+    id: 'REF_154',
+    subject: '냉동공조이론',
+    question: 'R-410A 냉매의 특징으로 옳은 것은?',
+    options: ['단일 냉매', 'R-32와 R-125의 공비 혼합물', '온도 글라이드가 큼', 'CFC 계열'],
+    answer: 1,
+    explanation: 'R-410A는 R-32(50%)와 R-125(50%)의 준공비 혼합물로, 온도 글라이드가 거의 없어 널리 사용됩니다.',
+    difficulty: '하',
+    tags: ['R-410A', '냉매']
+  },
+  {
+    id: 'REF_155',
+    subject: '냉동공조장치',
+    question: '극저온 냉동(Cryogenic Refrigeration)에서 주로 사용되는 냉매는?',
+    options: ['R-134a', '암모니아', '액체 질소', 'R-410A'],
+    answer: 2,
+    explanation: '극저온 냉동(-150℃ 이하)에는 액체 질소, 액체 헬륨 등이 사용되며, 의료, 식품 급속 냉동 등에 활용됩니다.',
+    difficulty: '중',
+    tags: ['극저온', '냉동']
+  },
+  {
+    id: 'REF_156',
+    subject: '냉동공조장치',
+    question: '극저온 냉동 시스템의 특수한 구성 요소가 아닌 것은?',
+    options: ['진공 단열', '다단 압축', '일반 윤활유', '열교환기 다단 배치'],
+    answer: 2,
+    explanation: '극저온에서는 일반 윤활유가 고화되므로 특수 합성유나 무급유 압축기를 사용해야 합니다.',
+    difficulty: '상',
+    tags: ['극저온', '장치']
+  },
+  {
+    id: 'REF_157',
+    subject: '냉동공조이론',
+    question: '초전도 냉각(Superconducting Cooling)이 필요한 온도 범위는?',
+    options: ['0~10℃', '-50~-100℃', '-200℃ 이하', '-10~0℃'],
+    answer: 2,
+    explanation: '초전도 현상은 매우 낮은 온도(-200℃ 이하)에서 발생하며, 액체 헬륨이나 액체 질소로 냉각합니다.',
+    difficulty: '중',
+    tags: ['초전도', '극저온']
+  },
+  {
+    id: 'REF_158',
+    subject: '냉동공조이론',
+    question: 'SEER(Seasonal Energy Efficiency Ratio)의 의미는?',
+    options: ['정격 효율', '연간 냉방 에너지 효율', '난방 효율', '압축기 효율'],
+    answer: 1,
+    explanation: 'SEER는 냉방 시즌 동안의 총 냉방량을 총 소비 전력량으로 나눈 값으로, 계절적 변화를 반영한 효율입니다.',
+    difficulty: '하',
+    tags: ['SEER', '에너지효율']
+  },
+  {
+    id: 'REF_159',
+    subject: '냉동공조이론',
+    question: 'HSPF(Heating Seasonal Performance Factor)는 무엇을 나타내는가?',
+    options: ['냉방 성능', '난방 시즌 성능 계수', '압축비', '냉매 충전량'],
+    answer: 1,
+    explanation: 'HSPF는 난방 시즌 동안의 총 난방량을 총 소비 전력량으로 나눈 값으로, 난방 효율을 나타냅니다.',
+    difficulty: '하',
+    tags: ['HSPF', '에너지효율']
+  },
+  {
+    id: 'REF_160',
+    subject: '냉동공조이론',
+    question: 'COP(Coefficient of Performance) 최적화 방법이 아닌 것은?',
+    options: ['증발 온도 상승', '응축 온도 하강', '과열도 증가', '열교환기 효율 향상'],
+    answer: 2,
+    explanation: 'COP 향상을 위해서는 증발 온도는 높이고 응축 온도는 낮추며, 과도한 과열도는 오히려 효율을 저하시킵니다.',
+    difficulty: '중',
+    tags: ['COP', '효율']
+  },
+  {
+    id: 'REF_161',
+    subject: '냉동공조장치',
+    question: '가변 속도 압축기(Variable Speed Compressor)의 장점은?',
+    options: ['고정 용량', '부하 변동 대응 및 에너지 절감', '단순 제어', '저렴한 가격'],
+    answer: 1,
+    explanation: '가변 속도 압축기는 인버터로 회전수를 조절하여 부하에 따라 용량을 조절하므로 에너지 효율이 높습니다.',
+    difficulty: '하',
+    tags: ['인버터', '압축기']
+  },
+  {
+    id: 'REF_162',
+    subject: '냉동공조관련 법규',
+    question: '몬트리올 의정서(Montreal Protocol)의 주요 내용은?',
+    options: ['온실가스 감축', '오존층 파괴 물질 규제', 'CO2 배출 감축', '에너지 효율 향상'],
+    answer: 1,
+    explanation: '몬트리올 의정서는 오존층 파괴 물질(CFC, HCFC 등)의 생산과 사용을 단계적으로 규제하는 국제 협약입니다.',
+    difficulty: '중',
+    tags: ['몬트리올의정서', '환경']
+  },
+  {
+    id: 'REF_163',
+    subject: '냉동공조관련 법규',
+    question: '교토 의정서(Kyoto Protocol)의 주요 목적은?',
+    options: ['오존층 보호', '온실가스 배출 감축', '냉매 규제', '에어컨 효율'],
+    answer: 1,
+    explanation: '교토 의정서는 CO2 등 온실가스 배출을 감축하여 지구 온난화를 방지하기 위한 국제 협약입니다.',
+    difficulty: '하',
+    tags: ['교토의정서', '환경']
+  },
+  {
+    id: 'REF_164',
+    subject: '냉동공조관련 법규',
+    question: '킬리 수정안(Kigali Amendment)의 내용은?',
+    options: ['CFC 규제', 'HFC 감축', 'CO2 감축', '암모니아 규제'],
+    answer: 1,
+    explanation: '킬리 수정안은 몬트리올 의정서에 추가되어 HFC(온실가스 효과가 큰 냉매)의 생산과 사용을 단계적으로 감축합니다.',
+    difficulty: '상',
+    tags: ['킬리수정안', 'HFC']
+  },
+  {
+    id: 'REF_165',
+    subject: '냉동공조이론',
+    question: 'GWP(Global Warming Potential)가 가장 낮은 냉매는?',
+    options: ['R-410A', 'R-134a', 'R-32', 'CO2(R-744)'],
+    answer: 3,
+    explanation: 'CO2(R-744)는 GWP가 1로 자연 냉매이며, R-410A(2088), R-134a(1430), R-32(675)보다 낮습니다.',
+    difficulty: '중',
+    tags: ['GWP', '환경']
+  },
+  {
+    id: 'REF_166',
+    subject: '냉동공조이론',
+    question: 'ODP(Ozone Depletion Potential)가 0인 냉매는?',
+    options: ['R-22', 'R-123', 'R-410A', 'R-11'],
+    answer: 2,
+    explanation: 'HFC 계열인 R-410A는 ODP가 0입니다. HCFC인 R-22와 CFC인 R-11, R-123은 ODP가 있습니다.',
+    difficulty: '중',
+    tags: ['ODP', '냉매']
+  },
+  {
+    id: 'REF_167',
+    subject: '냉동공조장치',
+    question: '흡수식 냉동기에서 흡수제로 사용되는 물질은?',
+    options: ['물', '브롬화리튬(LiBr)', '암모니아', 'R-134a'],
+    answer: 1,
+    explanation: '물-브롬화리튬 흡수식 냉동기에서 물이 냉매, LiBr이 흡수제 역할을 합니다. 암모니아-물 사이클도 있습니다.',
+    difficulty: '중',
+    tags: ['흡수식', '브롬화리튬']
+  },
+  {
+    id: 'REF_168',
+    subject: '냉동공조장치',
+    question: '흡수식 냉동기의 장점이 아닌 것은?',
+    options: ['폐열 활용 가능', '높은 COP', '소음 및 진동 적음', '냉매 친환경성'],
+    answer: 1,
+    explanation: '흡수식 냉동기는 COP가 0.7~1.2로 압축식(2~4)보다 낮지만, 폐열 활용과 저소음이 장점입니다.',
+    difficulty: '중',
+    tags: ['흡수식', '효율']
+  },
+  {
+    id: 'REF_169',
+    subject: '냉동공조장치',
+    question: '열음향 냉각(Thermoacoustic Cooling)의 원리는?',
+    options: ['압축', '음파를 이용한 열 전달', '흡수', '증발'],
+    answer: 1,
+    explanation: '열음향 냉각은 음파의 압력 변동을 이용하여 열을 전달하는 친환경 냉각 기술입니다.',
+    difficulty: '상',
+    tags: ['열음향', '신기술']
+  },
+  {
+    id: 'REF_170',
+    subject: '냉동공조장치',
+    question: '자기 냉동(Magnetic Refrigeration)의 특징은?',
+    options: ['냉매 사용', '자기 열량 효과 이용', '압축기 필요', '고소음'],
+    answer: 1,
+    explanation: '자기 냉동은 자기장 변화에 따른 자성 재료의 온도 변화(자기 열량 효과)를 이용하는 친환경 기술입니다.',
+    difficulty: '상',
+    tags: ['자기냉동', '신기술']
+  },
+  {
+    id: 'REF_171',
+    subject: '냉동공조이론',
+    question: '터보 냉동기(Turbo Chiller)의 압축 방식은?',
+    options: ['왕복동', '스크롤', '원심', '스크류'],
+    answer: 2,
+    explanation: '터보 냉동기는 원심 압축기를 사용하며, 대용량 시스템에 적합하고 효율이 높습니다.',
+    difficulty: '하',
+    tags: ['터보냉동기', '압축기']
+  },
+  {
+    id: 'REF_172',
+    subject: '냉동공조장치',
+    question: '자유 냉각(Free Cooling)의 종류가 아닌 것은?',
+    options: ['외기 냉각', '수냉각', '압축기 냉각', '야간 냉각'],
+    answer: 2,
+    explanation: '자유 냉각은 압축기 없이 외기, 냉각탑 물, 지열 등 자연 냉열원을 이용하는 에너지 절약 기법입니다.',
+    difficulty: '중',
+    tags: ['자유냉각', '에너지절약']
+  },
+  {
+    id: 'REF_173',
+    subject: '냉동공조장치',
+    question: '이코노마이저(Economizer) 사이클의 목적은?',
+    options: ['비용 절감', '중간 압력에서 냉매를 추가 공급하여 효율 향상', '소음 감소', '냉매 절약'],
+    answer: 1,
+    explanation: '이코노마이저는 중간 압력에서 플래시 가스를 분리하고 액냉매만 증발기로 보내 COP를 향상시킵니다.',
+    difficulty: '상',
+    tags: ['이코노마이저', '효율']
+  },
+  {
+    id: 'REF_174',
+    subject: '냉동공조이론',
+    question: '증발 압력 조절기(EPR)의 역할은?',
+    options: ['응축 압력 유지', '증발 압력 최저값 제한', '과열도 조절', '과냉각도 조절'],
+    answer: 1,
+    explanation: 'EPR은 증발 압력이 과도하게 낮아지는 것을 방지하여 압축기를 보호하고 증발 온도를 조절합니다.',
+    difficulty: '중',
+    tags: ['EPR', '압력제어']
+  },
+  {
+    id: 'REF_175',
+    subject: '냉동공조장치',
+    question: '응축 압력 조절기(CPR)의 용도는?',
+    options: ['증발 압력 제한', '응축 압력 최소값 유지', '온도 측정', '습도 조절'],
+    answer: 1,
+    explanation: 'CPR은 저온 환경에서 응축 압력이 과도하게 낮아지는 것을 방지하여 팽창밸브의 정상 작동을 보장합니다.',
+    difficulty: '중',
+    tags: ['CPR', '압력제어']
+  },
+  {
+    id: 'REF_176',
+    subject: '냉동공조이론',
+    question: '열회수(Heat Recovery) 시스템의 효과는?',
+    options: ['냉방만 가능', '난방과 급탕에 버려지는 열 활용', '소음 증가', '효율 저하'],
+    answer: 1,
+    explanation: '열회수는 냉방 시 응축열을 난방이나 급탕에 활용하여 에너지를 절약하는 기술입니다.',
+    difficulty: '하',
+    tags: ['열회수', '에너지절약']
+  },
+  {
+    id: 'REF_177',
+    subject: '냉동공조장치',
+    question: '4관식(Four-Pipe System) 공조 시스템의 특징은?',
+    options: ['냉방만 가능', '동시 냉난방 가능', '배관 2개', '제어 불가'],
+    answer: 1,
+    explanation: '4관식은 냉수 공급/환수, 온수 공급/환수 총 4개의 배관으로 구성되어 동시 냉난방이 가능합니다.',
+    difficulty: '중',
+    tags: ['4관식', '공조시스템']
+  },
+  {
+    id: 'REF_178',
+    subject: '냉동공조장치',
+    question: 'VAV(Variable Air Volume) 시스템의 장점은?',
+    options: ['고정 풍량', '부하에 따른 풍량 조절로 에너지 절약', '단순 구조', '저렴한 가격'],
+    answer: 1,
+    explanation: 'VAV는 실내 부하에 따라 풍량을 조절하여 에너지를 절약하고 쾌적성을 향상시킵니다.',
+    difficulty: '하',
+    tags: ['VAV', '공조방식']
+  },
+  {
+    id: 'REF_179',
+    subject: '냉동공조장치',
+    question: 'CAV(Constant Air Volume) 시스템의 특징은?',
+    options: ['가변 풍량', '일정 풍량, 온도로 제어', '에너지 효율 최고', '복잡한 제어'],
+    answer: 1,
+    explanation: 'CAV는 풍량을 일정하게 유지하고 공급 온도를 변경하여 제어하는 방식으로, 구조가 단순합니다.',
+    difficulty: '하',
+    tags: ['CAV', '공조방식']
+  },
+  {
+    id: 'REF_180',
+    subject: '냉동공조이론',
+    question: '현열비(SHR, Sensible Heat Ratio)의 정의는?',
+    options: ['전열량 / 현열량', '현열량 / 전열량', '잠열량 / 전열량', '현열량 / 잠열량'],
+    answer: 1,
+    explanation: 'SHR = 현열량 / 전열량(현열량 + 잠열량)으로, 1에 가까울수록 온도 부하가 크고, 작을수록 습도 부하가 큽니다.',
+    difficulty: '중',
+    tags: ['SHR', '열부하']
+  },
+  {
+    id: 'REF_181',
+    subject: '냉동공조이론',
+    question: '바이패스 팩터(Bypass Factor)의 의미는?',
+    options: ['처리된 공기 비율', '처리되지 않고 통과한 공기 비율', '효율', '압력 손실'],
+    answer: 1,
+    explanation: '바이패스 팩터는 코일을 통과하면서 열교환되지 않고 우회하는 공기의 비율로, 작을수록 효율이 좋습니다.',
+    difficulty: '중',
+    tags: ['바이패스팩터', '열교환']
+  },
+  {
+    id: 'REF_182',
+    subject: '전기제어공학',
+    question: 'BMS(Building Management System)의 주요 기능이 아닌 것은?',
+    options: ['공조 제어', '조명 제어', '보안 관리', '식품 조리'],
+    answer: 3,
+    explanation: 'BMS는 빌딩의 공조, 조명, 보안, 에너지 등을 통합 관리하는 시스템입니다.',
+    difficulty: '하',
+    tags: ['BMS', '빌딩관리']
+  },
+  {
+    id: 'REF_183',
+    subject: '전기제어공학',
+    question: 'DDC(Direct Digital Control)의 장점은?',
+    options: ['아날로그 제어', '정밀한 디지털 제어', '단순 on/off만 가능', '느린 응답'],
+    answer: 1,
+    explanation: 'DDC는 마이크로프로세서를 이용한 디지털 제어로 정밀하고 유연한 제어가 가능합니다.',
+    difficulty: '하',
+    tags: ['DDC', '제어']
+  },
+  {
+    id: 'REF_184',
+    subject: '전기제어공학',
+    question: 'PID 제어에서 I(Integral) 동작의 역할은?',
+    options: ['순간 오차 제어', '정상 상태 오차 제거', '미래 오차 예측', '소음 제거'],
+    answer: 1,
+    explanation: 'I 동작은 오차를 시간에 대해 적분하여 정상 상태에서 남아있는 잔류 오차(offset)를 제거합니다.',
+    difficulty: '중',
+    tags: ['PID', '제어']
+  },
+  {
+    id: 'REF_185',
+    subject: '냉동공조장치',
+    question: '열펌프의 난방 COP가 냉방 EER보다 높은 이유는?',
+    options: ['소비 전력 증가', '난방 시 압축기 열도 활용', '냉매량 증가', '효율 저하'],
+    answer: 1,
+    explanation: '난방 시에는 증발기에서 흡수한 열뿐만 아니라 압축기에서 발생한 열도 함께 사용하므로 COP가 높습니다.',
+    difficulty: '중',
+    tags: ['열펌프', 'COP']
+  },
+  {
+    id: 'REF_186',
+    subject: '냉동공조장치',
+    question: '지열 히트펌프(Ground Source Heat Pump)의 장점은?',
+    options: ['외기 온도 영향 큼', '안정적인 열원 온도', '설치 간단', '초기 비용 저렴'],
+    answer: 1,
+    explanation: '지열 히트펌프는 연중 안정적인 지중 온도를 이용하므로 효율이 높지만, 초기 공사비가 높습니다.',
+    difficulty: '중',
+    tags: ['지열', '히트펌프']
+  },
+  {
+    id: 'REF_187',
+    subject: '냉동공조이론',
+    question: '공기-물 히트펌프와 비교한 물-물 히트펌프의 특징은?',
+    options: ['낮은 효율', '높은 COP', '외기 온도 의존', '소형만 가능'],
+    answer: 1,
+    explanation: '물-물 히트펌프는 안정적인 물 온도를 열원으로 사용하여 공기 열원보다 COP가 높습니다.',
+    difficulty: '중',
+    tags: ['히트펌프', '열원']
+  },
+  {
+    id: 'REF_188',
+    subject: '냉동공조장치',
+    question: '축열 시스템(Thermal Storage)의 목적은?',
+    options: ['냉방 능력 증대', '전력 피크 이동 및 요금 절감', '난방 효율 향상', '냉매 절약'],
+    answer: 1,
+    explanation: '축열 시스템은 야간에 얼음이나 냉수를 만들어 저장했다가 주간에 사용하여 전력 요금을 절감합니다.',
+    difficulty: '하',
+    tags: ['축열', '에너지절약']
+  },
+  {
+    id: 'REF_189',
+    subject: '냉동공조장치',
+    question: '빙축열(Ice Storage) 방식의 장점이 아닌 것은?',
+    options: ['높은 축열 밀도', '전력 피크 절감', '냉동기 용량 감소 가능', '초기 비용 저렴'],
+    answer: 3,
+    explanation: '빙축열은 얼음의 높은 잠열을 이용해 컴팩트하지만, 축열조와 제어 시스템으로 초기 비용이 증가합니다.',
+    difficulty: '중',
+    tags: ['빙축열', '축열']
+  },
+  {
+    id: 'REF_190',
+    subject: '냉동공조이론',
+    question: '제습 냉방(Desiccant Cooling)의 원리는?',
+    options: ['압축', '흡습제로 습기 제거 후 냉각', '증발', '응축'],
+    answer: 1,
+    explanation: '제습 냉방은 실리카겔 등 흡습제로 습기를 제거한 후 증발 냉각 등으로 온도를 낮춥니다.',
+    difficulty: '상',
+    tags: ['제습냉방', '냉각방식']
+  },
+  {
+    id: 'REF_191',
+    subject: '냉동공조장치',
+    question: '복사 냉방(Radiant Cooling)의 특징은?',
+    options: ['대풍량 필요', '복사열로 냉방하여 쾌적성 높음', '빠른 응답', '저렴한 비용'],
+    answer: 1,
+    explanation: '복사 냉방은 천장/바닥 패널에 냉수를 순환시켜 복사열로 냉방하므로 쾌적하고 조용합니다.',
+    difficulty: '상',
+    tags: ['복사냉방', '공조방식']
+  },
+  {
+    id: 'REF_192',
+    subject: '냉동공조이론',
+    question: '냉동 사이클에서 과냉각도(Subcooling)를 증가시키면?',
+    options: ['냉동 효과 감소', '냉동 효과 증가', '압축기 부하 증가', '응축 압력 상승'],
+    answer: 1,
+    explanation: '과냉각도를 증가시키면 증발기 입구 엔탈피가 낮아져 냉동 효과가 증가하고 COP가 향상됩니다.',
+    difficulty: '중',
+    tags: ['과냉각', '효율']
+  },
+  {
+    id: 'REF_193',
+    subject: '냉동공조이론',
+    question: '2단 압축 냉동 사이클의 장점은?',
+    options: ['단순 구조', '높은 압축비에서 효율 향상', '저비용', '소형화'],
+    answer: 1,
+    explanation: '2단 압축은 압축비가 높은 저온 냉동이나 고온 난방에서 효율을 높이고 압축기 토출 온도를 낮춥니다.',
+    difficulty: '상',
+    tags: ['2단압축', '냉동사이클']
+  },
+  {
+    id: 'REF_194',
+    subject: '냉동공조장치',
+    question: '캐스케이드(Cascade) 냉동 사이클의 용도는?',
+    options: ['일반 냉방', '극저온 냉동', '난방', '제습'],
+    answer: 1,
+    explanation: '캐스케이드는 서로 다른 냉매를 사용하는 2개 이상의 사이클을 직렬로 연결하여 -80℃ 이하의 극저온을 얻습니다.',
+    difficulty: '상',
+    tags: ['캐스케이드', '극저온']
+  },
+  {
+    id: 'REF_195',
+    subject: '냉동공조이론',
+    question: '습공기 선도(Psychrometric Chart)에서 등엔탈피선의 기울기는?',
+    options: ['수평', '수직', '오른쪽 아래로 경사', '오른쪽 위로 경사'],
+    answer: 2,
+    explanation: '등엔탈피선은 습구온도선과 거의 평행하며 오른쪽 아래로 경사져 있습니다.',
+    difficulty: '중',
+    tags: ['습공기선도', '엔탈피']
+  },
+  {
+    id: 'REF_196',
+    subject: '냉동공조이론',
+    question: '단열 가습 과정에서 변하지 않는 것은?',
+    options: ['건구온도', '습구온도', '상대습도', '절대습도'],
+    answer: 1,
+    explanation: '단열 가습(증발식 가습)은 물이 증발하면서 열을 빼앗으므로 건구온도는 낮아지고 습구온도는 일정합니다.',
+    difficulty: '중',
+    tags: ['가습', '습공기']
+  },
+  {
+    id: 'REF_197',
+    subject: '냉동공조장치',
+    question: 'DOAS(Dedicated Outdoor Air System)의 특징은?',
+    options: ['환기와 냉난방 통합', '외기 전담 처리', '재순환 공기만 처리', '배기만 담당'],
+    answer: 1,
+    explanation: 'DOAS는 외기만 전담 처리하여 제습과 환기를 담당하고, 실내 부하는 별도 시스템으로 처리합니다.',
+    difficulty: '상',
+    tags: ['DOAS', '공조시스템']
+  },
+  {
+    id: 'REF_198',
+    subject: '냉동공조장치',
+    question: 'ERV(Energy Recovery Ventilator)와 HRV(Heat Recovery Ventilator)의 차이는?',
+    options: ['ERV는 열만, HRV는 열과 습기 회수', 'ERV는 열과 습기, HRV는 열만 회수', '차이 없음', 'ERV는 냉방, HRV는 난방'],
+    answer: 1,
+    explanation: 'ERV(전열교환기)는 현열과 잠열을 모두 회수하고, HRV(열교환기)는 현열만 회수합니다.',
+    difficulty: '중',
+    tags: ['ERV', 'HRV']
+  },
+  {
+    id: 'REF_199',
+    subject: '냉동공조이론',
+    question: 'PMV(Predicted Mean Vote) 지수의 범위는?',
+    options: ['0~100', '-3 ~ +3', '0~1', '-1 ~ +1'],
+    answer: 1,
+    explanation: 'PMV는 온열 쾌적도 지수로 -3(매우 춥다)부터 +3(매우 덥다)까지이며, 0에 가까울수록 쾌적합니다.',
+    difficulty: '중',
+    tags: ['PMV', '쾌적성']
+  },
+  {
+    id: 'REF_200',
+    subject: '냉동공조이론',
+    question: 'PPD(Predicted Percentage of Dissatisfied)가 의미하는 것은?',
+    options: ['만족한 사람 비율', '불만족한 사람 예측 비율', '온도', '습도'],
+    answer: 1,
+    explanation: 'PPD는 주어진 환경에서 불만족을 느낄 것으로 예측되는 사람의 비율로, PMV와 함께 쾌적성을 평가합니다.',
+    difficulty: '중',
+    tags: ['PPD', '쾌적성']
   }
 ];
 

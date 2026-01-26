@@ -1499,6 +1499,506 @@ export const bigdataQuestions = [
     explanation: 'Concept Drift는 시간이 지나면서 데이터의 통계적 특성이나 관계가 변화하는 현상입니다.',
     difficulty: '중',
     tags: ['Concept Drift', '모델관리']
+  },
+  {
+    id: 'BAE_151',
+    subject: '빅데이터 분석 기획',
+    question: '베이지안 통계의 핵심 개념은?',
+    options: ['빈도론적 접근', '사전 확률과 사후 확률', '단순 평균', '분산만 고려'],
+    answer: 1,
+    explanation: '베이지안 통계는 사전 확률(prior)에 데이터(likelihood)를 결합하여 사후 확률(posterior)을 구하는 방법입니다.',
+    difficulty: '중',
+    tags: ['베이지안', '통계']
+  },
+  {
+    id: 'BAE_152',
+    subject: '빅데이터 분석 기획',
+    question: 'MCMC(Markov Chain Monte Carlo)의 주요 용도는?',
+    options: ['데이터 정제', '복잡한 사후 분포 샘플링', '데이터 시각화', '데이터 압축'],
+    answer: 1,
+    explanation: 'MCMC는 직접 계산하기 어려운 복잡한 확률 분포에서 샘플을 추출하는 방법으로, 베이지안 추론에 널리 사용됩니다.',
+    difficulty: '상',
+    tags: ['MCMC', '베이지안']
+  },
+  {
+    id: 'BAE_153',
+    subject: '빅데이터 탐색',
+    question: '가설검정에서 제1종 오류(Type I Error)는?',
+    options: ['귀무가설이 참인데 기각', '귀무가설이 거짓인데 채택', '정확한 판단', '검정력'],
+    answer: 0,
+    explanation: '제1종 오류는 귀무가설이 실제로 참인데 이를 기각하는 오류로, 유의수준(α)에 의해 제어됩니다.',
+    difficulty: '중',
+    tags: ['가설검정', '통계']
+  },
+  {
+    id: 'BAE_154',
+    subject: '빅데이터 탐색',
+    question: 'p-value의 올바른 해석은?',
+    options: ['가설이 참일 확률', '귀무가설이 참일 때 관측된 결과 이상이 나올 확률', '대립가설이 참일 확률', '오류 확률'],
+    answer: 1,
+    explanation: 'p-value는 귀무가설이 참이라고 가정할 때 관측된 데이터 또는 더 극단적인 데이터가 나올 확률입니다.',
+    difficulty: '상',
+    tags: ['p-value', '가설검정']
+  },
+  {
+    id: 'BAE_155',
+    subject: '빅데이터 탐색',
+    question: '검정력(Power)의 정의는?',
+    options: ['1 - α', '1 - β', 'α + β', 'α / β'],
+    answer: 1,
+    explanation: '검정력은 대립가설이 참일 때 이를 올바르게 채택할 확률로, 1 - β(제2종 오류율)입니다.',
+    difficulty: '중',
+    tags: ['검정력', '가설검정']
+  },
+  {
+    id: 'BAE_156',
+    subject: '빅데이터 모델링',
+    question: 'ARIMA 모델에서 (p, d, q)가 의미하는 것은?',
+    options: ['평균, 분산, 왜도', 'AR차수, 차분차수, MA차수', '최솟값, 중간값, 최댓값', '시작, 중간, 끝'],
+    answer: 1,
+    explanation: 'ARIMA(p,d,q)에서 p는 자기회귀(AR) 차수, d는 차분 차수, q는 이동평균(MA) 차수를 나타냅니다.',
+    difficulty: '중',
+    tags: ['ARIMA', '시계열']
+  },
+  {
+    id: 'BAE_157',
+    subject: '빅데이터 모델링',
+    question: '시계열 분석에서 정상성(Stationarity)의 조건이 아닌 것은?',
+    options: ['일정한 평균', '일정한 분산', '시간 독립적 자기공분산', '계속 증가하는 추세'],
+    answer: 3,
+    explanation: '정상 시계열은 평균, 분산이 일정하고 자기공분산이 시간에 독립적이어야 합니다. 추세가 있으면 비정상입니다.',
+    difficulty: '중',
+    tags: ['시계열', '정상성']
+  },
+  {
+    id: 'BAE_158',
+    subject: '빅데이터 모델링',
+    question: 'Prophet 모델의 주요 구성 요소가 아닌 것은?',
+    options: ['추세(Trend)', '계절성(Seasonality)', '휴일 효과(Holidays)', '주성분 분석(PCA)'],
+    answer: 3,
+    explanation: 'Prophet은 추세, 계절성, 휴일 효과를 모델링하는 시계열 예측 라이브러리로, Facebook에서 개발했습니다.',
+    difficulty: '하',
+    tags: ['Prophet', '시계열']
+  },
+  {
+    id: 'BAE_159',
+    subject: '빅데이터 모델링',
+    question: 'LSTM을 시계열 예측에 사용하는 이유는?',
+    options: ['빠른 학습 속도', '장기 의존성 학습 가능', '파라미터 적음', '해석 용이'],
+    answer: 1,
+    explanation: 'LSTM은 장단기 메모리를 통해 장기 의존성을 학습할 수 있어 시계열 데이터의 패턴을 효과적으로 포착합니다.',
+    difficulty: '중',
+    tags: ['LSTM', '시계열']
+  },
+  {
+    id: 'BAE_160',
+    subject: '빅데이터 모델링',
+    question: '추천 시스템의 Cold Start 문제를 해결하는 방법이 아닌 것은?',
+    options: ['인기도 기반 추천', '컨텐츠 기반 필터링', '하이브리드 방식', '협업 필터링만 사용'],
+    answer: 3,
+    explanation: 'Cold Start 문제(신규 사용자/아이템)는 협업 필터링만으로 해결 어렵고, 인기도, 컨텐츠 기반, 하이브리드 방식을 사용합니다.',
+    difficulty: '중',
+    tags: ['추천시스템', 'Cold Start']
+  },
+  {
+    id: 'BAE_161',
+    subject: '빅데이터 모델링',
+    question: '협업 필터링(Collaborative Filtering)의 종류가 아닌 것은?',
+    options: ['사용자 기반(User-based)', '아이템 기반(Item-based)', '모델 기반(Model-based)', '규칙 기반(Rule-based)'],
+    answer: 3,
+    explanation: '협업 필터링은 사용자 기반, 아이템 기반, 모델 기반(Matrix Factorization 등)으로 분류됩니다.',
+    difficulty: '하',
+    tags: ['협업필터링', '추천시스템']
+  },
+  {
+    id: 'BAE_162',
+    subject: '빅데이터 모델링',
+    question: 'Matrix Factorization의 목적은?',
+    options: ['차원 확대', '사용자-아이템 행렬을 저차원으로 분해', '데이터 삭제', '정규화'],
+    answer: 1,
+    explanation: 'Matrix Factorization은 희소한 사용자-아이템 행렬을 저차원의 잠재 요인 행렬로 분해하여 추천을 수행합니다.',
+    difficulty: '중',
+    tags: ['Matrix Factorization', '추천시스템']
+  },
+  {
+    id: 'BAE_163',
+    subject: '빅데이터 모델링',
+    question: 'ALS(Alternating Least Squares)가 사용되는 분야는?',
+    options: ['이미지 분류', '추천 시스템의 Matrix Factorization', '텍스트 요약', '음성 인식'],
+    answer: 1,
+    explanation: 'ALS는 추천 시스템에서 Matrix Factorization을 효율적으로 수행하는 최적화 알고리즘입니다.',
+    difficulty: '중',
+    tags: ['ALS', '추천시스템']
+  },
+  {
+    id: 'BAE_164',
+    subject: '빅데이터 모델링',
+    question: '강화학습의 핵심 요소가 아닌 것은?',
+    options: ['에이전트(Agent)', '환경(Environment)', '보상(Reward)', '레이블(Label)'],
+    answer: 3,
+    explanation: '강화학습은 에이전트가 환경과 상호작용하며 보상을 최대화하도록 학습합니다. 레이블은 지도학습의 요소입니다.',
+    difficulty: '하',
+    tags: ['강화학습', 'RL']
+  },
+  {
+    id: 'BAE_165',
+    subject: '빅데이터 모델링',
+    question: 'Q-Learning의 Q가 의미하는 것은?',
+    options: ['Quality', 'Quantity', 'Query', 'Quick'],
+    answer: 0,
+    explanation: 'Q-Learning의 Q는 Quality를 의미하며, 상태-행동 쌍의 품질(가치)을 학습하는 강화학습 알고리즘입니다.',
+    difficulty: '하',
+    tags: ['Q-Learning', '강화학습']
+  },
+  {
+    id: 'BAE_166',
+    subject: '빅데이터 모델링',
+    question: 'DQN(Deep Q-Network)이 기존 Q-Learning과 다른 점은?',
+    options: ['Q-table 사용', '신경망으로 Q 함수 근사', '보상 없음', '환경 없음'],
+    answer: 1,
+    explanation: 'DQN은 Q-table 대신 심층 신경망을 사용하여 Q 함수를 근사하므로 고차원 상태 공간에서도 사용 가능합니다.',
+    difficulty: '중',
+    tags: ['DQN', '강화학습']
+  },
+  {
+    id: 'BAE_167',
+    subject: '빅데이터 모델링',
+    question: 'Policy Gradient의 핵심 아이디어는?',
+    options: ['가치 함수 학습', '정책을 직접 최적화', 'Q 함수만 사용', '규칙 기반'],
+    answer: 1,
+    explanation: 'Policy Gradient는 가치 함수를 거치지 않고 정책(policy)을 직접 최적화하여 행동을 선택합니다.',
+    difficulty: '상',
+    tags: ['Policy Gradient', '강화학습']
+  },
+  {
+    id: 'BAE_168',
+    subject: '빅데이터 모델링',
+    question: 'Actor-Critic 방법에서 Actor와 Critic의 역할은?',
+    options: ['Actor는 정책, Critic은 가치 평가', 'Actor는 데이터 수집, Critic은 삭제', 'Actor는 학습, Critic은 테스트', 'Actor는 전처리, Critic은 후처리'],
+    answer: 0,
+    explanation: 'Actor-Critic에서 Actor는 정책(행동 선택)을 담당하고, Critic은 그 행동의 가치를 평가합니다.',
+    difficulty: '상',
+    tags: ['Actor-Critic', '강화학습']
+  },
+  {
+    id: 'BAE_169',
+    subject: '빅데이터 탐색',
+    question: '다중공선성(Multicollinearity)의 문제점은?',
+    options: ['모델 성능 향상', '회귀 계수의 불안정성', '속도 향상', '정확도 향상'],
+    answer: 1,
+    explanation: '다중공선성은 독립변수 간 높은 상관관계로 인해 회귀 계수가 불안정해지고 해석이 어려워지는 문제입니다.',
+    difficulty: '중',
+    tags: ['다중공선성', '회귀분석']
+  },
+  {
+    id: 'BAE_170',
+    subject: '빅데이터 탐색',
+    question: 'VIF(Variance Inflation Factor)가 10 이상이면?',
+    options: ['다중공선성 없음', '심각한 다중공선성', '완벽한 모델', '변수 추가 필요'],
+    answer: 1,
+    explanation: 'VIF가 10 이상이면 심각한 다중공선성이 있다고 판단하며, 변수 제거나 PCA 등의 조치가 필요합니다.',
+    difficulty: '중',
+    tags: ['VIF', '다중공선성']
+  },
+  {
+    id: 'BAE_171',
+    subject: '빅데이터 모델링',
+    question: 'Transformer 모델의 핵심 메커니즘은?',
+    options: ['RNN', 'Attention', 'CNN만 사용', '결정 트리'],
+    answer: 1,
+    explanation: 'Transformer는 Self-Attention 메커니즘을 사용하여 순차 데이터를 병렬로 처리하며, RNN 없이도 시퀀스를 모델링합니다.',
+    difficulty: '중',
+    tags: ['Transformer', 'Attention']
+  },
+  {
+    id: 'BAE_172',
+    subject: '빅데이터 모델링',
+    question: 'BERT의 사전학습 방법이 아닌 것은?',
+    options: ['Masked Language Model', 'Next Sentence Prediction', 'Image Classification', 'Fine-tuning'],
+    answer: 2,
+    explanation: 'BERT는 MLM과 NSP로 사전학습되는 언어 모델이며, 이미지 분류는 포함되지 않습니다.',
+    difficulty: '하',
+    tags: ['BERT', 'NLP']
+  },
+  {
+    id: 'BAE_173',
+    subject: '빅데이터 모델링',
+    question: 'GPT와 BERT의 주요 차이점은?',
+    options: ['GPT는 양방향, BERT는 단방향', 'GPT는 단방향, BERT는 양방향', 'GPT는 CNN, BERT는 RNN', '차이 없음'],
+    answer: 1,
+    explanation: 'GPT는 단방향(왼쪽에서 오른쪽) 언어 모델이고, BERT는 양방향(Masked LM)으로 문맥을 이해합니다.',
+    difficulty: '중',
+    tags: ['GPT', 'BERT']
+  },
+  {
+    id: 'BAE_174',
+    subject: '빅데이터 모델링',
+    question: 'Few-Shot Learning의 목표는?',
+    options: ['많은 데이터 필요', '적은 샘플로 학습', '데이터 없이 학습', '무한 데이터 학습'],
+    answer: 1,
+    explanation: 'Few-Shot Learning은 매우 적은 수의 레이블된 샘플만으로도 새로운 클래스를 학습하는 기법입니다.',
+    difficulty: '중',
+    tags: ['Few-Shot', '전이학습']
+  },
+  {
+    id: 'BAE_175',
+    subject: '빅데이터 모델링',
+    question: 'Zero-Shot Learning의 특징은?',
+    options: ['학습 데이터 필요', '학습 시 보지 못한 클래스 예측', '오버피팅 유발', '데이터 증강'],
+    answer: 1,
+    explanation: 'Zero-Shot Learning은 학습 시 보지 못한 클래스를 의미적 정보나 속성을 통해 예측하는 기법입니다.',
+    difficulty: '상',
+    tags: ['Zero-Shot', '전이학습']
+  },
+  {
+    id: 'BAE_176',
+    subject: '빅데이터 플랫폼',
+    question: 'Apache Airflow의 DAG는 무엇을 의미하는가?',
+    options: ['Data Analysis Group', 'Directed Acyclic Graph', 'Database Access Gateway', 'Dynamic API Generator'],
+    answer: 1,
+    explanation: 'DAG(Directed Acyclic Graph)는 방향성 비순환 그래프로, Airflow에서 워크플로우의 작업 간 의존성을 표현합니다.',
+    difficulty: '하',
+    tags: ['Airflow', 'DAG']
+  },
+  {
+    id: 'BAE_177',
+    subject: '빅데이터 플랫폼',
+    question: 'Apache Kafka의 주요 구성 요소가 아닌 것은?',
+    options: ['Producer', 'Consumer', 'Broker', 'Selector'],
+    answer: 3,
+    explanation: 'Kafka는 Producer(메시지 발행), Consumer(메시지 소비), Broker(메시지 저장)로 구성됩니다.',
+    difficulty: '하',
+    tags: ['Kafka', '스트리밍']
+  },
+  {
+    id: 'BAE_178',
+    subject: '빅데이터 플랫폼',
+    question: 'Apache Flink의 특징은?',
+    options: ['배치 처리만 지원', '실시간 스트리밍과 배치 통합', 'SQL 미지원', '분산 처리 불가'],
+    answer: 1,
+    explanation: 'Flink는 통합된 스트림 처리 엔진으로, 실시간 스트리밍과 배치 처리를 모두 지원합니다.',
+    difficulty: '중',
+    tags: ['Flink', '스트리밍']
+  },
+  {
+    id: 'BAE_179',
+    subject: '빅데이터 모델링',
+    question: 'AutoML의 주요 목적은?',
+    options: ['수동 튜닝 강제', '머신러닝 파이프라인 자동화', '데이터 삭제', '시각화만 수행'],
+    answer: 1,
+    explanation: 'AutoML은 피처 엔지니어링, 모델 선택, 하이퍼파라미터 튜닝 등을 자동화하여 머신러닝을 접근 가능하게 합니다.',
+    difficulty: '하',
+    tags: ['AutoML', '자동화']
+  },
+  {
+    id: 'BAE_180',
+    subject: '빅데이터 모델링',
+    question: 'Neural Architecture Search(NAS)의 목적은?',
+    options: ['데이터 수집', '최적의 신경망 구조 자동 탐색', '데이터 시각화', '데이터 정제'],
+    answer: 1,
+    explanation: 'NAS는 강화학습이나 진화 알고리즘을 사용하여 주어진 작업에 최적인 신경망 구조를 자동으로 찾습니다.',
+    difficulty: '상',
+    tags: ['NAS', 'AutoML']
+  },
+  {
+    id: 'BAE_181',
+    subject: '빅데이터 탐색',
+    question: '차원의 저주(Curse of Dimensionality)의 문제점은?',
+    options: ['데이터 부족', '고차원에서 데이터 희소성 증가', '속도 향상', '정확도 향상'],
+    answer: 1,
+    explanation: '차원이 증가할수록 공간이 기하급수적으로 커져 데이터가 희소해지고, 모델 학습에 더 많은 데이터가 필요합니다.',
+    difficulty: '중',
+    tags: ['차원의 저주', '차원축소']
+  },
+  {
+    id: 'BAE_182',
+    subject: '빅데이터 탐색',
+    question: 't-SNE의 주요 용도는?',
+    options: ['회귀', '고차원 데이터 시각화', '분류', '군집화만'],
+    answer: 1,
+    explanation: 't-SNE는 고차원 데이터를 2D/3D로 축소하여 시각화하는 데 특화된 비선형 차원 축소 기법입니다.',
+    difficulty: '하',
+    tags: ['t-SNE', '시각화']
+  },
+  {
+    id: 'BAE_183',
+    subject: '빅데이터 탐색',
+    question: 'UMAP의 장점은?',
+    options: ['느린 속도', 't-SNE보다 빠르고 전역 구조 보존', '선형 변환만', '2차원만 지원'],
+    answer: 1,
+    explanation: 'UMAP은 t-SNE보다 빠르며 전역 구조를 더 잘 보존하고, 더 높은 차원으로도 축소 가능합니다.',
+    difficulty: '중',
+    tags: ['UMAP', '차원축소']
+  },
+  {
+    id: 'BAE_184',
+    subject: '빅데이터 모델링',
+    question: 'Federated Learning의 주요 특징은?',
+    options: ['중앙 서버에 모든 데이터 수집', '데이터를 로컬에 유지하며 분산 학습', '단일 기기 학습', '데이터 공유 필수'],
+    answer: 1,
+    explanation: 'Federated Learning은 데이터를 중앙으로 모으지 않고 각 디바이스에서 로컬로 학습한 후 모델만 공유합니다.',
+    difficulty: '상',
+    tags: ['Federated Learning', '분산학습']
+  },
+  {
+    id: 'BAE_185',
+    subject: '빅데이터 모델링',
+    question: 'Differential Privacy의 목적은?',
+    options: ['속도 향상', '개인정보 보호하며 데이터 분석', '모델 압축', '데이터 증강'],
+    answer: 1,
+    explanation: 'Differential Privacy는 데이터에 노이즈를 추가하여 개인정보를 보호하면서도 통계적 분석이 가능하게 합니다.',
+    difficulty: '상',
+    tags: ['Differential Privacy', '프라이버시']
+  },
+  {
+    id: 'BAE_186',
+    subject: '빅데이터 결과 해석',
+    question: 'Shapley Value의 의미는?',
+    options: ['손실 함수', '각 피처의 기여도', '학습률', '배치 크기'],
+    answer: 1,
+    explanation: 'Shapley Value는 게임 이론에서 유래한 개념으로, 각 피처가 예측에 기여한 정도를 공정하게 분배합니다.',
+    difficulty: '중',
+    tags: ['SHAP', '설명가능성']
+  },
+  {
+    id: 'BAE_187',
+    subject: '빅데이터 결과 해석',
+    question: 'LIME의 설명 방식은?',
+    options: ['전역적 설명', '국소적 선형 근사', '규칙 기반', '트리 기반'],
+    answer: 1,
+    explanation: 'LIME은 예측 주변에서 선형 모델로 국소적으로 근사하여 개별 예측을 설명합니다.',
+    difficulty: '중',
+    tags: ['LIME', '설명가능성']
+  },
+  {
+    id: 'BAE_188',
+    subject: '빅데이터 모델링',
+    question: 'Model Compression의 기법이 아닌 것은?',
+    options: ['Pruning', 'Quantization', 'Knowledge Distillation', 'Data Augmentation'],
+    answer: 3,
+    explanation: 'Model Compression은 Pruning(가지치기), Quantization(양자화), Knowledge Distillation(지식 증류)로 모델 크기를 줄입니다.',
+    difficulty: '중',
+    tags: ['Model Compression', '경량화']
+  },
+  {
+    id: 'BAE_189',
+    subject: '빅데이터 모델링',
+    question: 'Knowledge Distillation에서 Teacher와 Student의 관계는?',
+    options: ['동일한 모델', '큰 모델이 작은 모델을 학습시킴', '작은 모델이 큰 모델을 학습시킴', '독립적 학습'],
+    answer: 1,
+    explanation: 'Knowledge Distillation은 큰 Teacher 모델의 지식을 작은 Student 모델로 전달하여 성능을 유지하며 경량화합니다.',
+    difficulty: '중',
+    tags: ['Knowledge Distillation', '경량화']
+  },
+  {
+    id: 'BAE_190',
+    subject: '빅데이터 플랫폼',
+    question: 'Delta Lake의 주요 기능은?',
+    options: ['단순 저장소', 'ACID 트랜잭션과 Time Travel', 'SQL 미지원', '스트리밍 불가'],
+    answer: 1,
+    explanation: 'Delta Lake는 Data Lake에 ACID 트랜잭션, Time Travel, Schema Evolution 등을 제공하는 오픈소스 스토리지 레이어입니다.',
+    difficulty: '중',
+    tags: ['Delta Lake', 'Data Lake']
+  },
+  {
+    id: 'BAE_191',
+    subject: '빅데이터 플랫폼',
+    question: 'Apache Iceberg의 특징은?',
+    options: ['파일 포맷', '테이블 포맷', '데이터베이스', 'BI 도구'],
+    answer: 1,
+    explanation: 'Apache Iceberg는 대규모 분석을 위한 오픈 테이블 포맷으로, Schema Evolution과 Time Travel을 지원합니다.',
+    difficulty: '중',
+    tags: ['Iceberg', 'Table Format']
+  },
+  {
+    id: 'BAE_192',
+    subject: '빅데이터 모델링',
+    question: 'Active Learning의 목적은?',
+    options: ['모든 데이터 레이블링', '불확실한 샘플만 선택적 레이블링', '데이터 삭제', '무작위 선택'],
+    answer: 1,
+    explanation: 'Active Learning은 모델이 가장 불확실한 샘플을 선택하여 레이블링 비용을 최소화하며 효율적으로 학습합니다.',
+    difficulty: '상',
+    tags: ['Active Learning', '준지도학습']
+  },
+  {
+    id: 'BAE_193',
+    subject: '빅데이터 모델링',
+    question: 'Self-Supervised Learning의 특징은?',
+    options: ['레이블 필수', '데이터 자체에서 감독 신호 생성', '강화학습과 동일', '지도학습과 동일'],
+    answer: 1,
+    explanation: 'Self-Supervised Learning은 레이블 없이 데이터 자체에서 감독 신호를 생성하여 표현을 학습합니다.',
+    difficulty: '중',
+    tags: ['Self-Supervised', '비지도학습']
+  },
+  {
+    id: 'BAE_194',
+    subject: '빅데이터 탐색',
+    question: 'Bootstrapping의 목적은?',
+    options: ['데이터 삭제', '샘플링을 통한 통계적 추정', '모델 압축', '속도 향상'],
+    answer: 1,
+    explanation: 'Bootstrapping은 복원 추출로 여러 샘플을 생성하여 통계량의 분포를 추정하는 리샘플링 기법입니다.',
+    difficulty: '중',
+    tags: ['Bootstrapping', '통계']
+  },
+  {
+    id: 'BAE_195',
+    subject: '빅데이터 결과 해석',
+    question: 'Partial Dependence Plot(PDP)이 보여주는 것은?',
+    options: ['모델 정확도', '특정 변수가 예측에 미치는 평균적 영향', '손실 함수', '학습 곡선'],
+    answer: 1,
+    explanation: 'PDP는 다른 변수를 평균화하여 특정 변수가 예측값에 미치는 영향을 시각화합니다.',
+    difficulty: '중',
+    tags: ['PDP', '모델해석']
+  },
+  {
+    id: 'BAE_196',
+    subject: '빅데이터 모델링',
+    question: 'Ensemble Learning의 Bagging과 Boosting의 차이점은?',
+    options: ['Bagging은 순차적, Boosting은 병렬', 'Bagging은 병렬, Boosting은 순차적', '차이 없음', 'Bagging만 앙상블'],
+    answer: 1,
+    explanation: 'Bagging은 독립적으로 병렬 학습하고, Boosting은 이전 모델의 오차를 보완하며 순차적으로 학습합니다.',
+    difficulty: '중',
+    tags: ['Ensemble', 'Bagging', 'Boosting']
+  },
+  {
+    id: 'BAE_197',
+    subject: '빅데이터 모델링',
+    question: 'Stacking Ensemble의 메타 모델(Meta-model)의 역할은?',
+    options: ['데이터 전처리', '베이스 모델들의 예측을 결합', '데이터 생성', '피처 선택'],
+    answer: 1,
+    explanation: 'Stacking에서 메타 모델은 여러 베이스 모델의 예측을 입력으로 받아 최종 예측을 수행합니다.',
+    difficulty: '중',
+    tags: ['Stacking', 'Ensemble']
+  },
+  {
+    id: 'BAE_198',
+    subject: '빅데이터 플랫폼',
+    question: 'Apache Hudi의 주요 기능은?',
+    options: ['단순 파일 저장', '증분 데이터 처리와 Upsert', '이미지 처리', '텍스트 편집'],
+    answer: 1,
+    explanation: 'Apache Hudi는 Hadoop에서 증분 데이터 처리, Upsert, Delete를 효율적으로 지원하는 데이터 레이크 스토리지입니다.',
+    difficulty: '중',
+    tags: ['Hudi', 'Data Lake']
+  },
+  {
+    id: 'BAE_199',
+    subject: '빅데이터 모델링',
+    question: 'Online Learning의 특징은?',
+    options: ['배치로만 학습', '데이터가 도착하는 대로 점진적 학습', '학습 불가', '오프라인만 가능'],
+    answer: 1,
+    explanation: 'Online Learning은 새로운 데이터가 도착할 때마다 모델을 점진적으로 업데이트하여 변화하는 패턴에 적응합니다.',
+    difficulty: '중',
+    tags: ['Online Learning', '점진학습']
+  },
+  {
+    id: 'BAE_200',
+    subject: '빅데이터 분석 기획',
+    question: 'MLOps의 핵심 목표는?',
+    options: ['개발만 집중', 'ML 모델의 지속적 배포와 모니터링', '데이터 삭제', '수동 관리'],
+    answer: 1,
+    explanation: 'MLOps는 ML 모델의 개발, 배포, 모니터링, 재학습을 자동화하여 프로덕션 환경에서 안정적으로 운영하는 것을 목표로 합니다.',
+    difficulty: '하',
+    tags: ['MLOps', '운영']
   }
 ];
 

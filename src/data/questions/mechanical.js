@@ -1499,6 +1499,506 @@ export const mechanicalQuestions = [
     explanation: 'ISO 미터 나사의 골지름 d₂ = d - 1.2268P (약 1.2P)입니다.',
     difficulty: '상',
     tags: ['나사', '치수']
+  },
+  {
+    id: 'MECH_151',
+    subject: '기계재료',
+    question: '복합재료(Composite Material)의 주요 구성 요소는?',
+    options: ['단일 물질', '기지재와 강화재', '합금만', '세라믹만'],
+    answer: 1,
+    explanation: '복합재료는 기지재(Matrix)와 강화재(Reinforcement)로 구성되어 각각의 장점을 결합한 재료입니다.',
+    difficulty: '하',
+    tags: ['복합재료', '구조']
+  },
+  {
+    id: 'MECH_152',
+    subject: '기계재료',
+    question: 'CFRP(Carbon Fiber Reinforced Plastic)의 특징이 아닌 것은?',
+    options: ['높은 비강도', '우수한 내식성', '저렴한 가격', '경량'],
+    answer: 2,
+    explanation: 'CFRP는 탄소 섬유로 강화한 플라스틱으로 비강도가 높고 경량이지만, 재료비가 비쌉니다.',
+    difficulty: '중',
+    tags: ['CFRP', '복합재료']
+  },
+  {
+    id: 'MECH_153',
+    subject: '기계재료',
+    question: '세라믹 복합재료(CMC)의 장점은?',
+    options: ['높은 인성', '고온 강도 향상', '낮은 경도', '전기 전도성'],
+    answer: 1,
+    explanation: 'CMC는 세라믹에 섬유를 첨가하여 인성을 개선하고 고온 강도를 향상시킨 재료입니다.',
+    difficulty: '상',
+    tags: ['CMC', '세라믹']
+  },
+  {
+    id: 'MECH_154',
+    subject: '기계재료',
+    question: '나노 재료의 특성으로 옳지 않은 것은?',
+    options: ['큰 비표면적', '양자 효과', '벌크 재료와 동일한 특성', '우수한 강도'],
+    answer: 2,
+    explanation: '나노 재료는 크기가 100nm 이하로 벌크 재료와 다른 독특한 물리화학적 특성을 나타냅니다.',
+    difficulty: '중',
+    tags: ['나노재료', '특성']
+  },
+  {
+    id: 'MECH_155',
+    subject: '기계재료',
+    question: '형상기억합금(SMA)의 응용 분야가 아닌 것은?',
+    options: ['의료용 스텐트', '온도 감지 액추에이터', '일반 구조재', '안경테'],
+    answer: 2,
+    explanation: '형상기억합금은 특정 온도에서 원래 형상을 회복하는 특성을 이용하며, 일반 구조재보다는 특수 용도에 사용됩니다.',
+    difficulty: '중',
+    tags: ['형상기억합금', '응용']
+  },
+  {
+    id: 'MECH_156',
+    subject: '기계제작법',
+    question: 'EDM(방전가공)의 특징은?',
+    options: ['접촉 가공', '전기 방전으로 재료 제거', '대형 가공만 가능', '저경도 재료만 가능'],
+    answer: 1,
+    explanation: 'EDM은 전극과 공작물 사이의 방전으로 재료를 제거하는 비접촉 가공법으로, 고경도 재료 가공이 가능합니다.',
+    difficulty: '중',
+    tags: ['EDM', '특수가공']
+  },
+  {
+    id: 'MECH_157',
+    subject: '기계제작법',
+    question: 'Wire EDM의 장점은?',
+    options: ['빠른 가공 속도', '복잡한 2D/3D 형상 가공', '저비용', '대량 생산 적합'],
+    answer: 1,
+    explanation: 'Wire EDM은 가는 와이어 전극을 사용하여 복잡하고 정밀한 형상을 가공할 수 있습니다.',
+    difficulty: '중',
+    tags: ['Wire EDM', '가공']
+  },
+  {
+    id: 'MECH_158',
+    subject: '기계제작법',
+    question: 'ECM(전해가공)의 원리는?',
+    options: ['기계적 절삭', '전기화학적 용해', '열용융', '냉간가공'],
+    answer: 1,
+    explanation: 'ECM은 전해액 중에서 전기화학적 반응으로 양극인 공작물을 용해시켜 가공합니다.',
+    difficulty: '상',
+    tags: ['ECM', '특수가공']
+  },
+  {
+    id: 'MECH_159',
+    subject: '기계제작법',
+    question: '레이저 가공의 장점이 아닌 것은?',
+    options: ['높은 정밀도', '비접촉 가공', '저비용 설비', '열영향부 최소화'],
+    answer: 2,
+    explanation: '레이저 가공은 정밀하고 비접촉 가공이 가능하지만, 레이저 발진기 등 초기 설비 비용이 높습니다.',
+    difficulty: '하',
+    tags: ['레이저', '가공']
+  },
+  {
+    id: 'MECH_160',
+    subject: '기계제작법',
+    question: '워터젯 가공(Water Jet Machining)의 특징은?',
+    options: ['열변형 발생', '고압 물로 절단', '전도성 재료만 가능', '진공 필요'],
+    answer: 1,
+    explanation: '워터젯은 초고압 물(연마재 첨가 가능)로 재료를 절단하며, 열변형이 없고 다양한 재료 가공이 가능합니다.',
+    difficulty: '하',
+    tags: ['워터젯', '가공']
+  },
+  {
+    id: 'MECH_161',
+    subject: '기계동력학',
+    question: '진동의 3요소는?',
+    options: ['질량, 강성, 감쇠', '속도, 가속도, 변위', '힘, 토크, 에너지', '압력, 온도, 유량'],
+    answer: 0,
+    explanation: '진동 시스템의 3요소는 질량(Mass), 강성(Stiffness), 감쇠(Damping)입니다.',
+    difficulty: '하',
+    tags: ['진동', '3요소']
+  },
+  {
+    id: 'MECH_162',
+    subject: '기계동력학',
+    question: '공진(Resonance) 현상이 발생하는 조건은?',
+    options: ['가진 주파수 = 고유 진동수', '가진 주파수 >> 고유 진동수', '가진 주파수 << 고유 진동수', '가진 주파수와 무관'],
+    answer: 0,
+    explanation: '가진 주파수가 시스템의 고유 진동수와 일치하면 공진이 발생하여 진폭이 급격히 증가합니다.',
+    difficulty: '하',
+    tags: ['공진', '진동']
+  },
+  {
+    id: 'MECH_163',
+    subject: '기계동력학',
+    question: 'FFT(Fast Fourier Transform)의 용도는?',
+    options: ['시간 영역 분석', '주파수 영역 분석', '온도 측정', '압력 측정'],
+    answer: 1,
+    explanation: 'FFT는 시간 영역 신호를 주파수 영역으로 변환하여 진동의 주파수 성분을 분석합니다.',
+    difficulty: '중',
+    tags: ['FFT', '주파수분석']
+  },
+  {
+    id: 'MECH_164',
+    subject: '기계동력학',
+    question: '모달 해석(Modal Analysis)에서 구하는 것은?',
+    options: ['응력 분포', '고유 진동수와 모드 형상', '온도 분포', '유동 패턴'],
+    answer: 1,
+    explanation: '모달 해석은 구조물의 고유 진동수, 모드 형상, 감쇠비 등 동특성을 파악하는 해석입니다.',
+    difficulty: '중',
+    tags: ['모달해석', '진동']
+  },
+  {
+    id: 'MECH_165',
+    subject: '기계동력학',
+    question: '진동 절연(Vibration Isolation)의 목적은?',
+    options: ['진동 증폭', '진동 전달 차단', '공진 유도', '속도 증가'],
+    answer: 1,
+    explanation: '진동 절연은 방진고무, 스프링 등을 사용하여 진동이 다른 구조물로 전달되는 것을 차단합니다.',
+    difficulty: '하',
+    tags: ['진동절연', '방진']
+  },
+  {
+    id: 'MECH_166',
+    subject: '기계동력학',
+    question: '소음의 단위 dB(데시벨)은 무엇을 나타내는가?',
+    options: ['절대값', '상대적 비율의 로그', '선형 척도', '온도'],
+    answer: 1,
+    explanation: 'dB은 음압의 비율을 로그 척도로 나타낸 것으로, 20 log(P/P₀)로 계산됩니다.',
+    difficulty: '중',
+    tags: ['소음', '데시벨']
+  },
+  {
+    id: 'MECH_167',
+    subject: '기계제어',
+    question: 'PLC(Programmable Logic Controller)의 주요 용도는?',
+    options: ['온도 측정', '산업 자동화 제어', '데이터 저장', '통신만 담당'],
+    answer: 1,
+    explanation: 'PLC는 공장 자동화, 생산 라인 제어 등 산업용 제어에 널리 사용되는 프로그래밍 가능한 제어기입니다.',
+    difficulty: '하',
+    tags: ['PLC', '자동화']
+  },
+  {
+    id: 'MECH_168',
+    subject: '기계제어',
+    question: 'PLC의 래더 다이어그램(Ladder Diagram)이란?',
+    options: ['순서도', '릴레이 회로 형태의 프로그래밍 언어', 'C 언어', '어셈블리어'],
+    answer: 1,
+    explanation: '래더 다이어그램은 전기 릴레이 회로와 유사한 형태로 PLC를 프로그래밍하는 그래픽 언어입니다.',
+    difficulty: '하',
+    tags: ['PLC', '래더']
+  },
+  {
+    id: 'MECH_169',
+    subject: '기계제어',
+    question: '산업용 로봇의 자유도(DOF)는 무엇을 의미하는가?',
+    options: ['로봇의 무게', '독립적으로 움직일 수 있는 관절 수', '작업 속도', '정밀도'],
+    answer: 1,
+    explanation: '자유도는 로봇이 독립적으로 제어할 수 있는 축(관절)의 수로, 6자유도가 일반적입니다.',
+    difficulty: '하',
+    tags: ['로봇', '자유도']
+  },
+  {
+    id: 'MECH_170',
+    subject: '기계제어',
+    question: '로봇의 작업 공간(Work Envelope)이란?',
+    options: ['로봇 크기', '로봇이 도달할 수 있는 3차원 공간', '로봇 무게', '로봇 속도'],
+    answer: 1,
+    explanation: '작업 공간은 로봇의 엔드 이펙터가 도달할 수 있는 모든 점들의 집합입니다.',
+    difficulty: '하',
+    tags: ['로봇', '작업공간']
+  },
+  {
+    id: 'MECH_171',
+    subject: '기계제어',
+    question: '로봇의 티칭(Teaching) 방법이 아닌 것은?',
+    options: ['플레이백 방식', '온라인 프로그래밍', '오프라인 프로그래밍', '무작위 방식'],
+    answer: 3,
+    explanation: '로봇 티칭은 플레이백(시범), 온라인 프로그래밍(티치 펜던트), 오프라인 프로그래밍(시뮬레이션) 등이 있습니다.',
+    difficulty: '중',
+    tags: ['로봇', '티칭']
+  },
+  {
+    id: 'MECH_172',
+    subject: '기계제작법',
+    question: 'CNC(Computer Numerical Control)의 장점이 아닌 것은?',
+    options: ['높은 정밀도', '복잡 형상 가공', '저렴한 초기 비용', '반복 정확도 우수'],
+    answer: 2,
+    explanation: 'CNC는 정밀하고 복잡한 가공이 가능하지만, 기계와 제어 시스템의 초기 투자 비용이 높습니다.',
+    difficulty: '하',
+    tags: ['CNC', '수치제어']
+  },
+  {
+    id: 'MECH_173',
+    subject: '기계제작법',
+    question: 'G 코드(G-code)의 용도는?',
+    options: ['온도 제어', 'CNC 기계의 동작 명령', '데이터 저장', '통신 프로토콜'],
+    answer: 1,
+    explanation: 'G 코드는 CNC 공작기계에 이송, 절삭 등의 동작을 지시하는 프로그래밍 언어입니다.',
+    difficulty: '하',
+    tags: ['G코드', 'CNC']
+  },
+  {
+    id: 'MECH_174',
+    subject: '기계제작법',
+    question: 'CAM(Computer-Aided Manufacturing)의 주요 기능은?',
+    options: ['설계만', 'NC 프로그램 자동 생성', '재무 관리', '마케팅'],
+    answer: 1,
+    explanation: 'CAM은 CAD 모델을 기반으로 공구 경로를 생성하고 NC 프로그램을 자동으로 만드는 소프트웨어입니다.',
+    difficulty: '하',
+    tags: ['CAM', '제조']
+  },
+  {
+    id: 'MECH_175',
+    subject: '기계제어',
+    question: '서보 모터(Servo Motor)의 특징은?',
+    options: ['개루프 제어', '위치/속도 피드백 제어', '저정밀', '저비용'],
+    answer: 1,
+    explanation: '서보 모터는 엔코더로 위치와 속도를 피드백하여 정밀한 제어가 가능한 폐루프 시스템입니다.',
+    difficulty: '하',
+    tags: ['서보모터', '제어']
+  },
+  {
+    id: 'MECH_176',
+    subject: '기계제어',
+    question: '스테핑 모터(Stepping Motor)의 특징은?',
+    options: ['연속 회전만 가능', '펄스 신호로 정확한 각도 제어', '피드백 필수', '고속 전용'],
+    answer: 1,
+    explanation: '스테핑 모터는 펄스 신호에 따라 일정 각도씩 회전하며, 피드백 없이도 위치 제어가 가능합니다.',
+    difficulty: '하',
+    tags: ['스테핑모터', '제어']
+  },
+  {
+    id: 'MECH_177',
+    subject: '기계재료',
+    question: '금속 3D 프린팅(AM, Additive Manufacturing)의 방법이 아닌 것은?',
+    options: ['SLM(Selective Laser Melting)', 'EBM(Electron Beam Melting)', 'Binder Jetting', '선삭 가공'],
+    answer: 3,
+    explanation: '금속 3D 프린팅은 레이저, 전자빔, 바인더 등으로 층층이 쌓아 형상을 만드는 적층 제조 방식입니다.',
+    difficulty: '중',
+    tags: ['3D프린팅', 'AM']
+  },
+  {
+    id: 'MECH_178',
+    subject: '기계재료',
+    question: '적층 제조(Additive Manufacturing)의 장점이 아닌 것은?',
+    options: ['복잡 형상 제작 용이', '재료 낭비 최소화', '대량 생산 저비용', '시제품 제작 신속'],
+    answer: 2,
+    explanation: '적층 제조는 복잡한 형상과 소량 생산에 유리하지만, 대량 생산 시에는 기존 제조 방식보다 비용이 높습니다.',
+    difficulty: '중',
+    tags: ['적층제조', '특징']
+  },
+  {
+    id: 'MECH_179',
+    subject: '기계설계',
+    question: '위상 최적화(Topology Optimization)의 목적은?',
+    options: ['외관 디자인', '최소 재료로 최대 강성 구조 설계', '색상 선택', '표면 마감'],
+    answer: 1,
+    explanation: '위상 최적화는 주어진 하중과 경계 조건에서 재료 배치를 최적화하여 경량화와 고강성을 동시에 달성합니다.',
+    difficulty: '상',
+    tags: ['위상최적화', '설계']
+  },
+  {
+    id: 'MECH_180',
+    subject: '재료역학',
+    question: '유한요소해석(FEA)의 기본 원리는?',
+    options: ['해석적 해', '구조를 유한개 요소로 나누어 근사 해 계산', '실험만', '수작업 계산'],
+    answer: 1,
+    explanation: 'FEA는 복잡한 구조를 작은 유한 요소로 나누고, 각 요소의 거동을 조합하여 전체 거동을 근사합니다.',
+    difficulty: '중',
+    tags: ['FEA', '해석']
+  },
+  {
+    id: 'MECH_181',
+    subject: '재료역학',
+    question: 'FEA에서 요소(Element)의 종류가 아닌 것은?',
+    options: ['1D(빔, 트러스)', '2D(쉘, 평면)', '3D(솔리드)', '4D 요소'],
+    answer: 3,
+    explanation: 'FEA 요소는 1D(선), 2D(면), 3D(입체) 요소로 분류되며, 4D 요소는 없습니다.',
+    difficulty: '하',
+    tags: ['FEA', '요소']
+  },
+  {
+    id: 'MECH_182',
+    subject: '열역학',
+    question: '열교환기의 LMTD(Log Mean Temperature Difference)의 용도는?',
+    options: ['압력 계산', '열전달량 계산', '유량 계산', '밀도 계산'],
+    answer: 1,
+    explanation: 'LMTD는 열교환기 양단의 온도차를 평균하여 열전달량을 계산하는 데 사용됩니다.',
+    difficulty: '중',
+    tags: ['LMTD', '열전달']
+  },
+  {
+    id: 'MECH_183',
+    subject: '열역학',
+    question: '대류 열전달 계수에 영향을 주는 인자가 아닌 것은?',
+    options: ['유체 속도', '유체 점성', '중력', '전기 전도도'],
+    answer: 3,
+    explanation: '대류 열전달은 유체 속도, 점성, 밀도, 비열, 열전도도 등에 영향을 받지만, 전기 전도도는 무관합니다.',
+    difficulty: '중',
+    tags: ['대류', '열전달']
+  },
+  {
+    id: 'MECH_184',
+    subject: '유체역학',
+    question: '캐비테이션(Cavitation)이 발생하는 조건은?',
+    options: ['압력이 증기압보다 낮아질 때', '압력이 대기압보다 높을 때', '온도가 높을 때', '유속이 느릴 때'],
+    answer: 0,
+    explanation: '캐비테이션은 유체 압력이 증기압 이하로 떨어져 기포가 발생하고 붕괴하며 소음과 침식을 일으킵니다.',
+    difficulty: '중',
+    tags: ['캐비테이션', '펌프']
+  },
+  {
+    id: 'MECH_185',
+    subject: '유체역학',
+    question: '워터 해머(Water Hammer) 현상의 원인은?',
+    options: ['유속 증가', '밸브 급폐쇄로 인한 압력 급상승', '온도 상승', '밀도 변화'],
+    answer: 1,
+    explanation: '워터 해머는 밸브를 급격히 닫을 때 유체의 운동량 변화로 큰 압력 충격이 발생하는 현상입니다.',
+    difficulty: '하',
+    tags: ['워터해머', '압력']
+  },
+  {
+    id: 'MECH_186',
+    subject: '유체기계',
+    question: '펌프의 비속도(Specific Speed)가 의미하는 것은?',
+    options: ['펌프 크기', '펌프의 형식 분류 지표', '유량', '양정'],
+    answer: 1,
+    explanation: '비속도는 펌프의 형상과 특성을 나타내는 무차원수로, 원심 펌프, 사류 펌프, 축류 펌프를 구분합니다.',
+    difficulty: '중',
+    tags: ['비속도', '펌프']
+  },
+  {
+    id: 'MECH_187',
+    subject: '유체기계',
+    question: '송풍기의 전압(Total Pressure)은?',
+    options: ['정압만', '동압만', '정압 + 동압', '대기압'],
+    answer: 2,
+    explanation: '전압 = 정압 + 동압으로, 정압은 유체가 갖는 압력 에너지, 동압은 속도 에너지를 나타냅니다.',
+    difficulty: '하',
+    tags: ['전압', '송풍기']
+  },
+  {
+    id: 'MECH_188',
+    subject: '기계설계',
+    question: '피로 파괴(Fatigue Failure)의 특징은?',
+    options: ['한 번의 큰 하중', '반복 하중으로 점진적 파괴', '고온에서만 발생', '부식만으로 발생'],
+    answer: 1,
+    explanation: '피로 파괴는 항복 응력 이하의 반복 하중으로 균열이 생성·성장하여 최종 파괴되는 현상입니다.',
+    difficulty: '하',
+    tags: ['피로', '파괴']
+  },
+  {
+    id: 'MECH_189',
+    subject: '기계설계',
+    question: 'S-N 선도(S-N Curve)에서 철강 재료의 피로 한도는?',
+    options: ['존재하지 않음', '약 10⁶~10⁷ 사이클에서 수평', '1사이클', '무한대'],
+    answer: 1,
+    explanation: '철강은 약 10⁶~10⁷ 사이클 이후 피로 한도가 나타나며, 이 응력 이하에서는 무한 수명을 갖습니다.',
+    difficulty: '중',
+    tags: ['S-N선도', '피로']
+  },
+  {
+    id: 'MECH_190',
+    subject: '기계재료',
+    question: '크리프(Creep) 현상이란?',
+    options: ['순간 변형', '일정 응력 하에서 시간에 따른 변형 증가', '탄성 변형', '소성 변형'],
+    answer: 1,
+    explanation: '크리프는 고온에서 일정 응력이 가해질 때 시간에 따라 변형이 증가하는 현상으로, 터빈 블레이드 등에서 중요합니다.',
+    difficulty: '중',
+    tags: ['크리프', '고온']
+  },
+  {
+    id: 'MECH_191',
+    subject: '기계재료',
+    question: '응력 부식 균열(SCC)의 발생 조건이 아닌 것은?',
+    options: ['인장 응력', '부식 환경', '감수성 재료', '진공 상태'],
+    answer: 3,
+    explanation: 'SCC는 인장 응력, 부식 환경, 감수성 재료가 동시에 존재할 때 발생하며, 진공은 부식을 억제합니다.',
+    difficulty: '상',
+    tags: ['SCC', '부식']
+  },
+  {
+    id: 'MECH_192',
+    subject: '기계설계',
+    question: '축의 위험 속도(Critical Speed)란?',
+    options: ['최대 속도', '공진으로 큰 진동이 발생하는 속도', '최소 속도', '평균 속도'],
+    answer: 1,
+    explanation: '위험 속도는 회전 속도가 축의 고유 진동수와 일치하여 공진이 발생하는 속도로, 피해야 합니다.',
+    difficulty: '중',
+    tags: ['위험속도', '축']
+  },
+  {
+    id: 'MECH_193',
+    subject: '기계설계',
+    question: '베어링의 기본 정격 수명(L₁₀)의 정의는?',
+    options: ['평균 수명', '90% 신뢰 수명', '최대 수명', '최소 수명'],
+    answer: 1,
+    explanation: 'L₁₀은 동일 베어링 중 90%가 피로 손상 없이 도달할 수 있는 회전수로, 신뢰도 90%의 수명입니다.',
+    difficulty: '중',
+    tags: ['베어링', '수명']
+  },
+  {
+    id: 'MECH_194',
+    subject: '기계설계',
+    question: '플라이휠(Flywheel)의 주요 기능은?',
+    options: ['속도 증가', '회전 에너지 저장 및 속도 변동 억제', '방향 전환', '소음 감소'],
+    answer: 1,
+    explanation: '플라이휠은 관성 모멘트가 큰 회전체로 에너지를 저장하여 회전 속도의 변동을 줄입니다.',
+    difficulty: '하',
+    tags: ['플라이휠', '에너지']
+  },
+  {
+    id: 'MECH_195',
+    subject: '기계제작법',
+    question: '5축 가공(5-Axis Machining)의 장점은?',
+    options: ['단순 형상만 가능', '복잡한 3D 곡면 한 번에 가공', '저정밀', '저속 가공'],
+    answer: 1,
+    explanation: '5축 가공은 X,Y,Z 이동축과 2개의 회전축으로 복잡한 형상을 재고정 없이 가공할 수 있습니다.',
+    difficulty: '중',
+    tags: ['5축가공', 'CNC']
+  },
+  {
+    id: 'MECH_196',
+    subject: '기계제어',
+    question: '디지털 트윈(Digital Twin)의 개념은?',
+    options: ['물리적 자산의 디지털 복제본', '이중 백업', '클라우드 저장', '보안 시스템'],
+    answer: 0,
+    explanation: '디지털 트윈은 물리적 시스템을 가상으로 재현하여 시뮬레이션, 모니터링, 최적화에 활용하는 기술입니다.',
+    difficulty: '중',
+    tags: ['디지털트윈', '스마트제조']
+  },
+  {
+    id: 'MECH_197',
+    subject: '기계제어',
+    question: 'Industry 4.0(4차 산업혁명)의 핵심 기술이 아닌 것은?',
+    options: ['IoT', 'AI', '증기기관', '빅데이터'],
+    answer: 2,
+    explanation: 'Industry 4.0은 IoT, AI, 빅데이터, 클라우드, 사이버-물리 시스템 등을 활용한 스마트 제조를 의미합니다.',
+    difficulty: '하',
+    tags: ['Industry4.0', '스마트제조']
+  },
+  {
+    id: 'MECH_198',
+    subject: '기계제어',
+    question: '예지 정비(Predictive Maintenance)의 장점은?',
+    options: ['사후 정비', '고장 전 예측 정비로 다운타임 최소화', '비용 증가', '복잡성 감소'],
+    answer: 1,
+    explanation: '예지 정비는 센서 데이터와 AI로 고장을 사전에 예측하여 계획적 정비를 수행하므로 비용과 시간을 절약합니다.',
+    difficulty: '중',
+    tags: ['예지정비', '스마트제조']
+  },
+  {
+    id: 'MECH_199',
+    subject: '열역학',
+    question: '히트 파이프(Heat Pipe)의 작동 원리는?',
+    options: ['전도만', '상변화 잠열을 이용한 열전달', '복사만', '대류만'],
+    answer: 1,
+    explanation: '히트 파이프는 작동 유체의 증발과 응축을 이용하여 높은 효율로 열을 전달하는 수동 열전달 장치입니다.',
+    difficulty: '상',
+    tags: ['히트파이프', '열전달']
+  },
+  {
+    id: 'MECH_200',
+    subject: '기계재료',
+    question: '초소성(Superplasticity)이란?',
+    options: ['낮은 연신율', '특정 조건에서 수백% 이상의 연신율', '취성 증가', '경도 증가'],
+    answer: 1,
+    explanation: '초소성은 미세 결정립 재료가 특정 온도와 변형 속도에서 수백~수천%의 극대 연신율을 보이는 현상입니다.',
+    difficulty: '상',
+    tags: ['초소성', '재료특성']
   }
 ];
 

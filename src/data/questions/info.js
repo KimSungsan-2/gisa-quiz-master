@@ -1499,6 +1499,506 @@ export const infoQuestions = [
     explanation: 'Feature Flag는 코드 배포 없이 런타임에 기능을 활성화하거나 비활성화할 수 있습니다.',
     difficulty: '중',
     tags: ['Feature Flag', '배포']
+  },
+  {
+    id: 'INFO_151',
+    subject: '소프트웨어 설계',
+    question: 'XP(Extreme Programming)의 12가지 실천 방법에 포함되지 않는 것은?',
+    options: ['짝 프로그래밍(Pair Programming)', '테스트 주도 개발(TDD)', '폭포수 모델 적용', '지속적 통합(CI)'],
+    answer: 2,
+    explanation: 'XP는 애자일 방법론으로 폭포수 모델과는 반대되는 개념입니다. XP의 12가지 실천 방법에는 짝 프로그래밍, TDD, CI, 리팩토링 등이 포함됩니다.',
+    difficulty: '하',
+    tags: ['XP', '애자일']
+  },
+  {
+    id: 'INFO_152',
+    subject: '소프트웨어 설계',
+    question: '스크럼(Scrum)에서 스프린트(Sprint)의 일반적인 기간은?',
+    options: ['1일', '1~4주', '3개월', '6개월'],
+    answer: 1,
+    explanation: '스프린트는 일반적으로 1~4주의 기간으로 설정되며, 2주가 가장 일반적입니다. 스프린트 기간 동안 제품 증분을 완성합니다.',
+    difficulty: '하',
+    tags: ['스크럼', '스프린트']
+  },
+  {
+    id: 'INFO_153',
+    subject: '소프트웨어 설계',
+    question: '칸반(Kanban) 방법론의 핵심 원칙이 아닌 것은?',
+    options: ['작업 시각화', 'WIP(Work In Progress) 제한', '고정된 역할 할당', '흐름 관리'],
+    answer: 2,
+    explanation: '칸반은 유연한 역할 할당을 특징으로 하며, 작업 시각화, WIP 제한, 흐름 관리가 핵심 원칙입니다.',
+    difficulty: '중',
+    tags: ['칸반', '애자일']
+  },
+  {
+    id: 'INFO_154',
+    subject: '소프트웨어 설계',
+    question: '동적 프로그래밍(Dynamic Programming)의 두 가지 접근 방법이 아닌 것은?',
+    options: ['Top-down (메모이제이션)', 'Bottom-up (타뷸레이션)', 'Greedy', 'All of above'],
+    answer: 2,
+    explanation: '동적 프로그래밍의 접근 방법은 Top-down(메모이제이션)과 Bottom-up(타뷸레이션)입니다. Greedy는 별도의 알고리즘 기법입니다.',
+    difficulty: '중',
+    tags: ['알고리즘', '동적 프로그래밍']
+  },
+  {
+    id: 'INFO_155',
+    subject: '소프트웨어 설계',
+    question: '그리디 알고리즘(Greedy Algorithm)의 특징으로 옳지 않은 것은?',
+    options: ['매 순간 최선의 선택을 함', '항상 최적해를 보장함', '빠른 실행 속도', '지역 최적해를 선택'],
+    answer: 1,
+    explanation: '그리디 알고리즘은 항상 최적해를 보장하지 않습니다. 특정 조건(탐욕 선택 속성, 최적 부분 구조)을 만족할 때만 최적해를 찾습니다.',
+    difficulty: '중',
+    tags: ['알고리즘', 'Greedy']
+  },
+  {
+    id: 'INFO_156',
+    subject: '소프트웨어 설계',
+    question: '분할 정복(Divide and Conquer) 알고리즘의 단계가 아닌 것은?',
+    options: ['Divide (분할)', 'Conquer (정복)', 'Combine (결합)', 'Iterate (반복)'],
+    answer: 3,
+    explanation: '분할 정복은 Divide(문제 분할), Conquer(하위 문제 해결), Combine(해 결합)의 3단계로 구성됩니다.',
+    difficulty: '하',
+    tags: ['알고리즘', '분할 정복']
+  },
+  {
+    id: 'INFO_157',
+    subject: '데이터베이스 구축',
+    question: 'CAP 이론에서 CAP가 의미하는 것은?',
+    options: ['Consistency, Availability, Partition tolerance', 'Cache, Authentication, Performance', 'Cluster, API, Protocol', 'Connection, Authorization, Privacy'],
+    answer: 0,
+    explanation: 'CAP 이론은 분산 시스템에서 Consistency(일관성), Availability(가용성), Partition tolerance(분할 내성) 중 최대 2가지만 보장할 수 있다는 이론입니다.',
+    difficulty: '중',
+    tags: ['CAP', '분산 시스템']
+  },
+  {
+    id: 'INFO_158',
+    subject: '데이터베이스 구축',
+    question: 'BASE 특성에 포함되지 않는 것은?',
+    options: ['Basically Available', 'Soft state', 'Eventual consistency', 'Strong consistency'],
+    answer: 3,
+    explanation: 'BASE는 Basically Available(기본적 가용성), Soft state(유연한 상태), Eventual consistency(최종 일관성)를 의미하며, NoSQL의 특성입니다.',
+    difficulty: '중',
+    tags: ['BASE', 'NoSQL']
+  },
+  {
+    id: 'INFO_159',
+    subject: '정보시스템 구축관리',
+    question: '분산 시스템에서 Two-Phase Commit의 단계는?',
+    options: ['Prepare, Commit', 'Begin, End', 'Start, Finish', 'Open, Close'],
+    answer: 0,
+    explanation: '2PC는 Prepare 단계(모든 노드에 커밋 준비 요청)와 Commit 단계(실제 커밋 수행)로 구성되어 분산 트랜잭션의 원자성을 보장합니다.',
+    difficulty: '상',
+    tags: ['2PC', '분산 시스템']
+  },
+  {
+    id: 'INFO_160',
+    subject: '정보보안',
+    question: 'OWASP Top 10 2021에서 1위로 선정된 보안 취약점은?',
+    options: ['SQL Injection', 'Broken Access Control', 'XSS', 'CSRF'],
+    answer: 1,
+    explanation: '2021년 OWASP Top 10에서 Broken Access Control(취약한 접근 통제)이 1위로 선정되었습니다.',
+    difficulty: '중',
+    tags: ['OWASP', '보안']
+  },
+  {
+    id: 'INFO_161',
+    subject: '정보보안',
+    question: 'JWT(JSON Web Token)의 구조는?',
+    options: ['Header.Payload', 'Header.Payload.Signature', 'Payload.Signature', 'Token.Data'],
+    answer: 1,
+    explanation: 'JWT는 Header(알고리즘과 토큰 타입), Payload(클레임 데이터), Signature(서명)의 3부분으로 구성되며, 점(.)으로 구분됩니다.',
+    difficulty: '하',
+    tags: ['JWT', '인증']
+  },
+  {
+    id: 'INFO_162',
+    subject: '정보보안',
+    question: 'OAuth 2.0의 인증 방식(Grant Type)이 아닌 것은?',
+    options: ['Authorization Code', 'Implicit', 'Resource Owner Password Credentials', 'Bearer Token'],
+    answer: 3,
+    explanation: 'OAuth 2.0의 Grant Type은 Authorization Code, Implicit, Resource Owner Password Credentials, Client Credentials입니다. Bearer Token은 토큰 타입입니다.',
+    difficulty: '상',
+    tags: ['OAuth', '인증']
+  },
+  {
+    id: 'INFO_163',
+    subject: '정보보안',
+    question: 'HTTPS에서 사용하는 SSL/TLS 핸드셰이크 과정에 포함되지 않는 것은?',
+    options: ['Client Hello', 'Server Hello', 'Certificate Exchange', 'SQL Query'],
+    answer: 3,
+    explanation: 'SSL/TLS 핸드셰이크는 Client Hello, Server Hello, Certificate Exchange, Key Exchange 등으로 구성됩니다.',
+    difficulty: '하',
+    tags: ['HTTPS', 'TLS']
+  },
+  {
+    id: 'INFO_164',
+    subject: '소프트웨어 설계',
+    question: 'CQRS(Command Query Responsibility Segregation) 패턴의 설명으로 옳은 것은?',
+    options: ['읽기와 쓰기를 같은 모델로 처리', '읽기와 쓰기를 분리된 모델로 처리', '캐싱만 사용', '동기 처리만 가능'],
+    answer: 1,
+    explanation: 'CQRS는 Command(쓰기)와 Query(읽기)의 책임을 분리하여 각각 최적화된 모델로 처리하는 패턴입니다.',
+    difficulty: '상',
+    tags: ['CQRS', '패턴']
+  },
+  {
+    id: 'INFO_165',
+    subject: '소프트웨어 설계',
+    question: 'Event Sourcing의 핵심 개념은?',
+    options: ['최종 상태만 저장', '모든 상태 변경 이벤트를 저장', '로그만 저장', '캐시만 저장'],
+    answer: 1,
+    explanation: 'Event Sourcing은 현재 상태가 아닌 모든 상태 변경 이벤트를 순차적으로 저장하여 시스템 상태를 재구성할 수 있게 합니다.',
+    difficulty: '상',
+    tags: ['Event Sourcing', '패턴']
+  },
+  {
+    id: 'INFO_166',
+    subject: '데이터베이스 구축',
+    question: 'Sharding 전략 중 Range-based Sharding의 단점은?',
+    options: ['구현이 복잡함', '데이터 분포가 불균등할 수 있음', '조회가 느림', '확장이 불가능함'],
+    answer: 1,
+    explanation: 'Range-based Sharding은 특정 범위에 데이터가 몰릴 경우 데이터 분포가 불균등해지는 핫스팟 문제가 발생할 수 있습니다.',
+    difficulty: '중',
+    tags: ['Sharding', '데이터베이스']
+  },
+  {
+    id: 'INFO_167',
+    subject: '데이터베이스 구축',
+    question: 'Redis의 데이터 타입이 아닌 것은?',
+    options: ['String', 'List', 'Set', 'Table'],
+    answer: 3,
+    explanation: 'Redis는 String, List, Set, Hash, Sorted Set 등의 데이터 타입을 지원하지만, 관계형 DB의 Table은 지원하지 않습니다.',
+    difficulty: '하',
+    tags: ['Redis', 'NoSQL']
+  },
+  {
+    id: 'INFO_168',
+    subject: '데이터베이스 구축',
+    question: 'MongoDB에서 도큐먼트 간 관계를 표현하는 방법이 아닌 것은?',
+    options: ['Embedded Documents', 'References', 'Foreign Key Constraint', 'DBRef'],
+    answer: 2,
+    explanation: 'MongoDB는 NoSQL이므로 Foreign Key Constraint를 지원하지 않습니다. Embedded Documents나 References를 사용합니다.',
+    difficulty: '중',
+    tags: ['MongoDB', 'NoSQL']
+  },
+  {
+    id: 'INFO_169',
+    subject: '프로그래밍 언어 활용',
+    question: 'Python의 GIL(Global Interpreter Lock)에 대한 설명으로 옳은 것은?',
+    options: ['멀티스레드 병렬 실행을 완전히 지원', '한 번에 하나의 스레드만 Python 바이트코드 실행 가능', '멀티프로세싱에 영향을 줌', 'I/O 작업에만 적용'],
+    answer: 1,
+    explanation: 'GIL은 한 번에 하나의 스레드만 Python 바이트코드를 실행할 수 있게 제한합니다. CPU-bound 작업에서는 멀티프로세싱을 사용해야 합니다.',
+    difficulty: '상',
+    tags: ['Python', 'GIL']
+  },
+  {
+    id: 'INFO_170',
+    subject: '프로그래밍 언어 활용',
+    question: 'JavaScript의 이벤트 루프(Event Loop)에서 Microtask Queue에 들어가는 것은?',
+    options: ['setTimeout', 'Promise.then', 'setInterval', 'XMLHttpRequest'],
+    answer: 1,
+    explanation: 'Promise.then, async/await, MutationObserver는 Microtask Queue에, setTimeout, setInterval 등은 Macrotask Queue에 들어갑니다.',
+    difficulty: '상',
+    tags: ['JavaScript', 'Event Loop']
+  },
+  {
+    id: 'INFO_171',
+    subject: '프로그래밍 언어 활용',
+    question: 'Java의 Optional을 사용하는 주된 이유는?',
+    options: ['성능 향상', 'NullPointerException 방지', '메모리 절약', '속도 향상'],
+    answer: 1,
+    explanation: 'Optional은 null 값을 명시적으로 처리하여 NullPointerException을 방지하고 코드의 가독성을 높입니다.',
+    difficulty: '하',
+    tags: ['Java', 'Optional']
+  },
+  {
+    id: 'INFO_172',
+    subject: '프로그래밍 언어 활용',
+    question: 'Go 언어의 고루틴(Goroutine)의 특징은?',
+    options: ['OS 스레드와 1:1 매핑', '경량 스레드로 적은 메모리 사용', '무거운 컨텍스트 스위칭', '단일 스레드만 지원'],
+    answer: 1,
+    explanation: '고루틴은 OS 스레드보다 훨씬 가벼운 경량 스레드로, 수천~수만 개를 동시에 실행할 수 있습니다.',
+    difficulty: '중',
+    tags: ['Go', 'Goroutine']
+  },
+  {
+    id: 'INFO_173',
+    subject: '정보시스템 구축관리',
+    question: 'Service Mesh의 대표적인 구현체는?',
+    options: ['Nginx', 'Istio', 'Apache', 'Tomcat'],
+    answer: 1,
+    explanation: 'Istio는 대표적인 Service Mesh 구현체로, 마이크로서비스 간 통신을 관리하고 보안, 모니터링 등을 제공합니다.',
+    difficulty: '중',
+    tags: ['Service Mesh', 'Istio']
+  },
+  {
+    id: 'INFO_174',
+    subject: '정보시스템 구축관리',
+    question: 'Kubernetes의 StatefulSet이 필요한 경우는?',
+    options: ['무상태 애플리케이션', '상태 유지가 필요한 애플리케이션', '단순 웹 서버', '캐시 서버'],
+    answer: 1,
+    explanation: 'StatefulSet은 데이터베이스처럼 상태 유지와 안정적인 네트워크 식별자가 필요한 애플리케이션에 사용됩니다.',
+    difficulty: '중',
+    tags: ['Kubernetes', 'StatefulSet']
+  },
+  {
+    id: 'INFO_175',
+    subject: '정보시스템 구축관리',
+    question: 'GitOps의 핵심 원칙이 아닌 것은?',
+    options: ['선언적 구성', 'Git을 단일 진실 공급원으로 사용', '수동 배포', '자동 동기화'],
+    answer: 2,
+    explanation: 'GitOps는 Git을 통한 선언적 구성과 자동 동기화를 핵심으로 하며, 수동 배포를 지양합니다.',
+    difficulty: '중',
+    tags: ['GitOps', 'DevOps']
+  },
+  {
+    id: 'INFO_176',
+    subject: '소프트웨어 설계',
+    question: 'Domain-Driven Design(DDD)의 전략적 패턴이 아닌 것은?',
+    options: ['Bounded Context', 'Ubiquitous Language', 'Context Mapping', 'Singleton'],
+    answer: 3,
+    explanation: 'DDD의 전략적 패턴에는 Bounded Context, Ubiquitous Language, Context Mapping 등이 있습니다. Singleton은 GoF 디자인 패턴입니다.',
+    difficulty: '상',
+    tags: ['DDD', '설계']
+  },
+  {
+    id: 'INFO_177',
+    subject: '소프트웨어 설계',
+    question: 'Hexagonal Architecture(포트와 어댑터)의 주요 목적은?',
+    options: ['성능 향상', '비즈니스 로직과 외부 시스템 분리', '코드 압축', '메모리 절약'],
+    answer: 1,
+    explanation: 'Hexagonal Architecture는 비즈니스 로직을 중심에 두고 외부 시스템(DB, UI 등)과 분리하여 테스트 용이성과 유연성을 높입니다.',
+    difficulty: '상',
+    tags: ['Architecture', 'Hexagonal']
+  },
+  {
+    id: 'INFO_178',
+    subject: '정보보안',
+    question: 'Zero Trust 보안 모델의 핵심 원칙은?',
+    options: ['내부 네트워크는 신뢰', '모든 접근을 검증', 'VPN만 사용', '방화벽만 사용'],
+    answer: 1,
+    explanation: 'Zero Trust는 "절대 신뢰하지 말고 항상 검증하라"는 원칙으로, 내부/외부 구분 없이 모든 접근을 검증합니다.',
+    difficulty: '중',
+    tags: ['Zero Trust', '보안']
+  },
+  {
+    id: 'INFO_179',
+    subject: '정보보안',
+    question: 'Content Security Policy(CSP)의 주요 목적은?',
+    options: ['SQL Injection 방지', 'XSS 공격 방지', 'CSRF 방지', 'DDoS 방지'],
+    answer: 1,
+    explanation: 'CSP는 브라우저에서 로드할 수 있는 리소스를 제한하여 XSS 공격을 방지하는 보안 정책입니다.',
+    difficulty: '중',
+    tags: ['CSP', 'XSS']
+  },
+  {
+    id: 'INFO_180',
+    subject: '정보보안',
+    question: 'SAML(Security Assertion Markup Language)의 주요 용도는?',
+    options: ['데이터 암호화', 'SSO(Single Sign-On)', '데이터 압축', '성능 향상'],
+    answer: 1,
+    explanation: 'SAML은 서로 다른 보안 도메인 간에 인증 및 권한 정보를 교환하여 SSO를 구현하는 XML 기반 표준입니다.',
+    difficulty: '중',
+    tags: ['SAML', 'SSO']
+  },
+  {
+    id: 'INFO_181',
+    subject: '데이터베이스 구축',
+    question: 'Time-series Database의 특징으로 옳지 않은 것은?',
+    options: ['시간 기반 데이터 최적화', '높은 쓰기 성능', 'ACID 완전 보장', '데이터 압축'],
+    answer: 2,
+    explanation: '시계열 DB는 높은 쓰기 성능과 압축을 위해 ACID를 완전히 보장하지 않을 수 있습니다. 대표적으로 InfluxDB, TimescaleDB 등이 있습니다.',
+    difficulty: '중',
+    tags: ['TSDB', '데이터베이스']
+  },
+  {
+    id: 'INFO_182',
+    subject: '데이터베이스 구축',
+    question: 'Graph Database에서 사용하는 쿼리 언어는?',
+    options: ['SQL', 'Cypher', 'JavaScript', 'Python'],
+    answer: 1,
+    explanation: 'Neo4j 같은 Graph DB는 Cypher 쿼리 언어를 사용합니다. Gremlin도 그래프 순회 언어로 사용됩니다.',
+    difficulty: '하',
+    tags: ['Graph DB', 'Cypher']
+  },
+  {
+    id: 'INFO_183',
+    subject: '소프트웨어 설계',
+    question: 'Saga 패턴의 주요 목적은?',
+    options: ['단일 트랜잭션 처리', '분산 트랜잭션 관리', '캐싱', '로깅'],
+    answer: 1,
+    explanation: 'Saga 패턴은 마이크로서비스 환경에서 분산 트랜잭션을 관리하기 위해 일련의 로컬 트랜잭션으로 분할합니다.',
+    difficulty: '상',
+    tags: ['Saga', '분산 시스템']
+  },
+  {
+    id: 'INFO_184',
+    subject: '소프트웨어 설계',
+    question: 'Circuit Breaker 패턴의 상태가 아닌 것은?',
+    options: ['Closed', 'Open', 'Half-Open', 'Full-Open'],
+    answer: 3,
+    explanation: 'Circuit Breaker는 Closed(정상), Open(차단), Half-Open(반개방) 3가지 상태를 가집니다.',
+    difficulty: '중',
+    tags: ['Circuit Breaker', '패턴']
+  },
+  {
+    id: 'INFO_185',
+    subject: '프로그래밍 언어 활용',
+    question: 'Reactive Programming의 핵심 개념은?',
+    options: ['동기 처리', '비동기 데이터 스트림', '블로킹 I/O', '순차 처리'],
+    answer: 1,
+    explanation: 'Reactive Programming은 비동기 데이터 스트림과 변화 전파를 중심으로 하는 프로그래밍 패러다임입니다.',
+    difficulty: '중',
+    tags: ['Reactive', 'Programming']
+  },
+  {
+    id: 'INFO_186',
+    subject: '프로그래밍 언어 활용',
+    question: 'WebAssembly(Wasm)의 주요 장점은?',
+    options: ['JavaScript만 지원', '네이티브에 가까운 성능', '느린 실행 속도', '큰 파일 크기'],
+    answer: 1,
+    explanation: 'WebAssembly는 C/C++/Rust 등을 컴파일하여 브라우저에서 네이티브에 가까운 성능으로 실행할 수 있게 합니다.',
+    difficulty: '중',
+    tags: ['WebAssembly', 'Wasm']
+  },
+  {
+    id: 'INFO_187',
+    subject: '정보시스템 구축관리',
+    question: 'Observability의 3가지 기둥(Three Pillars)은?',
+    options: ['Logs, Metrics, Traces', 'CPU, Memory, Disk', 'Front, Back, DB', 'Dev, Test, Prod'],
+    answer: 0,
+    explanation: 'Observability는 Logs(로그), Metrics(메트릭), Traces(추적)의 3가지 기둥으로 시스템을 관찰하고 이해합니다.',
+    difficulty: '중',
+    tags: ['Observability', '모니터링']
+  },
+  {
+    id: 'INFO_188',
+    subject: '정보시스템 구축관리',
+    question: 'Chaos Engineering의 목적은?',
+    options: ['시스템 파괴', '장애 상황에서 시스템 회복력 테스트', '성능 저하', '비용 증가'],
+    answer: 1,
+    explanation: 'Chaos Engineering은 의도적으로 장애를 주입하여 시스템의 회복력과 안정성을 테스트하고 개선합니다.',
+    difficulty: '중',
+    tags: ['Chaos Engineering', '테스트']
+  },
+  {
+    id: 'INFO_189',
+    subject: '소프트웨어 설계',
+    question: 'BFF(Backend For Frontend) 패턴의 목적은?',
+    options: ['백엔드 통합', '각 프론트엔드에 최적화된 API 제공', '데이터베이스 분리', '캐싱'],
+    answer: 1,
+    explanation: 'BFF는 웹, 모바일 등 각 프론트엔드 클라이언트에 최적화된 별도의 백엔드 서비스를 제공하는 패턴입니다.',
+    difficulty: '상',
+    tags: ['BFF', 'API']
+  },
+  {
+    id: 'INFO_190',
+    subject: '데이터베이스 구축',
+    question: 'Write-Ahead Logging(WAL)의 목적은?',
+    options: ['읽기 성능 향상', '트랜잭션 복구 보장', '데이터 압축', '네트워크 최적화'],
+    answer: 1,
+    explanation: 'WAL은 실제 데이터 변경 전에 로그를 먼저 기록하여 장애 발생 시 트랜잭션 복구를 보장합니다.',
+    difficulty: '중',
+    tags: ['WAL', '데이터베이스']
+  },
+  {
+    id: 'INFO_191',
+    subject: '데이터베이스 구축',
+    question: 'MVCC(Multi-Version Concurrency Control)의 장점은?',
+    options: ['읽기 작업이 쓰기 작업을 차단', '읽기와 쓰기가 서로 차단하지 않음', '느린 성능', '높은 메모리 사용'],
+    answer: 1,
+    explanation: 'MVCC는 각 트랜잭션이 데이터의 스냅샷을 보므로 읽기와 쓰기가 서로 차단하지 않아 동시성이 향상됩니다.',
+    difficulty: '상',
+    tags: ['MVCC', '동시성']
+  },
+  {
+    id: 'INFO_192',
+    subject: '정보보안',
+    question: 'mTLS(Mutual TLS)와 일반 TLS의 차이는?',
+    options: ['성능', '양방향 인증', '암호화 강도', '속도'],
+    answer: 1,
+    explanation: 'mTLS는 서버와 클라이언트가 서로를 인증하는 양방향 인증을 수행합니다. 일반 TLS는 서버만 인증합니다.',
+    difficulty: '중',
+    tags: ['mTLS', '보안']
+  },
+  {
+    id: 'INFO_193',
+    subject: '정보보안',
+    question: 'HSTS(HTTP Strict Transport Security)의 목적은?',
+    options: ['HTTP만 사용', 'HTTPS 강제 사용', 'FTP 보안', 'SSH 보안'],
+    answer: 1,
+    explanation: 'HSTS는 브라우저가 해당 사이트에 항상 HTTPS로만 접속하도록 강제하여 다운그레이드 공격을 방지합니다.',
+    difficulty: '하',
+    tags: ['HSTS', 'HTTPS']
+  },
+  {
+    id: 'INFO_194',
+    subject: '프로그래밍 언어 활용',
+    question: 'Functional Programming의 핵심 개념이 아닌 것은?',
+    options: ['Immutability', 'Pure Function', 'Side Effect 최소화', 'Global State 사용'],
+    answer: 3,
+    explanation: '함수형 프로그래밍은 불변성, 순수 함수, 부수효과 최소화를 추구하며, 전역 상태 사용을 지양합니다.',
+    difficulty: '중',
+    tags: ['FP', 'Programming']
+  },
+  {
+    id: 'INFO_195',
+    subject: '소프트웨어 설계',
+    question: 'API Gateway의 역할이 아닌 것은?',
+    options: ['라우팅', '인증/인가', '데이터베이스 직접 접근', 'Rate Limiting'],
+    answer: 2,
+    explanation: 'API Gateway는 라우팅, 인증, Rate Limiting 등을 담당하지만, 데이터베이스에 직접 접근하지 않습니다.',
+    difficulty: '하',
+    tags: ['API Gateway', 'Architecture']
+  },
+  {
+    id: 'INFO_196',
+    subject: '정보시스템 구축관리',
+    question: 'Kubernetes의 HPA(Horizontal Pod Autoscaler)가 스케일링 기준으로 사용할 수 있는 것은?',
+    options: ['시간', 'CPU/메모리 사용률', '날짜', '개발자 수'],
+    answer: 1,
+    explanation: 'HPA는 CPU/메모리 사용률, 커스텀 메트릭 등을 기준으로 Pod 개수를 자동으로 조정합니다.',
+    difficulty: '하',
+    tags: ['Kubernetes', 'HPA']
+  },
+  {
+    id: 'INFO_197',
+    subject: '정보시스템 구축관리',
+    question: 'Infrastructure as Code(IaC)의 장점이 아닌 것은?',
+    options: ['재현 가능한 인프라', '버전 관리 가능', '수동 작업 필수', '자동화'],
+    answer: 2,
+    explanation: 'IaC는 인프라를 코드로 관리하여 재현성, 버전 관리, 자동화를 제공하며, 수동 작업을 최소화합니다.',
+    difficulty: '하',
+    tags: ['IaC', 'DevOps']
+  },
+  {
+    id: 'INFO_198',
+    subject: '소프트웨어 설계',
+    question: 'Polyglot Persistence의 의미는?',
+    options: ['하나의 데이터베이스만 사용', '여러 종류의 데이터베이스를 적재적소에 사용', '프로그래밍 언어 혼용', '캐싱만 사용'],
+    answer: 1,
+    explanation: 'Polyglot Persistence는 각 데이터의 특성에 맞춰 관계형 DB, NoSQL, Graph DB 등을 적재적소에 사용하는 접근 방식입니다.',
+    difficulty: '상',
+    tags: ['Polyglot', 'Architecture']
+  },
+  {
+    id: 'INFO_199',
+    subject: '데이터베이스 구축',
+    question: 'Database Replication에서 Master-Slave 구조의 문제점은?',
+    options: ['읽기 성능 향상', 'Master 장애 시 쓰기 불가', '데이터 복제', '백업 용이'],
+    answer: 1,
+    explanation: 'Master-Slave 구조는 Master 장애 시 쓰기 작업이 불가능해지는 단일 장애점(SPOF) 문제가 있습니다.',
+    difficulty: '중',
+    tags: ['Replication', 'HA']
+  },
+  {
+    id: 'INFO_200',
+    subject: '정보보안',
+    question: 'Supply Chain Attack의 예방 방법이 아닌 것은?',
+    options: ['의존성 취약점 스캔', '코드 서명 검증', '모든 패키지 무조건 신뢰', 'SBOM(Software Bill of Materials) 관리'],
+    answer: 2,
+    explanation: 'Supply Chain Attack 예방을 위해 의존성 스캔, 코드 서명 검증, SBOM 관리가 필요하며, 패키지를 무조건 신뢰해서는 안 됩니다.',
+    difficulty: '중',
+    tags: ['Supply Chain', '보안']
   }
 ];
 
