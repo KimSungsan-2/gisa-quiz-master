@@ -10,6 +10,7 @@ import ChapterSelector from './components/quiz/ChapterSelector';
 import LoginScreen from './components/auth/LoginScreen';
 import UserProfile from './components/auth/UserProfile';
 import AllStructuredData from './components/seo/StructuredData';
+import AdBanner from './components/ads/AdBanner';
 
 // 유틸리티 import
 import {
@@ -449,6 +450,14 @@ function CertificationQuizApp() {
             )}
           </div>
 
+          {/* 상단 광고 */}
+          <AdBanner
+            slot="1234567890"
+            format="horizontal"
+            style={{ minHeight: '90px' }}
+            className="mb-8"
+          />
+
           {/* 자격증 카드 */}
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
             {certificates.map((cert) => {
@@ -496,6 +505,14 @@ function CertificationQuizApp() {
               );
             })}
           </div>
+
+          {/* 중간 광고 */}
+          <AdBanner
+            slot="1234567891"
+            format="rectangle"
+            style={{ minHeight: '250px' }}
+            className="mb-8"
+          />
 
           {/* 통계 카드 */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mb-12">
@@ -815,6 +832,15 @@ function CertificationQuizApp() {
                 <div className="text-2xl md:text-4xl font-black text-purple-700">{score}%</div>
               </div>
             </div>
+
+            {/* 결과 페이지 광고 */}
+            <AdBanner
+              slot="1234567892"
+              format="rectangle"
+              style={{ minHeight: '250px' }}
+              className="mb-6"
+            />
+
             <div className="space-y-4">
               <button
                 onClick={() => setScreen('home')}
@@ -841,6 +867,14 @@ function CertificationQuizApp() {
                 다시 풀기
               </button>
             </div>
+
+            {/* 하단 광고 */}
+            <AdBanner
+              slot="1234567893"
+              format="horizontal"
+              style={{ minHeight: '90px' }}
+              className="mt-6"
+            />
           </div>
         </div>
       </div>

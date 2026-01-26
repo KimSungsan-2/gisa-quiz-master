@@ -674,7 +674,7 @@ export const refrigerationQuestions = [
     id: 'REF_068',
     subject: '냉동공조 원리',
     question: '습공기 선도(Psychrometric Chart)에서 읽을 수 없는 값은?',
-    options: ['건구온도', '습구온도', '상대습도', '압력']
+    options: ['건구온도', '습구온도', '상대습도', '압력'],
     answer: 3,
     explanation: '습공기 선도에서는 건구온도, 습구온도, 상대습도, 절대습도, 엔탈피 등을 읽을 수 있지만, 압력은 나타나지 않습니다.',
     difficulty: '중',

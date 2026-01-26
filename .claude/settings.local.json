@@ -10,7 +10,8 @@
       "Bash(tree:*)",
       "Bash(npm run dev:*)",
       "WebFetch(domain:www.machuda.kr)",
-      "Bash(git push:*)"
+      "Bash(git push:*)",
+      "Bash(find:*)"
     ]
   }
 }
