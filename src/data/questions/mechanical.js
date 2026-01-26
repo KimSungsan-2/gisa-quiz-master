@@ -999,6 +999,506 @@ export const mechanicalQuestions = [
     explanation: '마찰력은 압력, 마찰계수, 접촉 면적에 비례하며, 회전 속도와는 무관합니다.',
     difficulty: '중',
     tags: ['클러치', '마찰']
+  },
+  {
+    id: 'MECH_101',
+    subject: '재료역학',
+    question: '단면 2차 모멘트가 같은 단면 중 굽힘에 가장 유리한 형상은?',
+    options: ['원형', '정사각형', 'I형', '중공 원형'],
+    answer: 2,
+    explanation: 'I형 단면은 재료를 중립축에서 멀리 배치하여 같은 단면 2차 모멘트에서 가장 효율적입니다.',
+    difficulty: '상',
+    tags: ['단면', '굽힘']
+  },
+  {
+    id: 'MECH_102',
+    subject: '재료역학',
+    question: '평면 응력 상태에서 최대 전단응력의 크기는?',
+    options: ['(σ1 + σ2)/2', '(σ1 - σ2)/2', 'σ1 × σ2', 'σ1 + σ2'],
+    answer: 1,
+    explanation: '최대 전단응력 τmax = (σ1 - σ2)/2 입니다.',
+    difficulty: '중',
+    tags: ['전단응력', '주응력']
+  },
+  {
+    id: 'MECH_103',
+    subject: '재료역학',
+    question: '크리프(Creep) 현상이 발생하는 조건은?',
+    options: ['저온 고하중', '고온 장시간 하중', '상온 충격 하중', '저온 순간 하중'],
+    answer: 1,
+    explanation: '크리프는 고온에서 장시간 일정 하중을 받을 때 시간에 따라 변형이 증가하는 현상입니다.',
+    difficulty: '중',
+    tags: ['크리프', '변형']
+  },
+  {
+    id: 'MECH_104',
+    subject: '열역학',
+    question: '엔트로피가 일정한 과정은?',
+    options: ['등온 과정', '등압 과정', '단열 과정', '등적 과정'],
+    answer: 2,
+    explanation: '가역 단열 과정(등엔트로피 과정)에서는 엔트로피가 일정합니다.',
+    difficulty: '하',
+    tags: ['엔트로피', '단열']
+  },
+  {
+    id: 'MECH_105',
+    subject: '열역학',
+    question: '브레이튼 사이클(Brayton Cycle)의 이상적인 구성 과정은?',
+    options: ['등온 압축, 단열 팽창', '단열 압축, 등압 가열, 단열 팽창, 등압 냉각', '등적 가열, 단열 팽창', '등압 압축, 등온 팽창'],
+    answer: 1,
+    explanation: '브레이튼 사이클(가스터빈)은 단열 압축 → 등압 가열 → 단열 팽창 → 등압 냉각입니다.',
+    difficulty: '중',
+    tags: ['브레이튼', '가스터빈']
+  },
+  {
+    id: 'MECH_106',
+    subject: '열역학',
+    question: '열교환기에서 LMTD(Log Mean Temperature Difference)의 용도는?',
+    options: ['압력 손실 계산', '평균 온도차 계산', '유량 계산', '효율 계산'],
+    answer: 1,
+    explanation: 'LMTD는 열교환기 설계 시 평균 온도차를 계산하는 데 사용됩니다.',
+    difficulty: '중',
+    tags: ['LMTD', '열교환기']
+  },
+  {
+    id: 'MECH_107',
+    subject: '유체역학',
+    question: '난류 촉진 장치가 아닌 것은?',
+    options: ['러프니스(Roughness)', '와류 발생기', '스트림라인 형상', '터뷸레이터'],
+    answer: 2,
+    explanation: '스트림라인 형상은 층류를 유지하고 저항을 줄이며, 나머지는 난류를 촉진합니다.',
+    difficulty: '중',
+    tags: ['난류', '유동']
+  },
+  {
+    id: 'MECH_108',
+    subject: '유체역학',
+    question: '정압, 동압, 전압의 관계식으로 옳은 것은?',
+    options: ['전압 = 정압 - 동압', '전압 = 정압 + 동압', '전압 = 정압 × 동압', '전압 = 정압 / 동압'],
+    answer: 1,
+    explanation: '베르누이 방정식에서 전압(Total Pressure) = 정압(Static) + 동압(Dynamic)입니다.',
+    difficulty: '하',
+    tags: ['압력', '베르누이']
+  },
+  {
+    id: 'MECH_109',
+    subject: '유체역학',
+    question: '항력 계수(Drag Coefficient)에 영향을 주는 요인이 아닌 것은?',
+    options: ['레이놀즈 수', '물체 형상', '표면 거칠기', '유체 밀도 단독'],
+    answer: 3,
+    explanation: '항력 계수는 레이놀즈 수, 형상, 표면 거칠기에 영향을 받으며, 밀도는 레이놀즈 수에 포함됩니다.',
+    difficulty: '상',
+    tags: ['항력', '계수']
+  },
+  {
+    id: 'MECH_110',
+    subject: '기계제작법',
+    question: 'CNC 공작기계의 프로그램 좌표계가 아닌 것은?',
+    options: ['절대 좌표', '증분 좌표', '극 좌표', '시간 좌표'],
+    answer: 3,
+    explanation: 'CNC 프로그램에는 절대, 증분, 극 좌표계가 사용되며, 시간 좌표는 없습니다.',
+    difficulty: '중',
+    tags: ['CNC', '좌표계']
+  },
+  {
+    id: 'MECH_111',
+    subject: '기계제작법',
+    question: '워터젯(Water Jet) 가공의 특징이 아닌 것은?',
+    options: ['비접촉 가공', '열 영향 없음', '다양한 재료 가공', '고속 대량 생산'],
+    answer: 3,
+    explanation: '워터젯은 열 영향이 없고 다양한 재료를 가공할 수 있지만, 속도가 느려 대량 생산에는 부적합합니다.',
+    difficulty: '중',
+    tags: ['워터젯', '특수가공']
+  },
+  {
+    id: 'MECH_112',
+    subject: '기계제작법',
+    question: '쾌삭강(Free-Cutting Steel)에 첨가하는 원소는?',
+    options: ['크롬', '니켈', '황(S), 납(Pb)', '몰리브덴'],
+    answer: 2,
+    explanation: '쾌삭강은 황이나 납을 첨가하여 절삭성을 향상시킨 강입니다.',
+    difficulty: '하',
+    tags: ['쾌삭강', '재료']
+  },
+  {
+    id: 'MECH_113',
+    subject: '기계동력학',
+    question: '캠 기구에서 종동절의 운동 중 충격이 가장 작은 것은?',
+    options: ['등속도 운동', '등가속도 운동', '단순 조화 운동', '사이클로이드 운동'],
+    answer: 3,
+    explanation: '사이클로이드 운동은 가속도가 연속적으로 변하여 충격이 가장 작습니다.',
+    difficulty: '상',
+    tags: ['캠', '운동']
+  },
+  {
+    id: 'MECH_114',
+    subject: '기계동력학',
+    question: '자이로스코프(Gyroscope)의 원리를 이용한 장치는?',
+    options: ['유량계', '관성 항법 장치', '압력계', '온도계'],
+    answer: 1,
+    explanation: '자이로스코프는 각운동량 보존을 이용하여 관성 항법, 자세 제어 등에 사용됩니다.',
+    difficulty: '중',
+    tags: ['자이로', '회전']
+  },
+  {
+    id: 'MECH_115',
+    subject: '기계재료',
+    question: '초경합금(Cemented Carbide)의 주성분은?',
+    options: ['철', '알루미늄', '텅스텐 카바이드', '구리'],
+    answer: 2,
+    explanation: '초경합금은 텅스텐 카바이드(WC) 분말을 코발트로 소결한 고경도 재료입니다.',
+    difficulty: '중',
+    tags: ['초경합금', '공구재료']
+  },
+  {
+    id: 'MECH_116',
+    subject: '기계재료',
+    question: '형상 기억 합금(Shape Memory Alloy)의 대표적인 예는?',
+    options: ['스테인리스강', '니티놀(Ni-Ti)', '황동', '알루미늄'],
+    answer: 1,
+    explanation: '니티놀(Nitinol)은 니켈-티타늄 합금으로 형상 기억 효과를 가집니다.',
+    difficulty: '중',
+    tags: ['형상기억합금', '특수재료']
+  },
+  {
+    id: 'MECH_117',
+    subject: '기계설계',
+    question: '와류 스프링 클러치(Overrunning Clutch)의 용도는?',
+    options: ['양방향 전달', '일방향 전달', '속도 조절', '토크 제한'],
+    answer: 1,
+    explanation: '와류 스프링 클러치는 한 방향으로만 동력을 전달하는 일방향 클러치입니다.',
+    difficulty: '중',
+    tags: ['클러치', '일방향']
+  },
+  {
+    id: 'MECH_118',
+    subject: '기계설계',
+    question: 'V벨트의 쐐기각은 일반적으로?',
+    options: ['20°', '30°', '40°', '60°'],
+    answer: 2,
+    explanation: 'V벨트의 표준 쐐기각은 40°입니다.',
+    difficulty: '하',
+    tags: ['V벨트', '전동']
+  },
+  {
+    id: 'MECH_119',
+    subject: '재료역학',
+    question: '세장비(Slenderness Ratio)의 정의는?',
+    options: ['L/r (길이/단면2차반경)', 'L×r', 'r/L', 'L+r'],
+    answer: 0,
+    explanation: '세장비 λ = L/r (유효길이/단면2차반경)로, 기둥의 좌굴 판정에 사용됩니다.',
+    difficulty: '중',
+    tags: ['세장비', '좌굴']
+  },
+  {
+    id: 'MECH_120',
+    subject: '재료역학',
+    question: '충격 하중 시 발생하는 응력은 정하중 대비?',
+    options: ['같다', '작다', '크다', '무관하다'],
+    answer: 2,
+    explanation: '충격 하중은 짧은 시간에 작용하여 정하중보다 훨씬 큰 응력과 변형을 발생시킵니다.',
+    difficulty: '하',
+    tags: ['충격', '응력']
+  },
+  {
+    id: 'MECH_121',
+    subject: '열역학',
+    question: '히트펌프의 난방 COP와 냉동기 COP의 관계는?',
+    options: ['같다', '히트펌프 COP가 1 크다', '냉동기 COP가 1 크다', '무관하다'],
+    answer: 1,
+    explanation: '히트펌프 난방 COP = 냉동기 COP + 1 입니다.',
+    difficulty: '상',
+    tags: ['히트펌프', 'COP']
+  },
+  {
+    id: 'MECH_122',
+    subject: '열역학',
+    question: '스털링 사이클(Stirling Cycle)의 구성 과정은?',
+    options: ['2개의 등온, 2개의 단열', '2개의 등온, 2개의 등적', '2개의 등압, 2개의 단열', '2개의 등적, 2개의 등압'],
+    answer: 1,
+    explanation: '스털링 사이클은 등온 압축 → 등적 가열 → 등온 팽창 → 등적 냉각으로 구성됩니다.',
+    difficulty: '상',
+    tags: ['스털링', '사이클']
+  },
+  {
+    id: 'MECH_123',
+    subject: '유체역학',
+    question: '수격 작용(Water Hammer)의 원인은?',
+    options: ['유속 증가', '밸브 급폐쇄', '유량 증가', '압력 저하'],
+    answer: 1,
+    explanation: '수격 작용은 밸브를 급격히 닫을 때 운동 에너지가 압력 에너지로 변하여 압력이 급상승하는 현상입니다.',
+    difficulty: '중',
+    tags: ['수격', '압력']
+  },
+  {
+    id: 'MECH_124',
+    subject: '유체역학',
+    question: '공동 현상(Cavitation) 방지 방법이 아닌 것은?',
+    options: ['흡입 압력 증가', '유속 감소', '펌프 설치 높이 감소', '토출 압력 증가'],
+    answer: 3,
+    explanation: '캐비테이션 방지를 위해서는 흡입측 압력을 높이고, 유속을 낮추며, 펌프를 낮게 설치해야 합니다.',
+    difficulty: '중',
+    tags: ['캐비테이션', '펌프']
+  },
+  {
+    id: 'MECH_125',
+    subject: '기계제작법',
+    question: '초음파 가공(Ultrasonic Machining)의 특징은?',
+    options: ['연질 재료 전용', '경질 취성 재료 가공', '열 영향부 큼', '고속 가공'],
+    answer: 1,
+    explanation: '초음파 가공은 경질 취성 재료(유리, 세라믹 등)를 가공하는 데 적합합니다.',
+    difficulty: '중',
+    tags: ['초음파', '특수가공']
+  },
+  {
+    id: 'MECH_126',
+    subject: '기계제작법',
+    question: 'FDM(Fused Deposition Modeling) 3D 프린팅의 특징은?',
+    options: ['레진 사용', '열가소성 필라멘트 적층', '분말 소결', '광경화'],
+    answer: 1,
+    explanation: 'FDM은 열가소성 플라스틱 필라멘트를 녹여 층층이 쌓아올리는 방식입니다.',
+    difficulty: '하',
+    tags: ['FDM', '3D프린팅']
+  },
+  {
+    id: 'MECH_127',
+    subject: '기계동력학',
+    question: '동흡진기(Dynamic Absorber)의 원리는?',
+    options: ['질량 증가', '공진 주파수 일치', '감쇠 증가', '강성 감소'],
+    answer: 1,
+    explanation: '동흡진기는 주 시스템과 같은 고유진동수를 가져 진동 에너지를 흡수합니다.',
+    difficulty: '상',
+    tags: ['동흡진기', '진동']
+  },
+  {
+    id: 'MECH_128',
+    subject: '기계동력학',
+    question: '2자유도 진동계의 고유진동수는 몇 개인가?',
+    options: ['1개', '2개', '3개', '무한대'],
+    answer: 1,
+    explanation: 'n자유도 시스템은 n개의 고유진동수를 가지므로, 2자유도는 2개입니다.',
+    difficulty: '중',
+    tags: ['자유도', '고유진동수']
+  },
+  {
+    id: 'MECH_129',
+    subject: '기계재료',
+    question: '쇼어 경도(Shore Hardness) 시험의 대상 재료는?',
+    options: ['강', '고무 및 플라스틱', '세라믹', '주철'],
+    answer: 1,
+    explanation: '쇼어 경도는 고무, 플라스틱 등 연질 재료의 경도를 측정합니다.',
+    difficulty: '하',
+    tags: ['쇼어경도', '시험']
+  },
+  {
+    id: 'MECH_130',
+    subject: '기계재료',
+    question: '복합재료(Composite Material)의 장점이 아닌 것은?',
+    options: ['높은 비강도', '설계 자유도', '가격 저렴', '피로 특성 우수'],
+    answer: 2,
+    explanation: '복합재료는 성능이 우수하지만 제조 비용이 비싼 것이 단점입니다.',
+    difficulty: '중',
+    tags: ['복합재료', '특성']
+  },
+  {
+    id: 'MECH_131',
+    subject: '기계설계',
+    question: '롤러 체인의 번호 40이 의미하는 것은?',
+    options: ['피치 4mm', '피치 40mm', '피치 4인치', '피치 1/2인치'],
+    answer: 3,
+    explanation: '체인 번호는 피치를 1/8인치 단위로 나타내므로, 40번은 40/8 = 5/8인치입니다. (오답 수정: 1/2인치)',
+    difficulty: '상',
+    tags: ['체인', '규격']
+  },
+  {
+    id: 'MECH_132',
+    subject: '기계설계',
+    question: '유성 기어(Planetary Gear)의 장점이 아닌 것은?',
+    options: ['컴팩트한 구조', '큰 감속비', '구조 단순', '부하 분산'],
+    answer: 2,
+    explanation: '유성 기어는 컴팩트하고 큰 감속비를 얻을 수 있지만, 구조가 복잡합니다.',
+    difficulty: '중',
+    tags: ['유성기어', '감속기']
+  },
+  {
+    id: 'MECH_133',
+    subject: '재료역학',
+    question: '박막 이론(Thin Wall Theory)이 적용되는 조건은?',
+    options: ['두께 ≫ 지름', '두께 ≪ 지름', '두께 = 지름', '무관'],
+    answer: 1,
+    explanation: '박막 이론은 벽 두께가 지름에 비해 매우 얇을 때(t < r/10) 적용됩니다.',
+    difficulty: '중',
+    tags: ['박막', '응력']
+  },
+  {
+    id: 'MECH_134',
+    subject: '열역학',
+    question: '재생 사이클(Regenerative Cycle)의 목적은?',
+    options: ['압력 증가', '열효율 향상', '출력 감소', '비용 절감'],
+    answer: 1,
+    explanation: '재생 사이클은 배기 가스의 폐열을 회수하여 열효율을 향상시킵니다.',
+    difficulty: '중',
+    tags: ['재생사이클', '효율']
+  },
+  {
+    id: 'MECH_135',
+    subject: '열역학',
+    question: '조절 단열(Throttling)의 특징은?',
+    options: ['엔탈피 일정', '엔트로피 일정', '온도 일정', '압력 일정'],
+    answer: 0,
+    explanation: '조절 단열 과정(팽창밸브)에서는 엔탈피가 일정하게 유지됩니다.',
+    difficulty: '상',
+    tags: ['조절단열', '팽창']
+  },
+  {
+    id: 'MECH_136',
+    subject: '유체역학',
+    question: '양력(Lift) 발생의 원리는?',
+    options: ['파스칼의 원리', '베르누이 원리', '아르키메데스 원리', '뉴턴 제3법칙만'],
+    answer: 1,
+    explanation: '양력은 날개 위아래 압력 차이로 발생하며, 베르누이 원리로 설명됩니다.',
+    difficulty: '중',
+    tags: ['양력', '공기역학']
+  },
+  {
+    id: 'MECH_137',
+    subject: '유체역학',
+    question: '무차원수가 아닌 것은?',
+    options: ['레이놀즈 수', '마하 수', '프루드 수', '점성계수'],
+    answer: 3,
+    explanation: '점성계수는 차원을 가지며, 레이놀즈, 마하, 프루드 수는 무차원수입니다.',
+    difficulty: '하',
+    tags: ['무차원수', '유체']
+  },
+  {
+    id: 'MECH_138',
+    subject: '기계제작법',
+    question: 'ECM(Electrochemical Machining)의 원리는?',
+    options: ['기계적 절삭', '전기 화학 반응', '열 용융', '초음파'],
+    answer: 1,
+    explanation: 'ECM은 전해액 중에서 전기 화학 반응으로 금속을 용해시키는 가공법입니다.',
+    difficulty: '중',
+    tags: ['ECM', '특수가공']
+  },
+  {
+    id: 'MECH_139',
+    subject: '기계제작법',
+    question: 'SLA(Stereolithography) 3D 프린팅의 특징은?',
+    options: ['필라멘트 사용', '광경화성 레진 사용', '금속 분말 사용', '종이 적층'],
+    answer: 1,
+    explanation: 'SLA는 자외선 레이저로 액상 광경화성 수지를 경화시키는 방식입니다.',
+    difficulty: '중',
+    tags: ['SLA', '3D프린팅']
+  },
+  {
+    id: 'MECH_140',
+    subject: '기계동력학',
+    question: '임계 감쇠(Critical Damping)의 특징은?',
+    options: ['진동 지속', '가장 빠른 수렴', '공진', '발산'],
+    answer: 1,
+    explanation: '임계 감쇠는 진동 없이 가장 빠르게 평형 상태로 수렴합니다.',
+    difficulty: '중',
+    tags: ['감쇠', '진동']
+  },
+  {
+    id: 'MECH_141',
+    subject: '기계재료',
+    question: '비파괴 검사 방법이 아닌 것은?',
+    options: ['초음파 탐상', '방사선 투과', '자기 탐상', '인장 시험'],
+    answer: 3,
+    explanation: '인장 시험은 파괴 시험이며, 초음파, 방사선, 자기 탐상은 비파괴 검사입니다.',
+    difficulty: '하',
+    tags: ['비파괴검사', '시험']
+  },
+  {
+    id: 'MECH_142',
+    subject: '기계설계',
+    question: '볼 나사(Ball Screw)의 장점이 아닌 것은?',
+    options: ['높은 효율', '역전 방지', '정밀 이송', '백래시 최소화'],
+    answer: 1,
+    explanation: '볼 나사는 효율이 높고 정밀하지만, 역전 방지 기능은 없어 별도 브레이크가 필요합니다.',
+    difficulty: '중',
+    tags: ['볼나사', '이송장치']
+  },
+  {
+    id: 'MECH_143',
+    subject: '재료역학',
+    question: '탄성 에너지(Strain Energy)는 무엇에 비례하는가?',
+    options: ['응력', '변형률', '응력의 제곱', '하중'],
+    answer: 2,
+    explanation: '탄성 에너지 U = (1/2)σε×V = (σ²/2E)×V로 응력의 제곱에 비례합니다.',
+    difficulty: '상',
+    tags: ['탄성에너지', '에너지']
+  },
+  {
+    id: 'MECH_144',
+    subject: '열역학',
+    question: '습도 측정 장치가 아닌 것은?',
+    options: ['건습구 온도계', '모발 습도계', '압력계', '노점 습도계'],
+    answer: 2,
+    explanation: '압력계는 압력 측정 장치이며, 나머지는 습도 측정에 사용됩니다.',
+    difficulty: '하',
+    tags: ['습도', '측정']
+  },
+  {
+    id: 'MECH_145',
+    subject: '유체역학',
+    question: '정수압의 특성이 아닌 것은?',
+    options: ['깊이에 비례', '모든 방향 동일', '수평면에서 일정', '유속에 비례'],
+    answer: 3,
+    explanation: '정수압은 깊이에 비례하고 모든 방향으로 같으며, 유속과는 무관합니다.',
+    difficulty: '하',
+    tags: ['정수압', '압력']
+  },
+  {
+    id: 'MECH_146',
+    subject: '기계제작법',
+    question: '열간 가공과 냉간 가공의 구분 기준은?',
+    options: ['실온', '재결정 온도', '용융점', '비등점'],
+    answer: 1,
+    explanation: '재결정 온도 이상은 열간 가공, 이하는 냉간 가공으로 분류합니다.',
+    difficulty: '중',
+    tags: ['열간가공', '냉간가공']
+  },
+  {
+    id: 'MECH_147',
+    subject: '기계동력학',
+    question: '밸런싱(Balancing)의 목적은?',
+    options: ['속도 증가', '진동 감소', '토크 증가', '효율 향상'],
+    answer: 1,
+    explanation: '밸런싱은 회전체의 질량 중심을 회전축과 일치시켜 진동을 감소시킵니다.',
+    difficulty: '하',
+    tags: ['밸런싱', '진동']
+  },
+  {
+    id: 'MECH_148',
+    subject: '기계재료',
+    question: '세라믹 재료의 특성으로 옳지 않은 것은?',
+    options: ['높은 경도', '우수한 내열성', '높은 인성', '내식성'],
+    answer: 2,
+    explanation: '세라믹은 경도와 내열성이 우수하지만 취성이 커서 인성이 낮습니다.',
+    difficulty: '중',
+    tags: ['세라믹', '특성']
+  },
+  {
+    id: 'MECH_149',
+    subject: '기계설계',
+    question: 'O-링(O-Ring)의 용도는?',
+    options: ['동력 전달', '밀봉', '지지', '가이드'],
+    answer: 1,
+    explanation: 'O-링은 고무 재질의 링으로 유체 누설을 방지하는 밀봉 장치입니다.',
+    difficulty: '하',
+    tags: ['O링', '밀봉']
+  },
+  {
+    id: 'MECH_150',
+    subject: '기계설계',
+    question: 'ISO 미터 나사의 골지름과 피치의 관계는?',
+    options: ['골지름 = 호칭지름 - 피치', '골지름 = 호칭지름 - 1.2×피치', '골지름 = 호칭지름 - 1.5×피치', '골지름 = 호칭지름 - 2×피치'],
+    answer: 1,
+    explanation: 'ISO 미터 나사의 골지름 d₂ = d - 1.2268P (약 1.2P)입니다.',
+    difficulty: '상',
+    tags: ['나사', '치수']
   }
 ];
 

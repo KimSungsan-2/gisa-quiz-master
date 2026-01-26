@@ -999,6 +999,506 @@ export const refrigerationQuestions = [
     explanation: '냉매 충전은 천천히 해야 하며, 환기, 화기 금지, 보호구 착용이 필수입니다.',
     difficulty: '하',
     tags: ['안전', '냉매충전']
+  },
+  {
+    id: 'REF_101',
+    subject: '냉동공조이론',
+    question: '냉동 사이클에서 플래시 가스(Flash Gas)가 발생하는 위치는?',
+    options: ['압축기', '응축기', '팽창밸브 직후', '증발기 입구'],
+    answer: 2,
+    explanation: '팽창밸브 통과 직후 압력이 급격히 감소하면서 액체 냉매 일부가 증발하여 플래시 가스가 발생합니다.',
+    difficulty: '중',
+    tags: ['플래시가스', '냉동사이클']
+  },
+  {
+    id: 'REF_102',
+    subject: '냉동공조이론',
+    question: '증기압축식 냉동기의 이론 사이클은?',
+    options: ['카르노 사이클', '랭킨 사이클', '역 카르노 사이클', '오토 사이클'],
+    answer: 2,
+    explanation: '증기압축식 냉동기의 이론적 기준은 역 카르노 사이클이며, 실제로는 표준 냉동 사이클을 사용합니다.',
+    difficulty: '중',
+    tags: ['냉동사이클', '이론']
+  },
+  {
+    id: 'REF_103',
+    subject: '냉동공조장치',
+    question: '로터리 압축기의 특징으로 옳지 않은 것은?',
+    options: ['소형 경량', '진동이 적음', '고압비에 적합', '저소음'],
+    answer: 2,
+    explanation: '로터리 압축기는 소형 경량이고 진동과 소음이 적지만, 고압비 압축에는 적합하지 않습니다.',
+    difficulty: '중',
+    tags: ['압축기', '로터리']
+  },
+  {
+    id: 'REF_104',
+    subject: '냉동공조장치',
+    question: '이코노마이저(Economizer)의 목적은?',
+    options: ['압력 증가', '냉동 효율 향상', '소음 감소', '진동 방지'],
+    answer: 1,
+    explanation: '이코노마이저는 중간 압력에서 플래시 가스를 분리하여 냉동 효율과 COP를 향상시킵니다.',
+    difficulty: '상',
+    tags: ['이코노마이저', '효율']
+  },
+  {
+    id: 'REF_105',
+    subject: '냉동공조장치',
+    question: '셸 앤 튜브(Shell and Tube) 응축기의 장점이 아닌 것은?',
+    options: ['높은 전열 효율', '대용량 적합', '설치 공간 작음', '청소 용이'],
+    answer: 2,
+    explanation: '셸 앤 튜브형은 전열 효율과 용량이 크지만, 공랭식보다 설치 공간이 많이 필요합니다.',
+    difficulty: '하',
+    tags: ['응축기', '셸앤튜브']
+  },
+  {
+    id: 'REF_106',
+    subject: '냉동공조이론',
+    question: '습공기의 비엔탈피가 일정한 과정은?',
+    options: ['가열', '냉각', '가습', '단열 가습'],
+    answer: 3,
+    explanation: '단열 가습(증발식 냉각) 과정에서는 비엔탈피가 일정하게 유지됩니다.',
+    difficulty: '상',
+    tags: ['습공기', '엔탈피']
+  },
+  {
+    id: 'REF_107',
+    subject: '냉동공조이론',
+    question: '공조 부하 중 잠열 부하에 해당하는 것은?',
+    options: ['외벽 관류', '환기 부하 중 습도 변화', '조명 발열', '인체 현열'],
+    answer: 1,
+    explanation: '잠열 부하는 습도 변화와 관련되며, 환기나 침입 공기의 수분, 인체 잠열 등이 해당합니다.',
+    difficulty: '중',
+    tags: ['공조부하', '잠열']
+  },
+  {
+    id: 'REF_108',
+    subject: '냉동공조장치',
+    question: '액분리기(Liquid Separator)의 설치 목적은?',
+    options: ['냉매 저장', '액 냉매가 압축기로 유입 방지', '오일 분리', '압력 조절'],
+    answer: 1,
+    explanation: '액분리기는 증발기 출구에서 액체 냉매를 분리하여 압축기의 액압축을 방지합니다.',
+    difficulty: '중',
+    tags: ['액분리기', '보호장치']
+  },
+  {
+    id: 'REF_109',
+    subject: '냉동공조장치',
+    question: '모세관(Capillary Tube) 팽창밸브의 특징은?',
+    options: ['자동 조절 가능', '구조 단순', '부하 변동 대응 우수', '대용량 적합'],
+    answer: 1,
+    explanation: '모세관은 구조가 단순하고 저렴하지만, 자동 조절이 불가능하고 부하 변동에 취약합니다.',
+    difficulty: '하',
+    tags: ['모세관', '팽창장치']
+  },
+  {
+    id: 'REF_110',
+    subject: '냉동공조이론',
+    question: 'R-134a 냉매의 특징으로 옳은 것은?',
+    options: ['CFC 계열', 'HFC 계열', 'HCFC 계열', '자연 냉매'],
+    answer: 1,
+    explanation: 'R-134a는 HFC(수소불화탄소) 계열로 ODP는 0이지만 GWP가 높습니다.',
+    difficulty: '하',
+    tags: ['냉매', 'R-134a']
+  },
+  {
+    id: 'REF_111',
+    subject: '냉동공조이론',
+    question: '냉동유(Refrigeration Oil)의 역할이 아닌 것은?',
+    options: ['윤활', '냉각', '밀봉', '냉매 증발'],
+    answer: 3,
+    explanation: '냉동유는 압축기 내부의 윤활, 냉각, 밀봉 역할을 하며, 냉매 증발과는 무관합니다.',
+    difficulty: '하',
+    tags: ['냉동유', '윤활']
+  },
+  {
+    id: 'REF_112',
+    subject: '냉동공조장치',
+    question: '증발기의 서리 제거 방법 중 가장 효율적인 것은?',
+    options: ['자연 제상', '전기 히터 제상', '온수 제상', '역사이클(핫가스) 제상'],
+    answer: 3,
+    explanation: '역사이클 제상은 압축기 토출 고온가스를 이용하여 효율적이고 빠른 제상이 가능합니다.',
+    difficulty: '중',
+    tags: ['제상', '증발기']
+  },
+  {
+    id: 'REF_113',
+    subject: '냉동공조장치',
+    question: '다단 압축 냉동 사이클의 장점이 아닌 것은?',
+    options: ['압축비 감소', '토출 온도 저하', '체적 효율 향상', '초기 비용 절감'],
+    answer: 3,
+    explanation: '다단 압축은 압축비와 토출 온도를 낮추고 효율을 향상시키지만, 초기 비용은 증가합니다.',
+    difficulty: '중',
+    tags: ['다단압축', '효율']
+  },
+  {
+    id: 'REF_114',
+    subject: '냉동공조이론',
+    question: '공기조화의 4대 요소가 아닌 것은?',
+    options: ['온도', '습도', '청정도', '압력'],
+    answer: 3,
+    explanation: '공기조화의 4대 요소는 온도, 습도, 청정도, 기류(공기 분포)입니다.',
+    difficulty: '하',
+    tags: ['공조', '4대요소']
+  },
+  {
+    id: 'REF_115',
+    subject: '냉동공조장치',
+    question: '축열식 공조 시스템의 장점은?',
+    options: ['초기 비용 저렴', '전력 피크 부하 절감', '설치 공간 작음', '유지보수 불필요'],
+    answer: 1,
+    explanation: '축열식 시스템은 야간 전력을 이용해 축열하여 주간 전력 피크 부하를 절감합니다.',
+    difficulty: '중',
+    tags: ['축열', '공조시스템']
+  },
+  {
+    id: 'REF_116',
+    subject: '전기제어공학',
+    question: 'DOL(Direct On-Line) 기동 방식의 특징은?',
+    options: ['기동 전류 작음', '기동 토크 큼', '부드러운 기동', '인버터 사용'],
+    answer: 1,
+    explanation: 'DOL 기동은 전전압을 직접 인가하여 기동 토크는 크지만 기동 전류가 큽니다.',
+    difficulty: '중',
+    tags: ['전동기', 'DOL기동']
+  },
+  {
+    id: 'REF_117',
+    subject: '전기제어공학',
+    question: 'PID 제어에서 D(미분) 동작의 역할은?',
+    options: ['잔류 편차 제거', '응답 속도 향상', '오차 변화율에 대응', '안정성 향상'],
+    answer: 2,
+    explanation: '미분 동작은 오차의 변화율을 감지하여 빠른 변화에 선제적으로 대응합니다.',
+    difficulty: '상',
+    tags: ['PID', '미분제어']
+  },
+  {
+    id: 'REF_118',
+    subject: '전기제어공학',
+    question: '시퀀스 제어에서 자기 유지 회로의 목적은?',
+    options: ['순간 정지', '연속 운전', '속도 제어', '역률 개선'],
+    answer: 1,
+    explanation: '자기 유지 회로는 순간 스위치를 눌러도 전동기가 계속 운전되도록 하는 회로입니다.',
+    difficulty: '하',
+    tags: ['시퀀스', '자기유지']
+  },
+  {
+    id: 'REF_119',
+    subject: '냉동공조관련 법규',
+    question: '냉매 회수 재활용 촉진법의 목적은?',
+    options: ['비용 절감', '오존층 보호 및 지구온난화 방지', '성능 향상', '설치 간소화'],
+    answer: 1,
+    explanation: '냉매 회수 법규는 오존층 파괴와 지구온난화 방지를 위해 냉매의 적절한 회수와 재활용을 의무화합니다.',
+    difficulty: '하',
+    tags: ['법규', '냉매회수']
+  },
+  {
+    id: 'REF_120',
+    subject: '냉동공조관련 법규',
+    question: '냉동기 안전밸브(Safety Valve)의 설정 압력은?',
+    options: ['설계 압력의 50% 이하', '설계 압력의 80% 이하', '설계 압력 이하', '설계 압력의 110% 이하'],
+    answer: 3,
+    explanation: '안전밸브는 설계 압력의 110% 이하에서 작동하도록 설정해야 합니다.',
+    difficulty: '상',
+    tags: ['안전밸브', '법규']
+  },
+  {
+    id: 'REF_121',
+    subject: '냉동공조이론',
+    question: '냉매의 임계 온도(Critical Temperature)의 의미는?',
+    options: ['비등점', '응축 불가능한 최저 온도', '응축 가능한 최고 온도', '증발점'],
+    answer: 2,
+    explanation: '임계 온도는 압력을 아무리 높여도 냉매를 액화할 수 없는 한계 온도입니다.',
+    difficulty: '상',
+    tags: ['임계온도', '냉매']
+  },
+  {
+    id: 'REF_122',
+    subject: '냉동공조이론',
+    question: '증발 압력이 일정할 때 응축 압력이 상승하면 나타나는 현상은?',
+    options: ['냉동 능력 증가', '압축비 증가', 'COP 증가', '소비 동력 감소'],
+    answer: 1,
+    explanation: '응축 압력 상승은 압축비를 증가시키고, COP 감소 및 소비 동력 증가를 초래합니다.',
+    difficulty: '중',
+    tags: ['압축비', '성능']
+  },
+  {
+    id: 'REF_123',
+    subject: '냉동공조장치',
+    question: '인버터 압축기의 장점이 아닌 것은?',
+    options: ['부하 변동 대응', '에너지 절감', '정밀 온도 제어', '구조 단순'],
+    answer: 3,
+    explanation: '인버터 압축기는 부하 대응과 에너지 절감이 우수하지만, 제어 시스템이 복잡합니다.',
+    difficulty: '하',
+    tags: ['인버터', '압축기']
+  },
+  {
+    id: 'REF_124',
+    subject: '냉동공조장치',
+    question: '크랭크케이스 히터(Crankcase Heater)의 목적은?',
+    options: ['냉매 과열', '오일 희석 방지', '압축 효율 향상', '소음 감소'],
+    answer: 1,
+    explanation: '크랭크케이스 히터는 정지 중 오일에 냉매가 용해되는 것을 방지하여 기동 시 액압축을 예방합니다.',
+    difficulty: '중',
+    tags: ['크랭크케이스히터', '압축기']
+  },
+  {
+    id: 'REF_125',
+    subject: '냉동공조이론',
+    question: '등온 변화 과정에서 엔트로피는?',
+    options: ['증가', '감소', '일정', '0'],
+    answer: 0,
+    explanation: '가역 등온 과정에서 열을 흡수하면 엔트로피가 증가하고, 열을 방출하면 감소합니다.',
+    difficulty: '상',
+    tags: ['엔트로피', '열역학']
+  },
+  {
+    id: 'REF_126',
+    subject: '냉동공조장치',
+    question: '패키지 에어컨(PAC)의 특징으로 옳지 않은 것은?',
+    options: ['일체형 구조', '설치 용이', '냉매 배관 작업 불필요', '개별 제어 어려움'],
+    answer: 3,
+    explanation: '패키지 에어컨은 일체형으로 설치가 용이하지만, 실별 개별 제어는 어렵습니다.',
+    difficulty: '하',
+    tags: ['패키지에어컨', 'PAC']
+  },
+  {
+    id: 'REF_127',
+    subject: '냉동공조장치',
+    question: '팬코일 유닛(FCU)의 주요 구성품이 아닌 것은?',
+    options: ['열교환 코일', '송풍기', '압축기', '필터'],
+    answer: 2,
+    explanation: 'FCU는 열교환 코일, 송풍기, 필터로 구성되며, 압축기는 냉동기에 있습니다.',
+    difficulty: '하',
+    tags: ['FCU', '공조설비']
+  },
+  {
+    id: 'REF_128',
+    subject: '냉동공조이론',
+    question: 'PMV(Predicted Mean Vote)가 0일 때의 의미는?',
+    options: ['매우 덥다', '쾌적하다', '매우 춥다', '불쾌하다'],
+    answer: 1,
+    explanation: 'PMV는 온열 쾌적도 지표로, 0은 중립(쾌적)을 의미합니다.',
+    difficulty: '중',
+    tags: ['PMV', '쾌적도']
+  },
+  {
+    id: 'REF_129',
+    subject: '냉동공조장치',
+    question: '전열 교환기(Total Heat Exchanger)의 장점은?',
+    options: ['난방만 가능', '현열만 회수', '현열과 잠열 모두 회수', '환기 불필요'],
+    answer: 2,
+    explanation: '전열 교환기는 현열(온도)과 잠열(습도) 모두 회수하여 에너지를 절약합니다.',
+    difficulty: '중',
+    tags: ['전열교환기', '환기']
+  },
+  {
+    id: 'REF_130',
+    subject: '냉동공조이론',
+    question: 'SHF(Sensible Heat Factor)의 정의는?',
+    options: ['잠열 / 전열', '현열 / 전열', '전열 / 현열', '현열 - 잠열'],
+    answer: 1,
+    explanation: 'SHF = 현열 / (현열 + 잠열) = 현열 / 전열입니다.',
+    difficulty: '중',
+    tags: ['SHF', '현열비']
+  },
+  {
+    id: 'REF_131',
+    subject: '냉동공조장치',
+    question: '바이패스 댐퍼(Bypass Damper)의 목적은?',
+    options: ['풍량 고정', '풍량 조절', '압력 조절', '온도 조절'],
+    answer: 2,
+    explanation: '바이패스 댐퍼는 덕트 내 압력을 조절하여 시스템을 안정화합니다.',
+    difficulty: '중',
+    tags: ['댐퍼', '공조']
+  },
+  {
+    id: 'REF_132',
+    subject: '전기제어공학',
+    question: '리미트 스위치(Limit Switch)의 용도는?',
+    options: ['속도 제어', '위치 검출', '온도 측정', '압력 측정'],
+    answer: 1,
+    explanation: '리미트 스위치는 기계적 위치를 검출하여 동작을 제어하는 스위치입니다.',
+    difficulty: '하',
+    tags: ['리미트스위치', '센서']
+  },
+  {
+    id: 'REF_133',
+    subject: '전기제어공학',
+    question: 'PWM(Pulse Width Modulation)의 용도는?',
+    options: ['전압 측정', '속도 제어', '온도 측정', '압력 제어'],
+    answer: 1,
+    explanation: 'PWM은 펄스 폭을 조절하여 전동기 속도나 밝기 등을 제어합니다.',
+    difficulty: '중',
+    tags: ['PWM', '제어']
+  },
+  {
+    id: 'REF_134',
+    subject: '냉동공조관련 법규',
+    question: '냉동기의 내압 시험 압력은?',
+    options: ['상용 압력', '설계 압력', '설계 압력의 1.5배', '설계 압력의 2배'],
+    answer: 2,
+    explanation: '내압 시험은 설계 압력의 1.5배 이상의 압력으로 실시해야 합니다.',
+    difficulty: '상',
+    tags: ['내압시험', '법규']
+  },
+  {
+    id: 'REF_135',
+    subject: '냉동공조관련 법규',
+    question: 'GWP가 높은 냉매 사용 규제의 근거는?',
+    options: ['몬트리올 의정서', '교토 의정서', '파리 협정', '모두 해당'],
+    answer: 3,
+    explanation: '몬트리올(오존), 교토(온실가스), 파리(기후변화) 협정 모두 냉매 규제와 관련됩니다.',
+    difficulty: '중',
+    tags: ['GWP', '국제협약']
+  },
+  {
+    id: 'REF_136',
+    subject: '냉동공조이론',
+    question: 'A급 불연 냉매는?',
+    options: ['R-32', 'R-410A', 'R-290', 'R-600a'],
+    answer: 1,
+    explanation: 'R-410A는 A급 불연 냉매이고, R-32는 A2L(약연성), R-290과 R-600a는 A3(가연성)입니다.',
+    difficulty: '중',
+    tags: ['냉매', '안전등급']
+  },
+  {
+    id: 'REF_137',
+    subject: '냉동공조장치',
+    question: '터보 압축기(원심 압축기)의 서징(Surging) 현상이란?',
+    options: ['과부하', '유량 부족으로 인한 불안정', '과열', '소음'],
+    answer: 1,
+    explanation: '서징은 유량이 너무 작을 때 압축기 내부에서 유동이 역류하는 불안정 현상입니다.',
+    difficulty: '상',
+    tags: ['서징', '터보압축기']
+  },
+  {
+    id: 'REF_138',
+    subject: '냉동공조장치',
+    question: '디퓨저(Diffuser)의 역할은?',
+    options: ['풍속 증가', '풍속 감소 및 확산', '온도 조절', '습도 조절'],
+    answer: 1,
+    explanation: '디퓨저는 급기 속도를 감소시키고 공기를 실내에 균일하게 확산시킵니다.',
+    difficulty: '하',
+    tags: ['디퓨저', '취출구']
+  },
+  {
+    id: 'REF_139',
+    subject: '냉동공조이론',
+    question: '제습 냉각 과정에서 습공기선도상의 이동 방향은?',
+    options: ['우상향', '우하향', '좌상향', '좌하향'],
+    answer: 3,
+    explanation: '제습 냉각은 온도와 절대습도가 모두 감소하므로 좌하향으로 이동합니다.',
+    difficulty: '중',
+    tags: ['습공기선도', '제습']
+  },
+  {
+    id: 'REF_140',
+    subject: '냉동공조장치',
+    question: 'VRF(Variable Refrigerant Flow) 시스템의 장점이 아닌 것은?',
+    options: ['실별 개별 제어', '에너지 효율', '초기 비용 저렴', '동시 냉난방'],
+    answer: 2,
+    explanation: 'VRF는 개별 제어와 효율이 우수하지만 초기 설치 비용이 높습니다.',
+    difficulty: '하',
+    tags: ['VRF', '공조시스템']
+  },
+  {
+    id: 'REF_141',
+    subject: '냉동공조장치',
+    question: '오리피스(Orifice)의 용도는?',
+    options: ['압력 증가', '유량 측정 및 제한', '온도 측정', '습도 조절'],
+    answer: 1,
+    explanation: '오리피스는 관로에 설치하여 유량을 측정하거나 제한하는 장치입니다.',
+    difficulty: '하',
+    tags: ['오리피스', '유량']
+  },
+  {
+    id: 'REF_142',
+    subject: '냉동공조이론',
+    question: '성에(Frost) 발생의 주요 원인은?',
+    options: ['증발 온도가 이슬점보다 높음', '증발 온도가 빙점 이하', '응축 온도가 높음', '압축비가 낮음'],
+    answer: 1,
+    explanation: '증발기 표면 온도가 0℃ 이하일 때 공기 중 수분이 얼어 성에가 발생합니다.',
+    difficulty: '중',
+    tags: ['성에', '제상']
+  },
+  {
+    id: 'REF_143',
+    subject: '전기제어공학',
+    question: '온도 센서 중 응답 속도가 가장 빠른 것은?',
+    options: ['바이메탈', '열전대(Thermocouple)', 'RTD', '서미스터'],
+    answer: 1,
+    explanation: '열전대는 응답 속도가 빠르고 넓은 온도 범위를 측정할 수 있습니다.',
+    difficulty: '중',
+    tags: ['온도센서', '열전대']
+  },
+  {
+    id: 'REF_144',
+    subject: '전기제어공학',
+    question: 'IoT 기반 스마트 공조 시스템의 장점이 아닌 것은?',
+    options: ['원격 제어', '에너지 최적화', '예측 유지보수', '초기 비용 절감'],
+    answer: 3,
+    explanation: 'IoT 시스템은 편의성과 효율성이 높지만 초기 구축 비용이 증가합니다.',
+    difficulty: '하',
+    tags: ['IoT', '스마트공조']
+  },
+  {
+    id: 'REF_145',
+    subject: '냉동공조관련 법규',
+    question: '냉동기 기밀 시험의 목적은?',
+    options: ['성능 측정', '누설 확인', '압축비 측정', '소음 측정'],
+    answer: 1,
+    explanation: '기밀 시험은 냉동 시스템의 누설 여부를 확인하기 위해 실시합니다.',
+    difficulty: '하',
+    tags: ['기밀시험', '검사']
+  },
+  {
+    id: 'REF_146',
+    subject: '냉동공조관련 법규',
+    question: '냉매 종류별 안전 그룹 분류에서 독성이 높은 것은?',
+    options: ['A등급', 'B등급', '1등급', '2등급'],
+    answer: 1,
+    explanation: 'ASHRAE 냉매 안전 등급에서 A는 저독성, B는 고독성을 의미합니다.',
+    difficulty: '중',
+    tags: ['냉매', '안전등급']
+  },
+  {
+    id: 'REF_147',
+    subject: '냉동공조이론',
+    question: '자연 냉매가 아닌 것은?',
+    options: ['암모니아(R-717)', '이산화탄소(R-744)', '프로판(R-290)', 'R-1234yf'],
+    answer: 3,
+    explanation: 'R-1234yf는 HFO 계열 합성 냉매입니다. 암모니아, CO2, 탄화수소는 자연 냉매입니다.',
+    difficulty: '중',
+    tags: ['자연냉매', '환경']
+  },
+  {
+    id: 'REF_148',
+    subject: '냉동공조장치',
+    question: '판형 열교환기(Plate Heat Exchanger)의 장점은?',
+    options: ['대형 제작 용이', '높은 열전달 효율', '고압 적합', '청소 어려움'],
+    answer: 1,
+    explanation: '판형 열교환기는 열전달 면적이 넓고 효율이 높으며 컴팩트한 구조입니다.',
+    difficulty: '중',
+    tags: ['판형열교환기', '열교환']
+  },
+  {
+    id: 'REF_149',
+    subject: '냉동공조장치',
+    question: '언더플로어 공조(Underfloor Air Distribution)의 장점은?',
+    options: ['천장 높이 필요', '개인별 제어 가능', '초기 비용 저렴', '유지보수 불필요'],
+    answer: 1,
+    explanation: '언더플로어 공조는 바닥에서 급기하여 개인별 제어가 용이하고 실내 공기질이 향상됩니다.',
+    difficulty: '상',
+    tags: ['언더플로어', '공조방식']
+  },
+  {
+    id: 'REF_150',
+    subject: '냉동공조이론',
+    question: '기화 냉각(Evaporative Cooling)의 원리는?',
+    options: ['압축', '물의 증발 잠열 이용', '팽창', '응축'],
+    answer: 1,
+    explanation: '기화 냉각은 물이 증발할 때 주변에서 잠열을 흡수하여 공기를 냉각시키는 원리입니다.',
+    difficulty: '중',
+    tags: ['기화냉각', '냉각방식']
   }
 ];
 

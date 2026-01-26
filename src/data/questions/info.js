@@ -999,6 +999,506 @@ export const infoQuestions = [
     explanation: 'Monolithic은 개발 초기에는 단순하다는 장점이 있습니다. 배포 복잡도, 장애 전파, 기술 제약은 단점입니다.',
     difficulty: '중',
     tags: ['모놀리식', '아키텍처']
+  },
+  {
+    id: 'INFO_101',
+    subject: '소프트웨어 설계',
+    question: 'Domain-Driven Design(DDD)에서 Entity의 특징은?',
+    options: ['속성만으로 구별', '고유 식별자로 구별', '불변 객체', '생명주기 없음'],
+    answer: 1,
+    explanation: 'Entity는 고유 식별자(ID)를 가지며, 속성이 변해도 동일한 객체로 인식됩니다.',
+    difficulty: '중',
+    tags: ['DDD', 'Entity']
+  },
+  {
+    id: 'INFO_102',
+    subject: '소프트웨어 설계',
+    question: 'Saga 패턴의 주요 목적은?',
+    options: ['동기 처리', '분산 트랜잭션 관리', '데이터 압축', '로드 밸런싱'],
+    answer: 1,
+    explanation: 'Saga 패턴은 마이크로서비스 환경에서 분산 트랜잭션을 관리하기 위한 패턴입니다.',
+    difficulty: '상',
+    tags: ['Saga', '분산트랜잭션']
+  },
+  {
+    id: 'INFO_103',
+    subject: '데이터베이스 구축',
+    question: '파티셔닝(Partitioning)의 장점이 아닌 것은?',
+    options: ['쿼리 성능 향상', '관리 용이성', 'ACID 완벽 보장', '가용성 향상'],
+    answer: 2,
+    explanation: '파티셔닝은 성능과 관리성을 향상시키지만, 분산으로 인해 ACID 보장이 복잡해질 수 있습니다.',
+    difficulty: '중',
+    tags: ['파티셔닝', '데이터베이스']
+  },
+  {
+    id: 'INFO_104',
+    subject: '데이터베이스 구축',
+    question: 'B-Tree 인덱스의 특징으로 옳은 것은?',
+    options: ['순차 접근만 가능', '범위 검색 불가', '균형 잡힌 트리 구조', '해시 기반'],
+    answer: 2,
+    explanation: 'B-Tree는 모든 리프 노드가 같은 레벨에 있는 균형 잡힌 트리로, 범위 검색에 효율적입니다.',
+    difficulty: '중',
+    tags: ['B-Tree', '인덱스']
+  },
+  {
+    id: 'INFO_105',
+    subject: '데이터베이스 구축',
+    question: '데이터베이스 Replication의 목적이 아닌 것은?',
+    options: ['가용성 향상', '읽기 성능 향상', '정규화', '재해 복구'],
+    answer: 2,
+    explanation: 'Replication은 데이터 복제를 통한 가용성, 성능, 복구 능력 향상이 목적이며, 정규화와는 무관합니다.',
+    difficulty: '하',
+    tags: ['Replication', '복제']
+  },
+  {
+    id: 'INFO_106',
+    subject: '프로그래밍 언어 활용',
+    question: 'TypeScript의 주요 특징은?',
+    options: ['동적 타입', '정적 타입', '저수준 언어', '어셈블리 언어'],
+    answer: 1,
+    explanation: 'TypeScript는 JavaScript에 정적 타입을 추가한 슈퍼셋 언어입니다.',
+    difficulty: '하',
+    tags: ['TypeScript', '타입']
+  },
+  {
+    id: 'INFO_107',
+    subject: '프로그래밍 언어 활용',
+    question: 'Python의 GIL(Global Interpreter Lock)이 영향을 주는 것은?',
+    options: ['메모리 사용량', 'CPU 멀티스레딩', '디스크 I/O', '네트워크 I/O'],
+    answer: 1,
+    explanation: 'GIL은 한 번에 하나의 스레드만 Python 바이트코드를 실행하도록 제한하여 CPU 멀티스레딩 성능에 영향을 줍니다.',
+    difficulty: '상',
+    tags: ['Python', 'GIL']
+  },
+  {
+    id: 'INFO_108',
+    subject: '프로그래밍 언어 활용',
+    question: 'REST API에서 멱등성(Idempotent)을 보장하는 HTTP 메서드는?',
+    options: ['POST', 'GET, PUT, DELETE', 'POST, PATCH', 'PUT만'],
+    answer: 1,
+    explanation: 'GET, PUT, DELETE는 멱등성을 보장합니다. POST는 멱등성을 보장하지 않습니다.',
+    difficulty: '중',
+    tags: ['REST', '멱등성']
+  },
+  {
+    id: 'INFO_109',
+    subject: '정보시스템 구축관리',
+    question: 'gRPC의 특징이 아닌 것은?',
+    options: ['HTTP/2 기반', 'Protocol Buffers 사용', 'JSON 전용', '양방향 스트리밍'],
+    answer: 2,
+    explanation: 'gRPC는 Protocol Buffers를 기본으로 사용하며, JSON이 아닌 바이너리 직렬화를 사용합니다.',
+    difficulty: '중',
+    tags: ['gRPC', 'RPC']
+  },
+  {
+    id: 'INFO_110',
+    subject: '정보시스템 구축관리',
+    question: 'Prometheus의 주요 용도는?',
+    options: ['데이터베이스', '모니터링 및 알림', '웹 서버', 'CI/CD'],
+    answer: 1,
+    explanation: 'Prometheus는 시계열 데이터 기반의 모니터링 및 알림 시스템입니다.',
+    difficulty: '하',
+    tags: ['Prometheus', '모니터링']
+  },
+  {
+    id: 'INFO_111',
+    subject: '소프트웨어 설계',
+    question: 'Event Sourcing 패턴의 핵심 개념은?',
+    options: ['상태 저장', '이벤트 기록', '동기 처리', '캐싱'],
+    answer: 1,
+    explanation: 'Event Sourcing은 상태 변화를 이벤트로 기록하여 전체 이력을 추적할 수 있습니다.',
+    difficulty: '상',
+    tags: ['Event Sourcing', '패턴']
+  },
+  {
+    id: 'INFO_112',
+    subject: '소프트웨어 설계',
+    question: 'API Gateway의 역할이 아닌 것은?',
+    options: ['라우팅', '인증/인가', '데이터베이스 쿼리', '부하 분산'],
+    answer: 2,
+    explanation: 'API Gateway는 라우팅, 인증, 부하 분산 등을 담당하며, 데이터베이스 쿼리는 백엔드 서비스의 역할입니다.',
+    difficulty: '중',
+    tags: ['API Gateway', '아키텍처']
+  },
+  {
+    id: 'INFO_113',
+    subject: '데이터베이스 구축',
+    question: 'CAP 정리에서 P(Partition Tolerance)의 의미는?',
+    options: ['성능', '파티션 내구성', '네트워크 분할 허용', '병렬 처리'],
+    answer: 2,
+    explanation: 'Partition Tolerance는 네트워크 분할이 발생해도 시스템이 계속 작동하는 것을 의미합니다.',
+    difficulty: '상',
+    tags: ['CAP', '분산시스템']
+  },
+  {
+    id: 'INFO_114',
+    subject: '데이터베이스 구축',
+    question: 'MongoDB의 특징으로 옳은 것은?',
+    options: ['관계형 DB', 'Document Store', 'Key-Value Store', 'Graph DB'],
+    answer: 1,
+    explanation: 'MongoDB는 JSON 형식의 문서를 저장하는 Document Store NoSQL 데이터베이스입니다.',
+    difficulty: '하',
+    tags: ['MongoDB', 'NoSQL']
+  },
+  {
+    id: 'INFO_115',
+    subject: '프로그래밍 언어 활용',
+    question: 'Golang의 goroutine은 무엇인가?',
+    options: ['패키지', '경량 스레드', '함수', '변수'],
+    answer: 1,
+    explanation: 'goroutine은 Go의 경량 스레드로, 적은 리소스로 동시성을 구현합니다.',
+    difficulty: '중',
+    tags: ['Golang', 'goroutine']
+  },
+  {
+    id: 'INFO_116',
+    subject: '프로그래밍 언어 활용',
+    question: 'Rust 언어의 주요 특징은?',
+    options: ['가비지 컬렉션', '소유권 시스템', '동적 타입', '인터프리터'],
+    answer: 1,
+    explanation: 'Rust는 소유권(Ownership) 시스템을 통해 메모리 안전성을 가비지 컬렉션 없이 보장합니다.',
+    difficulty: '상',
+    tags: ['Rust', '소유권']
+  },
+  {
+    id: 'INFO_117',
+    subject: '정보시스템 구축관리',
+    question: 'Service Mesh의 대표적인 예는?',
+    options: ['Nginx', 'Istio', 'Apache', 'Tomcat'],
+    answer: 1,
+    explanation: 'Istio는 마이크로서비스 간 통신을 관리하는 대표적인 Service Mesh 도구입니다.',
+    difficulty: '중',
+    tags: ['Service Mesh', 'Istio']
+  },
+  {
+    id: 'INFO_118',
+    subject: '정보시스템 구축관리',
+    question: 'Terraform의 주요 용도는?',
+    options: ['코드 컴파일', 'Infrastructure as Code', '웹 개발', '데이터 분석'],
+    answer: 1,
+    explanation: 'Terraform은 인프라를 코드로 관리하는 IaC(Infrastructure as Code) 도구입니다.',
+    difficulty: '하',
+    tags: ['Terraform', 'IaC']
+  },
+  {
+    id: 'INFO_119',
+    subject: '소프트웨어 설계',
+    question: 'Hexagonal Architecture(포트와 어댑터)의 목적은?',
+    options: ['성능 향상', '비즈니스 로직과 외부 시스템 분리', '데이터 압축', '보안 강화'],
+    answer: 1,
+    explanation: 'Hexagonal Architecture는 비즈니스 로직을 외부 시스템(DB, UI 등)으로부터 분리합니다.',
+    difficulty: '상',
+    tags: ['Hexagonal', '아키텍처']
+  },
+  {
+    id: 'INFO_120',
+    subject: '소프트웨어 설계',
+    question: 'ATAM(Architecture Tradeoff Analysis Method)의 목적은?',
+    options: ['코딩 표준', '아키텍처 평가', '테스트 자동화', '배포 전략'],
+    answer: 1,
+    explanation: 'ATAM은 아키텍처의 품질 속성 간 트레이드오프를 분석하고 평가하는 방법입니다.',
+    difficulty: '상',
+    tags: ['ATAM', '평가']
+  },
+  {
+    id: 'INFO_121',
+    subject: '데이터베이스 구축',
+    question: 'Elasticsearch의 주요 용도는?',
+    options: ['관계형 데이터 저장', '전문 검색 엔진', '이미지 저장', '동영상 스트리밍'],
+    answer: 1,
+    explanation: 'Elasticsearch는 분산 전문 검색 및 분석 엔진입니다.',
+    difficulty: '하',
+    tags: ['Elasticsearch', '검색']
+  },
+  {
+    id: 'INFO_122',
+    subject: '데이터베이스 구축',
+    question: 'ACID 중 Isolation Level이 가장 높은 것은?',
+    options: ['READ UNCOMMITTED', 'READ COMMITTED', 'REPEATABLE READ', 'SERIALIZABLE'],
+    answer: 3,
+    explanation: 'SERIALIZABLE은 가장 높은 격리 수준으로 완전한 직렬화를 보장합니다.',
+    difficulty: '중',
+    tags: ['Isolation', 'ACID']
+  },
+  {
+    id: 'INFO_123',
+    subject: '프로그래밍 언어 활용',
+    question: 'WebAssembly(WASM)의 특징은?',
+    options: ['JavaScript만 지원', '브라우저에서 네이티브 수준 성능', 'HTML 전용', 'CSS 프레임워크'],
+    answer: 1,
+    explanation: 'WebAssembly는 브라우저에서 네이티브에 가까운 성능으로 실행되는 바이너리 포맷입니다.',
+    difficulty: '중',
+    tags: ['WebAssembly', 'WASM']
+  },
+  {
+    id: 'INFO_124',
+    subject: '프로그래밍 언어 활용',
+    question: 'GraphQL의 장점이 아닌 것은?',
+    options: ['Over-fetching 방지', 'Under-fetching 방지', '강력한 타입 시스템', 'RESTful 완전 대체 필수'],
+    answer: 3,
+    explanation: 'GraphQL은 유용하지만 RESTful을 완전히 대체해야 하는 것은 아니며, 상황에 따라 선택할 수 있습니다.',
+    difficulty: '중',
+    tags: ['GraphQL', 'API']
+  },
+  {
+    id: 'INFO_125',
+    subject: '정보시스템 구축관리',
+    question: 'ArgoCD의 주요 기능은?',
+    options: ['데이터베이스 관리', 'GitOps 기반 CD', '웹 서버', '로드 밸런서'],
+    answer: 1,
+    explanation: 'ArgoCD는 Kubernetes를 위한 GitOps 기반 지속적 배포(CD) 도구입니다.',
+    difficulty: '중',
+    tags: ['ArgoCD', 'GitOps']
+  },
+  {
+    id: 'INFO_126',
+    subject: '정보시스템 구축관리',
+    question: 'Zero Trust 보안 모델의 핵심 원칙은?',
+    options: ['내부 네트워크 신뢰', '모든 접근 검증', '방화벽만 사용', 'VPN 필수'],
+    answer: 1,
+    explanation: 'Zero Trust는 "신뢰하지 말고 항상 검증하라"는 원칙으로 모든 접근을 검증합니다.',
+    difficulty: '하',
+    tags: ['Zero Trust', '보안']
+  },
+  {
+    id: 'INFO_127',
+    subject: '소프트웨어 설계',
+    question: 'Reactive Programming의 핵심 개념은?',
+    options: ['동기 처리', '비동기 데이터 스트림', '절차적 프로그래밍', '순차 실행'],
+    answer: 1,
+    explanation: 'Reactive Programming은 비동기 데이터 스트림을 선언적으로 처리하는 패러다임입니다.',
+    difficulty: '중',
+    tags: ['Reactive', '비동기']
+  },
+  {
+    id: 'INFO_128',
+    subject: '소프트웨어 설계',
+    question: 'API 버전 관리 방법이 아닌 것은?',
+    options: ['URI 버전', 'Header 버전', 'Query Parameter 버전', 'Cookie 버전'],
+    answer: 3,
+    explanation: 'API 버전 관리는 URI, Header, Query Parameter로 주로 이루어지며, Cookie는 일반적이지 않습니다.',
+    difficulty: '하',
+    tags: ['API', '버전관리']
+  },
+  {
+    id: 'INFO_129',
+    subject: '데이터베이스 구축',
+    question: 'Cassandra의 특징으로 옳은 것은?',
+    options: ['관계형 DB', 'Column-Family Store', 'Document Store', 'Graph DB'],
+    answer: 1,
+    explanation: 'Cassandra는 분산 Column-Family Store NoSQL 데이터베이스입니다.',
+    difficulty: '중',
+    tags: ['Cassandra', 'NoSQL']
+  },
+  {
+    id: 'INFO_130',
+    subject: '데이터베이스 구축',
+    question: 'SQL Window 함수의 종류가 아닌 것은?',
+    options: ['ROW_NUMBER()', 'RANK()', 'PIVOT()', 'LEAD()'],
+    answer: 2,
+    explanation: 'PIVOT은 행을 열로 변환하는 기능이며, Window 함수는 ROW_NUMBER, RANK, LEAD 등이 있습니다.',
+    difficulty: '중',
+    tags: ['Window Function', 'SQL']
+  },
+  {
+    id: 'INFO_131',
+    subject: '프로그래밍 언어 활용',
+    question: 'Kotlin의 null 안전성 기능은?',
+    options: ['모든 변수 nullable', 'nullable/non-nullable 타입 구분', 'null 허용 안 함', 'null 체크 불필요'],
+    answer: 1,
+    explanation: 'Kotlin은 nullable(Type?)과 non-nullable(Type) 타입을 명확히 구분하여 null 안전성을 제공합니다.',
+    difficulty: '하',
+    tags: ['Kotlin', 'null 안전성']
+  },
+  {
+    id: 'INFO_132',
+    subject: '프로그래밍 언어 활용',
+    question: 'Lambda 함수(익명 함수)의 특징이 아닌 것은?',
+    options: ['일급 객체', '재사용성 매우 높음', '간결한 문법', '고차 함수와 함께 사용'],
+    answer: 1,
+    explanation: 'Lambda 함수는 일회성으로 사용되는 경우가 많아 재사용성이 높지 않을 수 있습니다.',
+    difficulty: '하',
+    tags: ['Lambda', '함수형']
+  },
+  {
+    id: 'INFO_133',
+    subject: '정보시스템 구축관리',
+    question: 'Chaos Engineering의 목적은?',
+    options: ['시스템 파괴', '장애 복원력 테스트', '성능 저하', '보안 취약점 생성'],
+    answer: 1,
+    explanation: 'Chaos Engineering은 의도적으로 장애를 주입하여 시스템의 복원력을 테스트합니다.',
+    difficulty: '상',
+    tags: ['Chaos Engineering', '복원력']
+  },
+  {
+    id: 'INFO_134',
+    subject: '정보시스템 구축관리',
+    question: 'Observability의 3 Pillar가 아닌 것은?',
+    options: ['Metrics', 'Logs', 'Traces', 'Alerts'],
+    answer: 3,
+    explanation: 'Observability의 3가지 기둥은 Metrics(지표), Logs(로그), Traces(추적)입니다.',
+    difficulty: '중',
+    tags: ['Observability', '모니터링']
+  },
+  {
+    id: 'INFO_135',
+    subject: '소프트웨어 설계',
+    question: 'BFF(Backend For Frontend) 패턴의 목적은?',
+    options: ['보안 강화', '프론트엔드별 최적화된 API 제공', '데이터베이스 통합', '캐싱'],
+    answer: 1,
+    explanation: 'BFF는 각 프론트엔드(웹, 모바일 등)에 최적화된 별도의 백엔드를 제공하는 패턴입니다.',
+    difficulty: '상',
+    tags: ['BFF', '패턴']
+  },
+  {
+    id: 'INFO_136',
+    subject: '소프트웨어 설계',
+    question: 'Software Bill of Materials(SBOM)의 용도는?',
+    options: ['비용 계산', '소프트웨어 구성요소 목록', '배포 계획', '테스트 케이스'],
+    answer: 1,
+    explanation: 'SBOM은 소프트웨어의 모든 구성요소와 의존성을 명시한 목록으로 보안과 라이선스 관리에 사용됩니다.',
+    difficulty: '중',
+    tags: ['SBOM', '보안']
+  },
+  {
+    id: 'INFO_137',
+    subject: '데이터베이스 구축',
+    question: 'Time-series Database의 대표적인 예는?',
+    options: ['MySQL', 'InfluxDB', 'Oracle', 'PostgreSQL'],
+    answer: 1,
+    explanation: 'InfluxDB는 시계열 데이터에 최적화된 데이터베이스입니다.',
+    difficulty: '하',
+    tags: ['Time-series', 'InfluxDB']
+  },
+  {
+    id: 'INFO_138',
+    subject: '데이터베이스 구축',
+    question: 'Database Connection Pool의 장점이 아닌 것은?',
+    options: ['연결 재사용', '응답 시간 감소', '메모리 사용량 증가', '동시 접속 제어'],
+    answer: 2,
+    explanation: 'Connection Pool은 연결을 재사용하여 효율성을 높이며, 메모리 사용량 증가는 장점이 아닙니다.',
+    difficulty: '하',
+    tags: ['Connection Pool', '성능']
+  },
+  {
+    id: 'INFO_139',
+    subject: '프로그래밍 언어 활용',
+    question: 'Git의 rebase와 merge의 주요 차이점은?',
+    options: ['기능 차이 없음', '커밋 히스토리 형태', '속도', '파일 크기'],
+    answer: 1,
+    explanation: 'rebase는 선형 히스토리를 만들고, merge는 병합 커밋을 생성하여 분기 히스토리를 유지합니다.',
+    difficulty: '중',
+    tags: ['Git', 'rebase']
+  },
+  {
+    id: 'INFO_140',
+    subject: '프로그래밍 언어 활용',
+    question: 'CORS(Cross-Origin Resource Sharing)가 필요한 이유는?',
+    options: ['성능 향상', '보안 정책', '압축', '캐싱'],
+    answer: 1,
+    explanation: 'CORS는 Same-Origin Policy를 우회하여 다른 도메인의 리소스에 안전하게 접근하기 위한 메커니즘입니다.',
+    difficulty: '중',
+    tags: ['CORS', '보안']
+  },
+  {
+    id: 'INFO_141',
+    subject: '정보시스템 구축관리',
+    question: 'Kubernetes의 Pod란?',
+    options: ['노드', '컨테이너 그룹의 최소 배포 단위', '네트워크', '스토리지'],
+    answer: 1,
+    explanation: 'Pod는 Kubernetes에서 배포 가능한 최소 단위로, 하나 이상의 컨테이너를 포함합니다.',
+    difficulty: '하',
+    tags: ['Kubernetes', 'Pod']
+  },
+  {
+    id: 'INFO_142',
+    subject: '정보시스템 구축관리',
+    question: 'Sidecar 패턴의 용도는?',
+    options: ['주 컨테이너와 독립적인 보조 기능 제공', '데이터 저장', '컴파일', '테스트'],
+    answer: 0,
+    explanation: 'Sidecar 패턴은 주 컨테이너와 함께 배포되어 로깅, 모니터링 등 보조 기능을 제공합니다.',
+    difficulty: '중',
+    tags: ['Sidecar', 'Kubernetes']
+  },
+  {
+    id: 'INFO_143',
+    subject: '소프트웨어 설계',
+    question: 'Contract Testing의 목적은?',
+    options: ['UI 테스트', 'API 제공자와 소비자 간 계약 검증', '부하 테스트', '보안 테스트'],
+    answer: 1,
+    explanation: 'Contract Testing은 API 제공자와 소비자 간의 계약(인터페이스)이 일치하는지 검증합니다.',
+    difficulty: '상',
+    tags: ['Contract Testing', '테스트']
+  },
+  {
+    id: 'INFO_144',
+    subject: '소프트웨어 설계',
+    question: 'Strangler Fig 패턴의 목적은?',
+    options: ['새 시스템 구축', '레거시 시스템 점진적 교체', '성능 향상', '보안 강화'],
+    answer: 1,
+    explanation: 'Strangler Fig 패턴은 레거시 시스템을 새 시스템으로 점진적으로 교체하는 마이그레이션 전략입니다.',
+    difficulty: '상',
+    tags: ['Strangler Fig', '마이그레이션']
+  },
+  {
+    id: 'INFO_145',
+    subject: '데이터베이스 구축',
+    question: 'CDC(Change Data Capture)의 용도는?',
+    options: ['백업', '데이터 변경 감지 및 추적', '압축', '암호화'],
+    answer: 1,
+    explanation: 'CDC는 데이터베이스의 변경 사항을 실시간으로 감지하고 추적하는 기술입니다.',
+    difficulty: '중',
+    tags: ['CDC', '데이터베이스']
+  },
+  {
+    id: 'INFO_146',
+    subject: '데이터베이스 구축',
+    question: 'Materialized View의 특징은?',
+    options: ['가상 테이블', '물리적으로 저장된 쿼리 결과', '임시 테이블', '인덱스'],
+    answer: 1,
+    explanation: 'Materialized View는 쿼리 결과를 물리적으로 저장하여 조회 성능을 향상시킵니다.',
+    difficulty: '중',
+    tags: ['Materialized View', 'SQL']
+  },
+  {
+    id: 'INFO_147',
+    subject: '프로그래밍 언어 활용',
+    question: 'Actor 모델의 핵심 개념은?',
+    options: ['공유 메모리', '메시지 전달', '전역 변수', '락'],
+    answer: 1,
+    explanation: 'Actor 모델은 액터 간 메시지 전달로 동시성을 구현하며, 상태를 공유하지 않습니다.',
+    difficulty: '상',
+    tags: ['Actor', '동시성']
+  },
+  {
+    id: 'INFO_148',
+    subject: '프로그래밍 언어 활용',
+    question: 'Monorepo의 장점이 아닌 것은?',
+    options: ['코드 공유 용이', '일관된 의존성 관리', '독립적 배포 필수', '통합 CI/CD'],
+    answer: 2,
+    explanation: 'Monorepo는 여러 프로젝트를 하나의 저장소에서 관리하며, 독립 배포 여부는 별개입니다.',
+    difficulty: '중',
+    tags: ['Monorepo', '저장소']
+  },
+  {
+    id: 'INFO_149',
+    subject: '정보시스템 구축관리',
+    question: 'Blue-Green Deployment의 장점은?',
+    options: ['비용 절감', '무중단 배포', '개발 속도 향상', '코드 품질 향상'],
+    answer: 1,
+    explanation: 'Blue-Green Deployment는 구 버전과 신 버전을 동시에 유지하여 무중단 배포를 가능하게 합니다.',
+    difficulty: '하',
+    tags: ['Blue-Green', '배포']
+  },
+  {
+    id: 'INFO_150',
+    subject: '정보시스템 구축관리',
+    question: 'Feature Flag(Feature Toggle)의 용도는?',
+    options: ['보안 강화', '기능 동적 활성화/비활성화', '성능 향상', '데이터 압축'],
+    answer: 1,
+    explanation: 'Feature Flag는 코드 배포 없이 런타임에 기능을 활성화하거나 비활성화할 수 있습니다.',
+    difficulty: '중',
+    tags: ['Feature Flag', '배포']
   }
 ];
 

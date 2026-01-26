@@ -999,6 +999,506 @@ export const bigdataQuestions = [
     explanation: 'Federated Learning은 데이터를 중앙 서버로 전송하지 않고 분산된 디바이스에서 학습하여 프라이버시를 보호합니다.',
     difficulty: '상',
     tags: ['Federated Learning', '분산학습']
+  },
+  {
+    id: 'BAE_101',
+    subject: '빅데이터 분석 기획',
+    question: '데이터 분석 프로젝트에서 KPI(핵심성과지표) 설정 시 고려사항이 아닌 것은?',
+    options: ['측정 가능성', '비즈니스 목표와의 연계', '데이터 수집 비용', '분석가의 선호도'],
+    answer: 3,
+    explanation: 'KPI는 측정 가능하고 비즈니스 목표와 연계되며 비용 효율적이어야 하지만, 분석가 개인의 선호도는 고려사항이 아닙니다.',
+    difficulty: '하',
+    tags: ['KPI', '분석기획']
+  },
+  {
+    id: 'BAE_102',
+    subject: '빅데이터 탐색',
+    question: '다중공선성(Multicollinearity) 진단 방법이 아닌 것은?',
+    options: ['VIF(Variance Inflation Factor)', '상관계수', 'Condition Index', 'F-검정'],
+    answer: 3,
+    explanation: 'VIF, 상관계수, Condition Index는 다중공선성 진단에 사용되며, F-검정은 모델 전체의 유의성 검정입니다.',
+    difficulty: '중',
+    tags: ['다중공선성', '회귀분석']
+  },
+  {
+    id: 'BAE_103',
+    subject: '빅데이터 모델링',
+    question: 'Bagging과 Boosting의 차이점으로 옳은 것은?',
+    options: ['Bagging은 순차적, Boosting은 병렬적', 'Bagging은 병렬적, Boosting은 순차적', '둘 다 순차적', '둘 다 병렬적'],
+    answer: 1,
+    explanation: 'Bagging은 독립적으로 병렬 학습하고, Boosting은 이전 모델의 오류를 보완하며 순차적으로 학습합니다.',
+    difficulty: '중',
+    tags: ['앙상블', 'Bagging', 'Boosting']
+  },
+  {
+    id: 'BAE_104',
+    subject: '빅데이터 결과 해석',
+    question: 'Lift Chart의 용도는?',
+    options: ['회귀 모델 평가', '분류 모델의 효과성 평가', '군집 평가', '차원 축소 평가'],
+    answer: 1,
+    explanation: 'Lift Chart는 분류 모델이 무작위 선택 대비 얼마나 효과적인지 평가하는 도구입니다.',
+    difficulty: '중',
+    tags: ['Lift Chart', '모델평가']
+  },
+  {
+    id: 'BAE_105',
+    subject: '빅데이터 분석 기획',
+    question: 'Data Lineage(데이터 계보)의 목적은?',
+    options: ['데이터 압축', '데이터 흐름 추적', '데이터 암호화', '데이터 시각화'],
+    answer: 1,
+    explanation: 'Data Lineage는 데이터의 출처, 이동, 변환 과정을 추적하여 데이터 품질과 투명성을 보장합니다.',
+    difficulty: '하',
+    tags: ['Data Lineage', '거버넌스']
+  },
+  {
+    id: 'BAE_106',
+    subject: '빅데이터 탐색',
+    question: 'SMOTE(Synthetic Minority Over-sampling Technique)의 목적은?',
+    options: ['차원 축소', '불균형 데이터 처리', '이상값 제거', '정규화'],
+    answer: 1,
+    explanation: 'SMOTE는 소수 클래스의 합성 샘플을 생성하여 불균형 데이터를 처리하는 오버샘플링 기법입니다.',
+    difficulty: '중',
+    tags: ['SMOTE', '불균형데이터']
+  },
+  {
+    id: 'BAE_107',
+    subject: '빅데이터 모델링',
+    question: 'CatBoost의 특징으로 옳은 것은?',
+    options: ['범주형 변수 자동 처리', '이미지 전용', '회귀만 가능', '군집화 전용'],
+    answer: 0,
+    explanation: 'CatBoost는 범주형 변수를 자동으로 처리하는 그래디언트 부스팅 알고리즘입니다.',
+    difficulty: '중',
+    tags: ['CatBoost', '부스팅']
+  },
+  {
+    id: 'BAE_108',
+    subject: '빅데이터 결과 해석',
+    question: 'LIME(Local Interpretable Model-agnostic Explanations)의 목적은?',
+    options: ['모델 학습', '모델 해석', '데이터 전처리', '차원 축소'],
+    answer: 1,
+    explanation: 'LIME은 블랙박스 모델의 개별 예측을 지역적으로 해석하는 XAI 기법입니다.',
+    difficulty: '상',
+    tags: ['LIME', 'XAI']
+  },
+  {
+    id: 'BAE_109',
+    subject: '빅데이터 플랫폼',
+    question: 'Delta Lake의 주요 기능이 아닌 것은?',
+    options: ['ACID 트랜잭션', '타임 트래블', '스키마 진화', '실시간 스트리밍 전용'],
+    answer: 3,
+    explanation: 'Delta Lake는 배치와 스트리밍 모두 지원하며, ACID, 타임 트래블, 스키마 진화 기능을 제공합니다.',
+    difficulty: '중',
+    tags: ['Delta Lake', '데이터레이크']
+  },
+  {
+    id: 'BAE_110',
+    subject: '빅데이터 분석 기획',
+    question: 'Data Mesh 아키텍처의 핵심 원칙이 아닌 것은?',
+    options: ['도메인 소유권', '데이터 제품화', '중앙 집중식 관리', '셀프 서비스 플랫폼'],
+    answer: 2,
+    explanation: 'Data Mesh는 분산된 도메인 소유권을 강조하며, 중앙 집중식 관리가 아닌 분산 관리를 지향합니다.',
+    difficulty: '상',
+    tags: ['Data Mesh', '아키텍처']
+  },
+  {
+    id: 'BAE_111',
+    subject: '빅데이터 탐색',
+    question: 'Target Encoding의 단점으로 옳은 것은?',
+    options: ['범주 개수 증가', '데이터 누수 위험', '학습 속도 저하', '메모리 부족'],
+    answer: 1,
+    explanation: 'Target Encoding은 목표 변수 정보를 사용하므로 올바르게 구현하지 않으면 데이터 누수가 발생할 수 있습니다.',
+    difficulty: '상',
+    tags: ['Target Encoding', '인코딩']
+  },
+  {
+    id: 'BAE_112',
+    subject: '빅데이터 모델링',
+    question: 'TabNet의 특징으로 옳은 것은?',
+    options: ['CNN 기반', 'Attention 기반 테이블 데이터 학습', '텍스트 전용', '이미지 전용'],
+    answer: 1,
+    explanation: 'TabNet은 Attention 메커니즘을 사용하여 테이블 데이터를 효과적으로 학습하는 딥러닝 모델입니다.',
+    difficulty: '상',
+    tags: ['TabNet', '딥러닝']
+  },
+  {
+    id: 'BAE_113',
+    subject: '빅데이터 결과 해석',
+    question: 'Permutation Importance의 원리는?',
+    options: ['변수 제거', '변수 순서 섞기', '변수 정규화', '변수 결합'],
+    answer: 1,
+    explanation: 'Permutation Importance는 변수 값을 무작위로 섞었을 때 성능 변화를 측정하여 변수 중요도를 계산합니다.',
+    difficulty: '중',
+    tags: ['Feature Importance', '해석']
+  },
+  {
+    id: 'BAE_114',
+    subject: '빅데이터 플랫폼',
+    question: 'Databricks의 핵심 기술은?',
+    options: ['Hadoop', 'Apache Spark', 'Flink', 'Storm'],
+    answer: 1,
+    explanation: 'Databricks는 Apache Spark 기반의 통합 분석 플랫폼입니다.',
+    difficulty: '하',
+    tags: ['Databricks', 'Spark']
+  },
+  {
+    id: 'BAE_115',
+    subject: '빅데이터 분석 기획',
+    question: 'Responsible AI의 핵심 원칙이 아닌 것은?',
+    options: ['공정성', '투명성', '설명가능성', '수익 극대화'],
+    answer: 3,
+    explanation: 'Responsible AI는 공정성, 투명성, 설명가능성, 프라이버시 등을 강조하며, 수익 극대화는 핵심 원칙이 아닙니다.',
+    difficulty: '하',
+    tags: ['Responsible AI', '윤리']
+  },
+  {
+    id: 'BAE_116',
+    subject: '빅데이터 탐색',
+    question: 'Isolation Forest의 원리는?',
+    options: ['거리 기반', '밀도 기반', '고립 용이성 기반', '클러스터 기반'],
+    answer: 2,
+    explanation: 'Isolation Forest는 이상값이 정상값보다 쉽게 고립된다는 원리를 이용한 이상탐지 알고리즘입니다.',
+    difficulty: '중',
+    tags: ['Isolation Forest', '이상탐지']
+  },
+  {
+    id: 'BAE_117',
+    subject: '빅데이터 모델링',
+    question: 'AutoEncoder의 주요 용도가 아닌 것은?',
+    options: ['차원 축소', '이상 탐지', '데이터 생성', '분류 모델 학습'],
+    answer: 3,
+    explanation: 'AutoEncoder는 차원 축소, 이상 탐지, 생성에 주로 사용되며, 분류는 주 목적이 아닙니다.',
+    difficulty: '중',
+    tags: ['AutoEncoder', '딥러닝']
+  },
+  {
+    id: 'BAE_118',
+    subject: '빅데이터 결과 해석',
+    question: 'Calibration Curve의 목적은?',
+    options: ['모델 속도 측정', '예측 확률의 신뢰도 평가', '과적합 진단', '변수 선택'],
+    answer: 1,
+    explanation: 'Calibration Curve는 모델의 예측 확률이 실제 확률과 얼마나 일치하는지 평가합니다.',
+    difficulty: '상',
+    tags: ['Calibration', '모델평가']
+  },
+  {
+    id: 'BAE_119',
+    subject: '빅데이터 플랫폼',
+    question: 'Snowflake의 특징으로 옳은 것은?',
+    options: ['온프레미스 전용', '클라우드 네이티브 DW', 'NoSQL 전용', '스트리밍 전용'],
+    answer: 1,
+    explanation: 'Snowflake는 클라우드 네이티브 데이터 웨어하우스로, 스토리지와 컴퓨팅을 분리합니다.',
+    difficulty: '하',
+    tags: ['Snowflake', '데이터웨어하우스']
+  },
+  {
+    id: 'BAE_120',
+    subject: '빅데이터 분석 기획',
+    question: 'DataOps의 핵심 목표는?',
+    options: ['비용 절감', '데이터 파이프라인 자동화 및 품질 향상', '데이터 삭제', '보안 강화'],
+    answer: 1,
+    explanation: 'DataOps는 DevOps 원칙을 데이터 관리에 적용하여 파이프라인을 자동화하고 데이터 품질을 향상시킵니다.',
+    difficulty: '중',
+    tags: ['DataOps', '자동화']
+  },
+  {
+    id: 'BAE_121',
+    subject: '빅데이터 탐색',
+    question: 'WOE(Weight of Evidence) 변환의 목적은?',
+    options: ['정규화', '범주형 변수의 예측력 표현', '이상값 제거', '차원 축소'],
+    answer: 1,
+    explanation: 'WOE는 범주형 변수의 각 범주가 목표 변수에 미치는 영향을 수치로 표현합니다.',
+    difficulty: '상',
+    tags: ['WOE', '변환']
+  },
+  {
+    id: 'BAE_122',
+    subject: '빅데이터 모델링',
+    question: 'Vision Transformer(ViT)의 특징은?',
+    options: ['CNN 기반', 'Transformer를 이미지에 적용', 'RNN 기반', '통계 모델'],
+    answer: 1,
+    explanation: 'ViT는 이미지를 패치로 나누어 Transformer 아키텍처를 적용한 모델입니다.',
+    difficulty: '상',
+    tags: ['ViT', '이미지']
+  },
+  {
+    id: 'BAE_123',
+    subject: '빅데이터 결과 해석',
+    question: 'Matthews Correlation Coefficient(MCC)의 범위는?',
+    options: ['0~1', '-1~1', '0~100', '-∞~+∞'],
+    answer: 1,
+    explanation: 'MCC는 -1(완전 불일치)부터 1(완전 일치) 사이 값으로, 불균형 데이터에도 신뢰할 수 있습니다.',
+    difficulty: '중',
+    tags: ['MCC', '평가지표']
+  },
+  {
+    id: 'BAE_124',
+    subject: '빅데이터 플랫폼',
+    question: 'Presto(Trino)의 특징은?',
+    options: ['배치 처리 전용', '분산 SQL 쿼리 엔진', 'NoSQL 전용', '스트리밍 전용'],
+    answer: 1,
+    explanation: 'Presto(Trino)는 여러 데이터 소스에 대한 대화형 분산 SQL 쿼리를 지원합니다.',
+    difficulty: '중',
+    tags: ['Presto', 'SQL']
+  },
+  {
+    id: 'BAE_125',
+    subject: '빅데이터 분석 기획',
+    question: 'Data Quality Dimensions가 아닌 것은?',
+    options: ['정확성', '완전성', '일관성', '속도'],
+    answer: 3,
+    explanation: '데이터 품질 차원에는 정확성, 완전성, 일관성, 적시성, 유효성 등이 있으며, 속도는 차원이 아닙니다.',
+    difficulty: '하',
+    tags: ['데이터품질', 'DQ']
+  },
+  {
+    id: 'BAE_126',
+    subject: '빅데이터 탐색',
+    question: 'Entropy와 Information Gain의 관계는?',
+    options: ['무관함', 'IG = Entropy 감소량', 'IG = Entropy 증가량', 'IG = 1/Entropy'],
+    answer: 1,
+    explanation: 'Information Gain은 분할 전후 Entropy의 감소량을 측정하여 변수의 유용성을 평가합니다.',
+    difficulty: '중',
+    tags: ['Entropy', 'IG']
+  },
+  {
+    id: 'BAE_127',
+    subject: '빅데이터 모델링',
+    question: 'Hugging Face Transformers의 용도는?',
+    options: ['데이터베이스', 'NLP 모델 라이브러리', '웹 프레임워크', 'BI 도구'],
+    answer: 1,
+    explanation: 'Hugging Face Transformers는 BERT, GPT 등 사전 학습된 NLP 모델을 제공하는 라이브러리입니다.',
+    difficulty: '하',
+    tags: ['Hugging Face', 'NLP']
+  },
+  {
+    id: 'BAE_128',
+    subject: '빅데이터 결과 해석',
+    question: 'Learning Curve 분석의 목적은?',
+    options: ['하이퍼파라미터 튜닝', '과적합/과소적합 진단', '변수 선택', '이상값 탐지'],
+    answer: 1,
+    explanation: 'Learning Curve는 훈련 데이터 크기에 따른 성능 변화를 보여주어 과적합/과소적합을 진단합니다.',
+    difficulty: '중',
+    tags: ['Learning Curve', '진단']
+  },
+  {
+    id: 'BAE_129',
+    subject: '빅데이터 플랫폼',
+    question: 'dbt(data build tool)의 주요 기능은?',
+    options: ['데이터 수집', 'SQL 기반 데이터 변환', '시각화', '모델 학습'],
+    answer: 1,
+    explanation: 'dbt는 SQL을 사용하여 데이터 변환(T)을 정의하고 실행하는 도구입니다.',
+    difficulty: '중',
+    tags: ['dbt', 'ELT']
+  },
+  {
+    id: 'BAE_130',
+    subject: '빅데이터 분석 기획',
+    question: 'Data Catalog의 핵심 기능이 아닌 것은?',
+    options: ['메타데이터 관리', '데이터 검색', '데이터 변환 실행', '계보 추적'],
+    answer: 2,
+    explanation: 'Data Catalog는 메타데이터 관리, 검색, 계보 추적을 제공하며, 데이터 변환 실행은 주 기능이 아닙니다.',
+    difficulty: '하',
+    tags: ['Data Catalog', '메타데이터']
+  },
+  {
+    id: 'BAE_131',
+    subject: '빅데이터 탐색',
+    question: 'UMAP(Uniform Manifold Approximation and Projection)의 용도는?',
+    options: ['분류', '차원 축소 및 시각화', '회귀', '군집화'],
+    answer: 1,
+    explanation: 'UMAP은 t-SNE보다 빠르고 전역 구조를 잘 보존하는 차원 축소 기법입니다.',
+    difficulty: '중',
+    tags: ['UMAP', '차원축소']
+  },
+  {
+    id: 'BAE_132',
+    subject: '빅데이터 모델링',
+    question: 'Focal Loss의 목적은?',
+    options: ['속도 향상', '불균형 데이터 학습 개선', '메모리 절약', '정규화'],
+    answer: 1,
+    explanation: 'Focal Loss는 쉬운 샘플의 가중치를 낮추고 어려운 샘플에 집중하여 불균형 문제를 개선합니다.',
+    difficulty: '상',
+    tags: ['Focal Loss', '손실함수']
+  },
+  {
+    id: 'BAE_133',
+    subject: '빅데이터 결과 해석',
+    question: 'Cumulative Accuracy Profile(CAP)의 용도는?',
+    options: ['회귀 평가', '분류 모델의 누적 정확도 시각화', '군집 평가', '시계열 평가'],
+    answer: 1,
+    explanation: 'CAP은 분류 모델의 누적 정확도를 시각화하여 모델의 식별 능력을 평가합니다.',
+    difficulty: '중',
+    tags: ['CAP', '평가']
+  },
+  {
+    id: 'BAE_134',
+    subject: '빅데이터 플랫폼',
+    question: 'Apache Iceberg의 특징은?',
+    options: ['NoSQL', '테이블 포맷', '스트리밍 엔진', 'BI 도구'],
+    answer: 1,
+    explanation: 'Apache Iceberg는 대규모 분석을 위한 오픈 테이블 포맷으로, ACID와 타임 트래블을 지원합니다.',
+    difficulty: '상',
+    tags: ['Iceberg', '테이블포맷']
+  },
+  {
+    id: 'BAE_135',
+    subject: '빅데이터 분석 기획',
+    question: 'Privacy-Preserving Machine Learning 기법이 아닌 것은?',
+    options: ['Differential Privacy', 'Federated Learning', 'Homomorphic Encryption', 'Batch Normalization'],
+    answer: 3,
+    explanation: 'Batch Normalization은 학습 안정화 기법이며, 나머지는 프라이버시 보호 ML 기법입니다.',
+    difficulty: '중',
+    tags: ['프라이버시', 'ML']
+  },
+  {
+    id: 'BAE_136',
+    subject: '빅데이터 탐색',
+    question: 'Gini Impurity의 범위는?',
+    options: ['0~1', '-1~1', '0~∞', '-∞~+∞'],
+    answer: 0,
+    explanation: 'Gini Impurity는 0(완전 순수)부터 1 사이의 값을 가지며, 의사결정나무에서 사용됩니다.',
+    difficulty: '하',
+    tags: ['Gini', '의사결정나무']
+  },
+  {
+    id: 'BAE_137',
+    subject: '빅데이터 모델링',
+    question: 'Knowledge Distillation의 목적은?',
+    options: ['데이터 증강', '모델 경량화', '과적합 방지', '데이터 수집'],
+    answer: 1,
+    explanation: 'Knowledge Distillation은 큰 교사 모델의 지식을 작은 학생 모델에 전달하여 경량화합니다.',
+    difficulty: '상',
+    tags: ['Knowledge Distillation', '경량화']
+  },
+  {
+    id: 'BAE_138',
+    subject: '빅데이터 결과 해석',
+    question: 'Residual Plot의 이상적인 패턴은?',
+    options: ['선형 패턴', '무작위 분포', '곡선 패턴', '계단 패턴'],
+    answer: 1,
+    explanation: 'Residual Plot은 잔차가 무작위로 분포해야 모델의 가정이 충족된 것으로 판단합니다.',
+    difficulty: '중',
+    tags: ['Residual Plot', '회귀']
+  },
+  {
+    id: 'BAE_139',
+    subject: '빅데이터 플랫폼',
+    question: 'MinIO의 용도는?',
+    options: ['관계형 DB', '객체 스토리지', '메시지 큐', '검색 엔진'],
+    answer: 1,
+    explanation: 'MinIO는 S3 호환 오픈소스 객체 스토리지 서버입니다.',
+    difficulty: '하',
+    tags: ['MinIO', '스토리지']
+  },
+  {
+    id: 'BAE_140',
+    subject: '빅데이터 분석 기획',
+    question: 'Model Registry의 주요 기능이 아닌 것은?',
+    options: ['모델 버전 관리', '모델 메타데이터 저장', '데이터 수집', '모델 배포 추적'],
+    answer: 2,
+    explanation: 'Model Registry는 모델 버전, 메타데이터, 배포를 관리하며, 데이터 수집은 별도 기능입니다.',
+    difficulty: '중',
+    tags: ['Model Registry', 'MLOps']
+  },
+  {
+    id: 'BAE_141',
+    subject: '빅데이터 탐색',
+    question: 'Polynomial Features의 목적은?',
+    options: ['차원 축소', '비선형 관계 표현', '정규화', '이상값 제거'],
+    answer: 1,
+    explanation: 'Polynomial Features는 변수 간 다항식 조합을 생성하여 비선형 관계를 선형 모델로 표현합니다.',
+    difficulty: '중',
+    tags: ['Polynomial', '피처엔지니어링']
+  },
+  {
+    id: 'BAE_142',
+    subject: '빅데이터 모델링',
+    question: 'Multi-Task Learning의 장점은?',
+    options: ['모델 단순화', '관련 작업 간 지식 공유', '학습 속도 저하', '메모리 증가'],
+    answer: 1,
+    explanation: 'Multi-Task Learning은 여러 관련 작업을 동시에 학습하여 공통 표현을 학습하고 일반화 성능을 향상시킵니다.',
+    difficulty: '상',
+    tags: ['Multi-Task', '전이학습']
+  },
+  {
+    id: 'BAE_143',
+    subject: '빅데이터 결과 해석',
+    question: 'Business Value Framework에서 모델 평가 시 고려사항이 아닌 것은?',
+    options: ['비즈니스 영향', '구현 비용', '모델 복잡도', '알고리즘 이름'],
+    answer: 3,
+    explanation: 'Business Value Framework는 비즈니스 영향, 비용, 복잡도를 고려하며, 알고리즘 이름은 중요하지 않습니다.',
+    difficulty: '하',
+    tags: ['Business Value', '평가']
+  },
+  {
+    id: 'BAE_144',
+    subject: '빅데이터 플랫폼',
+    question: 'Apache Pinot의 특화 분야는?',
+    options: ['배치 처리', '실시간 OLAP', 'ETL', '데이터 시각화'],
+    answer: 1,
+    explanation: 'Apache Pinot은 실시간 분산 OLAP 데이터 저장소로, 낮은 지연시간의 분석 쿼리를 지원합니다.',
+    difficulty: '상',
+    tags: ['Pinot', 'OLAP']
+  },
+  {
+    id: 'BAE_145',
+    subject: '빅데이터 분석 기획',
+    question: 'Feature Store의 목적은?',
+    options: ['모델 저장', '피처 재사용 및 일관성 관리', '데이터 삭제', '시각화'],
+    answer: 1,
+    explanation: 'Feature Store는 피처를 중앙에서 관리하여 재사용성을 높이고 학습-서빙 간 일관성을 보장합니다.',
+    difficulty: '중',
+    tags: ['Feature Store', 'MLOps']
+  },
+  {
+    id: 'BAE_146',
+    subject: '빅데이터 탐색',
+    question: 'Stratified Sampling의 목적은?',
+    options: ['속도 향상', '계층별 비율 유지', '무작위성 증가', '데이터 압축'],
+    answer: 1,
+    explanation: 'Stratified Sampling은 각 계층(층)의 비율을 원본 데이터와 동일하게 유지하여 샘플링합니다.',
+    difficulty: '하',
+    tags: ['Sampling', '데이터분할']
+  },
+  {
+    id: 'BAE_147',
+    subject: '빅데이터 모델링',
+    question: 'Contrastive Learning의 핵심 아이디어는?',
+    options: ['지도 학습', '유사한 샘플 가깝게, 다른 샘플 멀게', '회귀', '군집화'],
+    answer: 1,
+    explanation: 'Contrastive Learning은 유사한 데이터는 가깝게, 다른 데이터는 멀게 배치하도록 학습합니다.',
+    difficulty: '상',
+    tags: ['Contrastive Learning', '자기지도학습']
+  },
+  {
+    id: 'BAE_148',
+    subject: '빅데이터 결과 해석',
+    question: 'Champion/Challenger 테스트의 목적은?',
+    options: ['데이터 수집', '신규 모델과 기존 모델 성능 비교', '데이터 정제', '시각화'],
+    answer: 1,
+    explanation: 'Champion/Challenger는 운영 중인 모델(Champion)과 신규 모델(Challenger)을 동시 운영하여 성능을 비교합니다.',
+    difficulty: '중',
+    tags: ['A/B테스트', '모델평가']
+  },
+  {
+    id: 'BAE_149',
+    subject: '빅데이터 플랫폼',
+    question: 'Redshift Spectrum의 특징은?',
+    options: ['S3 데이터 직접 쿼리', '스트리밍 전용', 'NoSQL 전용', '온프레미스 전용'],
+    answer: 0,
+    explanation: 'Redshift Spectrum은 S3의 데이터를 Redshift로 로드하지 않고 직접 쿼리할 수 있습니다.',
+    difficulty: '중',
+    tags: ['Redshift', 'AWS']
+  },
+  {
+    id: 'BAE_150',
+    subject: '빅데이터 분석 기획',
+    question: 'Concept Drift의 의미는?',
+    options: ['데이터 수집 오류', '시간에 따른 데이터 분포 변화', '모델 오버피팅', '하드웨어 고장'],
+    answer: 1,
+    explanation: 'Concept Drift는 시간이 지나면서 데이터의 통계적 특성이나 관계가 변화하는 현상입니다.',
+    difficulty: '중',
+    tags: ['Concept Drift', '모델관리']
   }
 ];
 
