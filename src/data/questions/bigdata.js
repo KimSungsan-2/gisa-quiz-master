@@ -749,6 +749,256 @@ export const bigdataQuestions = [
     explanation: '데이터 레이크는 Schema-on-Read(읽을 때 스키마 정의), 데이터 웨어하우스는 Schema-on-Write(쓸 때 스키마 정의)입니다.',
     difficulty: '상',
     tags: ['데이터레이크', '데이터웨어하우스']
+  },
+  {
+    id: 'BAE_076',
+    subject: '빅데이터 탐색',
+    question: 'Scikit-learn에서 train_test_split의 기본 테스트 데이터 비율은?',
+    options: ['10%', '20%', '25%', '30%'],
+    answer: 2,
+    explanation: 'Scikit-learn의 train_test_split 함수는 기본적으로 25%를 테스트 데이터로 분할합니다.',
+    difficulty: '하',
+    tags: ['데이터 분할', 'Scikit-learn']
+  },
+  {
+    id: 'BAE_077',
+    subject: '빅데이터 모델링',
+    question: 'Transformer 모델의 핵심 메커니즘은?',
+    options: ['Convolution', 'Recurrence', 'Self-Attention', 'Pooling'],
+    answer: 2,
+    explanation: 'Transformer는 Self-Attention 메커니즘을 통해 시퀀스의 모든 위치 간 관계를 학습합니다.',
+    difficulty: '중',
+    tags: ['Transformer', '딥러닝']
+  },
+  {
+    id: 'BAE_078',
+    subject: '빅데이터 탐색',
+    question: 'SQL의 JOIN 종류가 아닌 것은?',
+    options: ['INNER JOIN', 'LEFT JOIN', 'CROSS JOIN', 'PARALLEL JOIN'],
+    answer: 3,
+    explanation: 'SQL JOIN 종류에는 INNER, LEFT, RIGHT, FULL OUTER, CROSS JOIN이 있습니다.',
+    difficulty: '하',
+    tags: ['SQL', 'JOIN']
+  },
+  {
+    id: 'BAE_079',
+    subject: '빅데이터 모델링',
+    question: 'Batch Normalization의 주요 효과는?',
+    options: ['모델 크기 감소', '학습 안정화 및 속도 향상', '과소적합 방지', '데이터 증강'],
+    answer: 1,
+    explanation: 'Batch Normalization은 각 층의 입력을 정규화하여 학습을 안정화하고 속도를 향상시킵니다.',
+    difficulty: '중',
+    tags: ['Batch Normalization', '딥러닝']
+  },
+  {
+    id: 'BAE_080',
+    subject: '빅데이터 플랫폼',
+    question: 'Apache Kafka의 주요 용도는?',
+    options: ['배치 처리', '실시간 스트리밍 처리', '데이터 웨어하우스', '머신러닝 모델 학습'],
+    answer: 1,
+    explanation: 'Kafka는 대규모 실시간 데이터 스트리밍 처리를 위한 분산 메시징 시스템입니다.',
+    difficulty: '하',
+    tags: ['Kafka', '스트리밍']
+  },
+  {
+    id: 'BAE_081',
+    subject: '빅데이터 모델링',
+    question: 'GANs(Generative Adversarial Networks)의 구성 요소는?',
+    options: ['Encoder-Decoder', 'Generator-Discriminator', 'Actor-Critic', 'Teacher-Student'],
+    answer: 1,
+    explanation: 'GAN은 생성자(Generator)와 판별자(Discriminator) 두 네트워크가 경쟁하며 학습합니다.',
+    difficulty: '중',
+    tags: ['GAN', '생성모델']
+  },
+  {
+    id: 'BAE_082',
+    subject: '빅데이터 탐색',
+    question: 'Box Plot에서 확인할 수 없는 것은?',
+    options: ['중앙값', '사분위수', '이상값', '평균'],
+    answer: 3,
+    explanation: 'Box Plot은 중앙값, 사분위수, 이상값을 시각화하지만 평균은 기본적으로 표시되지 않습니다.',
+    difficulty: '하',
+    tags: ['시각화', 'Box Plot']
+  },
+  {
+    id: 'BAE_083',
+    subject: '빅데이터 모델링',
+    question: 'Adam 최적화 알고리즘의 특징은?',
+    options: ['고정 학습률 사용', 'Momentum과 RMSProp 결합', '배치 크기 의존', '메모리 효율적'],
+    answer: 1,
+    explanation: 'Adam은 Momentum과 RMSProp을 결합하여 적응적 학습률을 사용하는 최적화 알고리즘입니다.',
+    difficulty: '중',
+    tags: ['최적화', 'Adam']
+  },
+  {
+    id: 'BAE_084',
+    subject: '빅데이터 결과 해석',
+    question: 'Confusion Matrix에서 Accuracy의 계산식은?',
+    options: ['(TP + TN) / Total', 'TP / (TP + FP)', 'TP / (TP + FN)', '(TP + FP) / Total'],
+    answer: 0,
+    explanation: 'Accuracy(정확도)는 전체 예측 중 올바른 예측의 비율로 (TP + TN) / Total입니다.',
+    difficulty: '하',
+    tags: ['평가지표', 'Accuracy']
+  },
+  {
+    id: 'BAE_085',
+    subject: '빅데이터 모델링',
+    question: 'Transfer Learning의 장점이 아닌 것은?',
+    options: ['적은 데이터로 학습 가능', '학습 시간 단축', '모델 크기 감소', '사전 학습된 지식 활용'],
+    answer: 2,
+    explanation: 'Transfer Learning은 사전 학습된 모델을 활용하여 적은 데이터와 시간으로 학습할 수 있지만, 모델 크기 감소와는 관련 없습니다.',
+    difficulty: '중',
+    tags: ['Transfer Learning', '딥러닝']
+  },
+  {
+    id: 'BAE_086',
+    subject: '빅데이터 플랫폼',
+    question: 'Docker 컨테이너의 특징이 아닌 것은?',
+    options: ['가상화 기술', '경량화', '이식성', '하드웨어 수준 가상화'],
+    answer: 3,
+    explanation: 'Docker는 OS 수준 가상화로 경량화되어 있으며, 하드웨어 수준 가상화는 VM의 특징입니다.',
+    difficulty: '중',
+    tags: ['Docker', '컨테이너']
+  },
+  {
+    id: 'BAE_087',
+    subject: '빅데이터 탐색',
+    question: 'Pandas DataFrame에서 결측값을 확인하는 메서드는?',
+    options: ['isnull()', 'isna()', 'notnull()', '모두 가능'],
+    answer: 3,
+    explanation: 'Pandas에서 isnull()과 isna()는 동일하게 결측값을 확인하며, notnull()은 결측값이 아닌 것을 확인합니다.',
+    difficulty: '하',
+    tags: ['Pandas', '결측값']
+  },
+  {
+    id: 'BAE_088',
+    subject: '빅데이터 모델링',
+    question: 'AutoML의 주요 목적은?',
+    options: ['모델 크기 축소', '머신러닝 자동화', '데이터 수집 자동화', '모델 배포 자동화'],
+    answer: 1,
+    explanation: 'AutoML은 피처 엔지니어링, 모델 선택, 하이퍼파라미터 튜닝 등 머신러닝 과정을 자동화합니다.',
+    difficulty: '중',
+    tags: ['AutoML', '자동화']
+  },
+  {
+    id: 'BAE_089',
+    subject: '빅데이터 탐색',
+    question: 'Chi-square 검정의 용도는?',
+    options: ['두 연속형 변수 간 상관관계', '두 범주형 변수 간 독립성', '평균 차이 검정', '분산 동질성 검정'],
+    answer: 1,
+    explanation: 'Chi-square 검정은 두 범주형 변수 간의 독립성을 검정하는 데 사용됩니다.',
+    difficulty: '중',
+    tags: ['통계검정', 'Chi-square']
+  },
+  {
+    id: 'BAE_090',
+    subject: '빅데이터 결과 해석',
+    question: 'Silhouette Score의 범위는?',
+    options: ['0 ~ 1', '-1 ~ 1', '0 ~ 100', '-∞ ~ +∞'],
+    answer: 1,
+    explanation: 'Silhouette Score는 -1에서 1 사이의 값으로, 1에 가까울수록 군집화가 잘 된 것입니다.',
+    difficulty: '중',
+    tags: ['군집화', 'Silhouette']
+  },
+  {
+    id: 'BAE_091',
+    subject: '빅데이터 플랫폼',
+    question: 'MLflow의 주요 기능이 아닌 것은?',
+    options: ['실험 추적', '모델 레지스트리', '모델 배포', '데이터 수집'],
+    answer: 3,
+    explanation: 'MLflow는 ML 실험 추적, 모델 관리, 배포를 지원하지만 데이터 수집 기능은 없습니다.',
+    difficulty: '상',
+    tags: ['MLflow', 'MLOps']
+  },
+  {
+    id: 'BAE_092',
+    subject: '빅데이터 모델링',
+    question: 'BERT 모델의 특징이 아닌 것은?',
+    options: ['Bidirectional Transformer', 'Masked Language Model', 'Autoregressive', 'Pre-training + Fine-tuning'],
+    answer: 2,
+    explanation: 'BERT는 양방향(Bidirectional) 모델이며, GPT가 Autoregressive 모델입니다.',
+    difficulty: '상',
+    tags: ['BERT', 'NLP']
+  },
+  {
+    id: 'BAE_093',
+    subject: '빅데이터 탐색',
+    question: 'Data Augmentation의 목적은?',
+    options: ['데이터 크기 감소', '학습 데이터 다양성 증가', '모델 복잡도 감소', '추론 속도 향상'],
+    answer: 1,
+    explanation: 'Data Augmentation은 기존 데이터를 변형하여 학습 데이터의 다양성을 증가시키고 과적합을 방지합니다.',
+    difficulty: '하',
+    tags: ['데이터 증강', '전처리']
+  },
+  {
+    id: 'BAE_094',
+    subject: '빅데이터 결과 해석',
+    question: 'Feature Importance를 제공하지 않는 모델은?',
+    options: ['Random Forest', 'XGBoost', 'Logistic Regression', 'KNN'],
+    answer: 3,
+    explanation: 'KNN은 거리 기반 모델로 Feature Importance를 직접 제공하지 않습니다.',
+    difficulty: '중',
+    tags: ['Feature Importance', '해석']
+  },
+  {
+    id: 'BAE_095',
+    subject: '빅데이터 플랫폼',
+    question: 'Kubernetes의 주요 역할은?',
+    options: ['데이터베이스 관리', '컨테이너 오케스트레이션', '데이터 분석', '모델 학습'],
+    answer: 1,
+    explanation: 'Kubernetes는 컨테이너화된 애플리케이션의 배포, 확장, 관리를 자동화하는 오케스트레이션 플랫폼입니다.',
+    difficulty: '중',
+    tags: ['Kubernetes', '컨테이너']
+  },
+  {
+    id: 'BAE_096',
+    subject: '빅데이터 모델링',
+    question: 'Gradient Clipping의 목적은?',
+    options: ['학습 속도 향상', 'Exploding Gradient 방지', '모델 압축', '데이터 정규화'],
+    answer: 1,
+    explanation: 'Gradient Clipping은 기울기 값을 제한하여 Exploding Gradient 문제를 방지합니다.',
+    difficulty: '상',
+    tags: ['경사 클리핑', '최적화']
+  },
+  {
+    id: 'BAE_097',
+    subject: '빅데이터 탐색',
+    question: 'Apache Airflow의 용도는?',
+    options: ['데이터 시각화', '워크플로우 스케줄링', '모델 학습', '데이터 저장'],
+    answer: 1,
+    explanation: 'Apache Airflow는 데이터 파이프라인의 워크플로우를 스케줄링하고 모니터링하는 도구입니다.',
+    difficulty: '중',
+    tags: ['Airflow', '워크플로우']
+  },
+  {
+    id: 'BAE_098',
+    subject: '빅데이터 결과 해석',
+    question: 'Bias-Variance Tradeoff에서 High Bias는?',
+    options: ['과적합', '과소적합', '적정 적합', '불균형'],
+    answer: 1,
+    explanation: 'High Bias는 모델이 단순하여 훈련 데이터도 제대로 학습하지 못하는 과소적합 상태입니다.',
+    difficulty: '하',
+    tags: ['Bias-Variance', '모델 평가']
+  },
+  {
+    id: 'BAE_099',
+    subject: '빅데이터 플랫폼',
+    question: 'GraphQL의 특징이 아닌 것은?',
+    options: ['클라이언트가 필요한 데이터만 요청', '단일 엔드포인트', 'REST API 대체', '관계형 데이터베이스 전용'],
+    answer: 3,
+    explanation: 'GraphQL은 API 쿼리 언어로 다양한 데이터 소스에 사용 가능하며, 관계형 DB 전용이 아닙니다.',
+    difficulty: '상',
+    tags: ['GraphQL', 'API']
+  },
+  {
+    id: 'BAE_100',
+    subject: '빅데이터 모델링',
+    question: 'Federated Learning의 주요 특징은?',
+    options: ['중앙 집중식 학습', '분산 학습으로 데이터 프라이버시 보호', '모델 압축', '전이 학습'],
+    answer: 1,
+    explanation: 'Federated Learning은 데이터를 중앙 서버로 전송하지 않고 분산된 디바이스에서 학습하여 프라이버시를 보호합니다.',
+    difficulty: '상',
+    tags: ['Federated Learning', '분산학습']
   }
 ];
 

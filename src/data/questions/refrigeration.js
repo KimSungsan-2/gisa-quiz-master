@@ -749,6 +749,256 @@ export const refrigerationQuestions = [
     explanation: '1냉동톤(RT)은 1시간에 1톤(1000kg)의 0°C 물을 0°C 얼음으로 만드는 냉동 능력으로, 약 3024 kcal/h입니다.',
     difficulty: '중',
     tags: ['냉동톤', '단위']
+  },
+  {
+    id: 'REF_076',
+    subject: '냉동공조 설비',
+    question: '인버터 압축기의 장점이 아닌 것은?',
+    options: ['에너지 절감', '부하 변동 대응', '구조가 단순함', '소음 감소'],
+    answer: 2,
+    explanation: '인버터 압축기는 에너지 절감과 부하 대응이 우수하지만, 제어 시스템이 복잡합니다.',
+    difficulty: '하',
+    tags: ['압축기', '인버터']
+  },
+  {
+    id: 'REF_077',
+    subject: '냉동공조 원리',
+    question: '브라인(Brine)의 역할은?',
+    options: ['냉매', '2차 냉매', '윤활유', '세척제'],
+    answer: 1,
+    explanation: '브라인은 간접 냉각 시스템에서 사용되는 2차 냉매로, 염화칼슘이나 에틸렌글리콜 등이 있습니다.',
+    difficulty: '중',
+    tags: ['브라인', '2차냉매']
+  },
+  {
+    id: 'REF_078',
+    subject: '냉동공조 설계',
+    question: 'EER(에너지소비효율)의 정의는?',
+    options: ['냉방능력 / 소비전력', '소비전력 / 냉방능력', '냉방능력 × 소비전력', '냉방능력 + 소비전력'],
+    answer: 0,
+    explanation: 'EER(Energy Efficiency Ratio)은 냉방능력을 소비전력으로 나눈 값으로, 클수록 효율이 좋습니다.',
+    difficulty: '하',
+    tags: ['EER', '효율']
+  },
+  {
+    id: 'REF_079',
+    subject: '전기제어공학',
+    question: 'PLC(Programmable Logic Controller)의 주요 용도는?',
+    options: ['전력 변환', '자동 제어', '전압 조정', '전류 측정'],
+    answer: 1,
+    explanation: 'PLC는 산업 현장의 자동화 제어에 사용되는 프로그래밍 가능한 논리 제어기입니다.',
+    difficulty: '하',
+    tags: ['PLC', '제어']
+  },
+  {
+    id: 'REF_080',
+    subject: '냉동공조 원리',
+    question: 'R-32 냉매의 특징으로 옳은 것은?',
+    options: ['GWP가 매우 높음', 'ODP가 높음', 'R-410A 대비 GWP 낮음', '자연 냉매'],
+    answer: 2,
+    explanation: 'R-32는 R-410A보다 GWP가 약 1/3 수준으로 낮아 친환경적입니다.',
+    difficulty: '중',
+    tags: ['냉매', 'R-32']
+  },
+  {
+    id: 'REF_081',
+    subject: '냉동공조 설비',
+    question: '전자팽창밸브(EEV)의 장점이 아닌 것은?',
+    options: ['정밀한 제어', '빠른 응답', '가격이 저렴함', '과열도 자동 조절'],
+    answer: 2,
+    explanation: '전자팽창밸브는 정밀 제어가 가능하지만, 온도식 팽창밸브보다 가격이 비쌉니다.',
+    difficulty: '중',
+    tags: ['팽창밸브', 'EEV']
+  },
+  {
+    id: 'REF_082',
+    subject: '냉동공조 설계',
+    question: '냉매 배관 설계 시 오일 트랩(Oil Trap)의 목적은?',
+    options: ['압력 조절', '오일 회수', '냉매 저장', '필터 역할'],
+    answer: 1,
+    explanation: '오일 트랩은 배관의 수직 구간에서 오일이 압축기로 돌아가도록 하는 장치입니다.',
+    difficulty: '중',
+    tags: ['배관', '오일']
+  },
+  {
+    id: 'REF_083',
+    subject: '냉동공조관련 법규',
+    question: 'F-gas 규제의 목적은?',
+    options: ['에너지 절감', '온실가스 감축', '소음 규제', '안전 강화'],
+    answer: 1,
+    explanation: 'F-gas 규제는 불소계 온실가스의 사용을 줄여 지구온난화를 방지하기 위한 유럽 규제입니다.',
+    difficulty: '중',
+    tags: ['법규', 'F-gas']
+  },
+  {
+    id: 'REF_084',
+    subject: '냉동공조 설비',
+    question: '쿨링타워(Cooling Tower)에서 냉각수 온도 차이는 일반적으로?',
+    options: ['1~2℃', '3~5℃', '7~10℃', '15~20℃'],
+    answer: 1,
+    explanation: '쿨링타워의 입출구 온도 차이는 일반적으로 3~5℃ 정도입니다.',
+    difficulty: '하',
+    tags: ['쿨링타워', '온도']
+  },
+  {
+    id: 'REF_085',
+    subject: '냉동공조 원리',
+    question: '과냉도(Subcooling)가 부족하면 발생하는 문제는?',
+    options: ['압축비 증가', '플래시 가스 발생', 'COP 증가', '응축 압력 감소'],
+    answer: 1,
+    explanation: '과냉도가 부족하면 팽창밸브 통과 시 플래시 가스가 발생하여 냉동효과가 감소합니다.',
+    difficulty: '중',
+    tags: ['과냉도', '냉매']
+  },
+  {
+    id: 'REF_086',
+    subject: '전기제어공학',
+    question: 'VFD(Variable Frequency Drive)의 역할은?',
+    options: ['전압 안정화', '전동기 속도 제어', '역률 개선', '전류 제한'],
+    answer: 1,
+    explanation: 'VFD(인버터)는 주파수를 변화시켜 전동기의 속도를 제어합니다.',
+    difficulty: '하',
+    tags: ['VFD', '인버터']
+  },
+  {
+    id: 'REF_087',
+    subject: '냉동공조 설계',
+    question: '클린룸 공조 설계 시 가장 중요한 요소는?',
+    options: ['온도', '습도', '청정도', '환기 횟수'],
+    answer: 2,
+    explanation: '클린룸은 먼지 입자 수를 기준으로 청정도(Class)를 관리하는 것이 가장 중요합니다.',
+    difficulty: '중',
+    tags: ['클린룸', '설계']
+  },
+  {
+    id: 'REF_088',
+    subject: '냉동공조 설비',
+    question: '4방 밸브(Four-way Valve)의 용도는?',
+    options: ['압력 조절', '유량 조절', '냉난방 전환', '온도 조절'],
+    answer: 2,
+    explanation: '4방 밸브는 히트펌프에서 냉매 흐름 방향을 바꿔 냉난방을 전환합니다.',
+    difficulty: '하',
+    tags: ['4방밸브', '히트펌프']
+  },
+  {
+    id: 'REF_089',
+    subject: '냉동공조 원리',
+    question: 'CO2(R-744) 냉매의 특징으로 틀린 것은?',
+    options: ['자연 냉매', 'GWP=1', '작동 압력이 매우 높음', 'ODP가 높음'],
+    answer: 3,
+    explanation: 'CO2는 자연 냉매로 GWP=1, ODP=0입니다. 초임계 사이클로 작동 압력이 높습니다.',
+    difficulty: '상',
+    tags: ['CO2', '자연냉매']
+  },
+  {
+    id: 'REF_090',
+    subject: '전기제어공학',
+    question: 'NPN과 PNP 트랜지스터의 차이점은?',
+    options: ['크기', '전류 방향', '전압 레벨', '재질'],
+    answer: 1,
+    explanation: 'NPN과 PNP는 베이스 전류와 컬렉터-에미터 전류의 방향이 반대입니다.',
+    difficulty: '중',
+    tags: ['트랜지스터', '반도체']
+  },
+  {
+    id: 'REF_091',
+    subject: '냉동공조 설계',
+    question: '병원 수술실 공조 시스템의 특징은?',
+    options: ['음압', '양압', '상압', '변압'],
+    answer: 1,
+    explanation: '수술실은 외부 오염 물질 유입 방지를 위해 양압을 유지합니다.',
+    difficulty: '중',
+    tags: ['수술실', '공조']
+  },
+  {
+    id: 'REF_092',
+    subject: '냉동공조 설비',
+    question: '어큐뮬레이터(Accumulator)의 설치 위치는?',
+    options: ['압축기 토출측', '응축기 출구', '증발기 출구', '팽창밸브 전단'],
+    answer: 2,
+    explanation: '어큐뮬레이터는 증발기 출구에 설치하여 액체 냉매가 압축기로 유입되는 것을 방지합니다.',
+    difficulty: '중',
+    tags: ['어큐뮬레이터', '냉동설비']
+  },
+  {
+    id: 'REF_093',
+    subject: '냉동공조 원리',
+    question: '암모니아(R-717) 냉매의 특징이 아닌 것은?',
+    options: ['자연 냉매', '효율이 우수함', '독성과 가연성', '무색무취'],
+    answer: 3,
+    explanation: '암모니아는 자극적인 냄새가 있어 누출 감지가 용이합니다.',
+    difficulty: '중',
+    tags: ['암모니아', '냉매']
+  },
+  {
+    id: 'REF_094',
+    subject: '냉동공조관련 법규',
+    question: '냉동기 제조 검사의 목적이 아닌 것은?',
+    options: ['안전성 확인', '성능 검증', '가격 결정', '법규 준수'],
+    answer: 2,
+    explanation: '제조 검사는 안전성, 성능, 법규 준수를 확인하기 위한 것으로 가격 결정과는 무관합니다.',
+    difficulty: '하',
+    tags: ['검사', '법규']
+  },
+  {
+    id: 'REF_095',
+    subject: '냉동공조 설계',
+    question: 'VRF(Variable Refrigerant Flow) 시스템의 장점이 아닌 것은?',
+    options: ['실별 개별 제어', '에너지 효율', '설치 비용이 저렴함', '동시 냉난방'],
+    answer: 2,
+    explanation: 'VRF는 개별 제어와 효율이 우수하지만 초기 설치 비용이 높습니다.',
+    difficulty: '중',
+    tags: ['VRF', '공조시스템']
+  },
+  {
+    id: 'REF_096',
+    subject: '전기제어공학',
+    question: 'UPS(무정전 전원장치)의 용도는?',
+    options: ['전력 증폭', '전압 안정화 및 백업', '주파수 변환', '전류 제한'],
+    answer: 1,
+    explanation: 'UPS는 정전 시 배터리로 전력을 공급하고 전압을 안정화합니다.',
+    difficulty: '하',
+    tags: ['UPS', '전원']
+  },
+  {
+    id: 'REF_097',
+    subject: '냉동공조 설비',
+    question: '압축기 오일 레벨 점검 시기는?',
+    options: ['운전 중', '정지 직후', '정지 후 충분한 시간 경과', '기동 전'],
+    answer: 2,
+    explanation: '압축기 오일 레벨은 정지 후 오일이 충분히 내려온 상태에서 점검해야 정확합니다.',
+    difficulty: '중',
+    tags: ['압축기', '유지보수']
+  },
+  {
+    id: 'REF_098',
+    subject: '냉동공조 원리',
+    question: '히트펌프의 난방 COP가 냉동기 COP보다 높은 이유는?',
+    options: ['압축기 효율 증가', '응축열량 > 증발열량', '냉매 차이', '배관 길이 차이'],
+    answer: 1,
+    explanation: '히트펌프 난방 시 COP = (증발열량 + 압축일) / 압축일로, 냉동 COP보다 1만큼 큽니다.',
+    difficulty: '상',
+    tags: ['히트펌프', 'COP']
+  },
+  {
+    id: 'REF_099',
+    subject: '냉동공조 설계',
+    question: '지열 히트펌프의 장점이 아닌 것은?',
+    options: ['안정적인 열원', '에너지 효율', '초기 비용 저렴', '친환경'],
+    answer: 2,
+    explanation: '지열 히트펌프는 효율과 친환경성이 우수하지만 지중 열교환기 설치로 초기 비용이 높습니다.',
+    difficulty: '중',
+    tags: ['지열', '히트펌프']
+  },
+  {
+    id: 'REF_100',
+    subject: '냉동공조관련 법규',
+    question: '냉매 충전 시 안전 수칙이 아닌 것은?',
+    options: ['환기 실시', '화기 금지', '보안경 착용', '고속 충전'],
+    answer: 3,
+    explanation: '냉매 충전은 천천히 해야 하며, 환기, 화기 금지, 보호구 착용이 필수입니다.',
+    difficulty: '하',
+    tags: ['안전', '냉매충전']
   }
 ];
 

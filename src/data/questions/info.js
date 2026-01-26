@@ -749,6 +749,256 @@ export const infoQuestions = [
     explanation: '함수형 프로그래밍은 부작용을 최소화하고 순수 함수를 지향하므로 전역 변수 사용을 지양합니다.',
     difficulty: '중',
     tags: ['함수형프로그래밍', '패러다임']
+  },
+  {
+    id: 'INFO_076',
+    subject: '소프트웨어 설계',
+    question: '소프트웨어 품질 특성(ISO 9126)이 아닌 것은?',
+    options: ['기능성(Functionality)', '신뢰성(Reliability)', '사용성(Usability)', '수익성(Profitability)'],
+    answer: 3,
+    explanation: 'ISO 9126의 품질 특성은 기능성, 신뢰성, 사용성, 효율성, 유지보수성, 이식성입니다.',
+    difficulty: '중',
+    tags: ['품질', 'ISO']
+  },
+  {
+    id: 'INFO_077',
+    subject: '데이터베이스 구축',
+    question: '데이터베이스 회복 기법이 아닌 것은?',
+    options: ['로그 기반 회복', '체크포인트', '그림자 페이징', '해싱'],
+    answer: 3,
+    explanation: '해싱은 검색 기법입니다. 회복 기법에는 로그 기반, 체크포인트, 그림자 페이징 등이 있습니다.',
+    difficulty: '중',
+    tags: ['데이터베이스', '회복']
+  },
+  {
+    id: 'INFO_078',
+    subject: '프로그래밍 언어 활용',
+    question: 'Big-O 표기법에서 O(1)의 의미는?',
+    options: ['선형 시간', '상수 시간', '로그 시간', '지수 시간'],
+    answer: 1,
+    explanation: 'O(1)은 입력 크기와 관계없이 일정한 상수 시간 복잡도를 의미합니다.',
+    difficulty: '하',
+    tags: ['알고리즘', '시간복잡도']
+  },
+  {
+    id: 'INFO_079',
+    subject: '정보시스템 구축관리',
+    question: 'VPN(Virtual Private Network)의 주요 목적은?',
+    options: ['속도 향상', '보안 통신', '대역폭 증가', '서버 부하 분산'],
+    answer: 1,
+    explanation: 'VPN은 공중 네트워크를 통해 안전한 개인 네트워크를 구성하여 보안 통신을 제공합니다.',
+    difficulty: '하',
+    tags: ['VPN', '네트워크']
+  },
+  {
+    id: 'INFO_080',
+    subject: '소프트웨어 설계',
+    question: '클린 코드(Clean Code)의 원칙이 아닌 것은?',
+    options: ['의미있는 이름', '작은 함수', '복잡한 주석', '오류 처리'],
+    answer: 2,
+    explanation: '클린 코드는 코드 자체가 문서가 되도록 명확하게 작성하고, 불필요한 주석을 지양합니다.',
+    difficulty: '중',
+    tags: ['클린코드', '코딩']
+  },
+  {
+    id: 'INFO_081',
+    subject: '데이터베이스 구축',
+    question: 'OUTER JOIN의 종류가 아닌 것은?',
+    options: ['LEFT OUTER JOIN', 'RIGHT OUTER JOIN', 'FULL OUTER JOIN', 'CENTER OUTER JOIN'],
+    answer: 3,
+    explanation: 'OUTER JOIN은 LEFT, RIGHT, FULL로 구분됩니다. CENTER OUTER JOIN은 존재하지 않습니다.',
+    difficulty: '하',
+    tags: ['SQL', 'JOIN']
+  },
+  {
+    id: 'INFO_082',
+    subject: '프로그래밍 언어 활용',
+    question: 'Stack 자료구조의 특징은?',
+    options: ['FIFO', 'LIFO', 'Random Access', 'Priority'],
+    answer: 1,
+    explanation: 'Stack은 LIFO(Last In First Out) 구조로 마지막에 들어간 데이터가 먼저 나옵니다.',
+    difficulty: '하',
+    tags: ['자료구조', 'Stack']
+  },
+  {
+    id: 'INFO_083',
+    subject: '정보시스템 구축관리',
+    question: 'Firewall의 주요 기능이 아닌 것은?',
+    options: ['패킷 필터링', '접근 제어', 'NAT', '데이터 압축'],
+    answer: 3,
+    explanation: 'Firewall은 패킷 필터링, 접근 제어, NAT 등의 기능을 수행합니다. 데이터 압축은 주요 기능이 아닙니다.',
+    difficulty: '중',
+    tags: ['방화벽', '보안']
+  },
+  {
+    id: 'INFO_084',
+    subject: '소프트웨어 설계',
+    question: 'Proxy 패턴의 목적은?',
+    options: ['객체 생성 제어', '다른 객체에 대한 접근 제어', '알고리즘 캡슐화', '객체 간 통신'],
+    answer: 1,
+    explanation: 'Proxy 패턴은 다른 객체에 대한 접근을 제어하기 위한 대리자 역할을 합니다.',
+    difficulty: '중',
+    tags: ['디자인패턴', 'Proxy']
+  },
+  {
+    id: 'INFO_085',
+    subject: '데이터베이스 구축',
+    question: '데이터베이스 튜닝의 목적이 아닌 것은?',
+    options: ['성능 향상', '응답 시간 단축', '데이터 중복 증가', '처리량 증대'],
+    answer: 2,
+    explanation: '데이터베이스 튜닝은 성능 향상, 응답 시간 단축, 처리량 증대를 목적으로 합니다. 데이터 중복은 지양해야 합니다.',
+    difficulty: '하',
+    tags: ['튜닝', '성능']
+  },
+  {
+    id: 'INFO_086',
+    subject: '프로그래밍 언어 활용',
+    question: '정규표현식에서 [0-9]+의 의미는?',
+    options: ['0 또는 9', '0부터 9까지 1개 이상', '0과 9 사이 숫자', '0 또는 9의 합'],
+    answer: 1,
+    explanation: '[0-9]는 0부터 9까지의 숫자, +는 1개 이상을 의미합니다.',
+    difficulty: '중',
+    tags: ['정규표현식', '프로그래밍']
+  },
+  {
+    id: 'INFO_087',
+    subject: '정보시스템 구축관리',
+    question: 'Load Balancing의 주요 목적은?',
+    options: ['보안 강화', '서버 부하 분산', '데이터 암호화', '네트워크 속도 향상'],
+    answer: 1,
+    explanation: 'Load Balancing은 여러 서버에 부하를 분산시켜 시스템 성능과 가용성을 향상시킵니다.',
+    difficulty: '하',
+    tags: ['로드밸런싱', '시스템']
+  },
+  {
+    id: 'INFO_088',
+    subject: '소프트웨어 설계',
+    question: 'TDD(Test-Driven Development)의 순서로 옳은 것은?',
+    options: ['코드 작성 → 테스트 작성 → 리팩토링', '테스트 작성 → 코드 작성 → 리팩토링', '리팩토링 → 테스트 작성 → 코드 작성', '테스트 작성 → 리팩토링 → 코드 작성'],
+    answer: 1,
+    explanation: 'TDD는 Red(테스트 작성) → Green(코드 작성) → Refactor(리팩토링) 순서로 진행합니다.',
+    difficulty: '중',
+    tags: ['TDD', '테스트']
+  },
+  {
+    id: 'INFO_089',
+    subject: '데이터베이스 구축',
+    question: 'Stored Procedure의 장점이 아닌 것은?',
+    options: ['네트워크 트래픽 감소', '보안 향상', '재사용성', '이식성 증가'],
+    answer: 3,
+    explanation: 'Stored Procedure는 DBMS마다 문법이 다르므로 이식성이 낮습니다. 네트워크 트래픽 감소, 보안, 재사용성은 장점입니다.',
+    difficulty: '중',
+    tags: ['프로시저', '데이터베이스']
+  },
+  {
+    id: 'INFO_090',
+    subject: '프로그래밍 언어 활용',
+    question: 'Queue 자료구조를 활용하는 대표적인 알고리즘은?',
+    options: ['DFS(깊이 우선 탐색)', 'BFS(너비 우선 탐색)', '이진 탐색', '퀵 정렬'],
+    answer: 1,
+    explanation: 'BFS(너비 우선 탐색)는 Queue를 사용합니다. DFS는 Stack을 사용합니다.',
+    difficulty: '중',
+    tags: ['자료구조', 'BFS']
+  },
+  {
+    id: 'INFO_091',
+    subject: '정보시스템 구축관리',
+    question: 'CDN(Content Delivery Network)의 주요 목적은?',
+    options: ['보안 강화', '콘텐츠 빠른 전송', '데이터 백업', '서버 비용 절감'],
+    answer: 1,
+    explanation: 'CDN은 지리적으로 분산된 서버를 통해 사용자에게 빠르게 콘텐츠를 전송합니다.',
+    difficulty: '중',
+    tags: ['CDN', '네트워크']
+  },
+  {
+    id: 'INFO_092',
+    subject: '소프트웨어 설계',
+    question: 'Microservices Architecture의 특징이 아닌 것은?',
+    options: ['독립적 배포', '서비스별 기술 선택 자유', '단일 데이터베이스 공유', '확장성'],
+    answer: 2,
+    explanation: 'Microservices는 각 서비스가 독립적인 데이터베이스를 가지는 것이 원칙입니다.',
+    difficulty: '중',
+    tags: ['마이크로서비스', '아키텍처']
+  },
+  {
+    id: 'INFO_093',
+    subject: '데이터베이스 구축',
+    question: 'Sharding의 목적은?',
+    options: ['데이터 암호화', '수평적 데이터 분할', '수직적 데이터 분할', '데이터 복제'],
+    answer: 1,
+    explanation: 'Sharding은 데이터를 여러 데이터베이스에 수평적으로 분할하여 저장하는 기법입니다.',
+    difficulty: '상',
+    tags: ['Sharding', '분산']
+  },
+  {
+    id: 'INFO_094',
+    subject: '프로그래밍 언어 활용',
+    question: 'Garbage Collection의 역할은?',
+    options: ['메모리 할당', '사용하지 않는 메모리 회수', '프로그램 최적화', '코드 압축'],
+    answer: 1,
+    explanation: 'Garbage Collection은 더 이상 사용되지 않는 메모리를 자동으로 회수하는 기능입니다.',
+    difficulty: '하',
+    tags: ['GC', '메모리']
+  },
+  {
+    id: 'INFO_095',
+    subject: '정보시스템 구축관리',
+    question: 'Kubernetes의 주요 기능이 아닌 것은?',
+    options: ['컨테이너 오케스트레이션', '자동 스케일링', '로드 밸런싱', '소스 코드 컴파일'],
+    answer: 3,
+    explanation: 'Kubernetes는 컨테이너 오케스트레이션 도구로, 소스 코드 컴파일 기능은 없습니다.',
+    difficulty: '중',
+    tags: ['Kubernetes', '컨테이너']
+  },
+  {
+    id: 'INFO_096',
+    subject: '소프트웨어 설계',
+    question: 'CQRS(Command Query Responsibility Segregation) 패턴의 핵심은?',
+    options: ['읽기와 쓰기 모델 분리', '데이터 암호화', '캐싱', '로깅'],
+    answer: 0,
+    explanation: 'CQRS는 읽기(Query)와 쓰기(Command) 모델을 분리하여 성능과 확장성을 향상시킵니다.',
+    difficulty: '상',
+    tags: ['CQRS', '패턴']
+  },
+  {
+    id: 'INFO_097',
+    subject: '데이터베이스 구축',
+    question: 'Redis의 주요 특징은?',
+    options: ['관계형 데이터베이스', '인메모리 데이터 저장소', '파일 시스템', '컴파일러'],
+    answer: 1,
+    explanation: 'Redis는 인메모리 Key-Value 저장소로 빠른 데이터 접근을 제공합니다.',
+    difficulty: '중',
+    tags: ['Redis', 'NoSQL']
+  },
+  {
+    id: 'INFO_098',
+    subject: '프로그래밍 언어 활용',
+    question: 'Dependency Injection(DI)의 목적은?',
+    options: ['성능 향상', '결합도 감소', '코드 압축', '메모리 절약'],
+    answer: 1,
+    explanation: 'DI는 객체 간 의존성을 외부에서 주입하여 결합도를 낮추고 테스트 용이성을 높입니다.',
+    difficulty: '중',
+    tags: ['DI', '디자인']
+  },
+  {
+    id: 'INFO_099',
+    subject: '정보시스템 구축관리',
+    question: 'OAuth 2.0의 주요 용도는?',
+    options: ['데이터 암호화', '인증 및 권한 부여', '데이터 압축', '네트워크 라우팅'],
+    answer: 1,
+    explanation: 'OAuth 2.0은 제3자 애플리케이션의 리소스 접근을 위한 인증 및 권한 부여 프레임워크입니다.',
+    difficulty: '중',
+    tags: ['OAuth', '인증']
+  },
+  {
+    id: 'INFO_100',
+    subject: '소프트웨어 설계',
+    question: 'Monolithic Architecture의 단점이 아닌 것은?',
+    options: ['배포 복잡도 증가', '부분 장애가 전체 영향', '기술 스택 제약', '개발 초기 단순함'],
+    answer: 3,
+    explanation: 'Monolithic은 개발 초기에는 단순하다는 장점이 있습니다. 배포 복잡도, 장애 전파, 기술 제약은 단점입니다.',
+    difficulty: '중',
+    tags: ['모놀리식', '아키텍처']
   }
 ];
 

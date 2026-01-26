@@ -749,6 +749,256 @@ export const mechanicalQuestions = [
     explanation: 'NC 공작기계는 다품종 소량생산에 적합합니다. 복잡한 형상 가공, 높은 정밀도, 자동화가 장점입니다.',
     difficulty: '중',
     tags: ['NC', '공작기계']
+  },
+  {
+    id: 'MECH_076',
+    subject: '재료역학',
+    question: '원형 축의 극관성모멘트 공식은? (d: 지름)',
+    options: ['πd⁴/32', 'πd⁴/64', 'πd³/16', 'πd³/32'],
+    answer: 0,
+    explanation: '원형 단면의 극관성모멘트 Ip = πd⁴/32 입니다.',
+    difficulty: '중',
+    tags: ['극관성모멘트', '단면']
+  },
+  {
+    id: 'MECH_077',
+    subject: '기계설계',
+    question: '볼트 체결 시 스프링 와셔의 역할은?',
+    options: ['하중 증가', '풀림 방지', '체결 시간 단축', '볼트 길이 조정'],
+    answer: 1,
+    explanation: '스프링 와셔는 진동 시 볼트가 풀리는 것을 방지하는 잠금장치입니다.',
+    difficulty: '하',
+    tags: ['볼트', '와셔']
+  },
+  {
+    id: 'MECH_078',
+    subject: '유체역학',
+    question: '마노미터(Manometer)로 측정하는 것은?',
+    options: ['유량', '압력', '점성', '밀도'],
+    answer: 1,
+    explanation: '마노미터는 액주의 높이 차이를 이용하여 압력을 측정하는 장치입니다.',
+    difficulty: '하',
+    tags: ['압력측정', '마노미터']
+  },
+  {
+    id: 'MECH_079',
+    subject: '열역학',
+    question: '단열 과정에서 온도와 압력의 관계는? (k: 비열비)',
+    options: ['T₁/T₂ = (P₁/P₂)^k', 'T₁/T₂ = (P₁/P₂)^(k-1)/k', 'T₁×P₁ = T₂×P₂', 'T₁+P₁ = T₂+P₂'],
+    answer: 1,
+    explanation: '단열 과정에서 T₁/T₂ = (P₁/P₂)^((k-1)/k) 관계가 성립합니다.',
+    difficulty: '상',
+    tags: ['단열과정', '열역학']
+  },
+  {
+    id: 'MECH_080',
+    subject: '기계제작법',
+    question: '3D 프린팅 방식이 아닌 것은?',
+    options: ['FDM', 'SLA', 'SLS', 'CNC'],
+    answer: 3,
+    explanation: 'CNC는 절삭 가공 방식이고, FDM, SLA, SLS는 적층 제조(3D 프린팅) 방식입니다.',
+    difficulty: '하',
+    tags: ['3D프린팅', '적층제조']
+  },
+  {
+    id: 'MECH_081',
+    subject: '기계동력학',
+    question: '크랭크-슬라이더 기구의 자유도는?',
+    options: ['0', '1', '2', '3'],
+    answer: 1,
+    explanation: '크랭크-슬라이더 기구는 1자유도 기구로, 크랭크 회전각 하나로 운동이 결정됩니다.',
+    difficulty: '중',
+    tags: ['기구학', '자유도']
+  },
+  {
+    id: 'MECH_082',
+    subject: '기계재료',
+    question: 'HRC(Rockwell C) 경도 시험에 사용되는 압입자는?',
+    options: ['강구', '다이아몬드 원추', '텅스텐 카바이드 구', '피라미드'],
+    answer: 1,
+    explanation: 'HRC 경도 시험은 다이아몬드 원추형 압입자를 사용합니다.',
+    difficulty: '중',
+    tags: ['경도', 'Rockwell']
+  },
+  {
+    id: 'MECH_083',
+    subject: '열역학',
+    question: '랭킨 사이클(Rankine Cycle)은 어떤 기관의 이론 사이클인가?',
+    options: ['가솔린 기관', '디젤 기관', '증기 터빈', '가스 터빈'],
+    answer: 2,
+    explanation: '랭킨 사이클은 증기 터빈(발전소)의 이론적 사이클입니다.',
+    difficulty: '하',
+    tags: ['랭킨', '증기']
+  },
+  {
+    id: 'MECH_084',
+    subject: '기계설계',
+    question: '축의 위험 속도(Critical Speed)가 발생하는 조건은?',
+    options: ['최대 토크', '최대 응력', '고유진동수 = 회전 속도', '최대 처짐'],
+    answer: 2,
+    explanation: '축의 위험 속도는 회전 속도가 축의 고유진동수와 일치할 때 발생하는 공진 현상입니다.',
+    difficulty: '상',
+    tags: ['위험속도', '진동']
+  },
+  {
+    id: 'MECH_085',
+    subject: '유체역학',
+    question: '캐비테이션(Cavitation)이 발생하는 원인은?',
+    options: ['압력 상승', '온도 하강', '국부 압력이 증기압 이하로 하강', '유속 감소'],
+    answer: 2,
+    explanation: '캐비테이션은 유체의 국부 압력이 증기압 이하로 떨어져 기포가 발생하는 현상입니다.',
+    difficulty: '중',
+    tags: ['캐비테이션', '펌프']
+  },
+  {
+    id: 'MECH_086',
+    subject: '기계제작법',
+    question: '레이저 가공의 특징이 아닌 것은?',
+    options: ['비접촉 가공', '열영향부 최소화', '두꺼운 재료 가공에 유리', '정밀 가공'],
+    answer: 2,
+    explanation: '레이저 가공은 정밀하고 비접촉이지만, 두꺼운 재료 가공에는 제한이 있습니다.',
+    difficulty: '중',
+    tags: ['레이저', '가공']
+  },
+  {
+    id: 'MECH_087',
+    subject: '재료역학',
+    question: '단순 지지보에 집중하중이 작용할 때 최대 굽힘모멘트 발생 위치는?',
+    options: ['지점', '하중 작용점', '보의 중앙', '양 끝단'],
+    answer: 1,
+    explanation: '집중하중이 작용하는 단순보에서 최대 굽힘모멘트는 하중 작용점에서 발생합니다.',
+    difficulty: '중',
+    tags: ['굽힘모멘트', '보']
+  },
+  {
+    id: 'MECH_088',
+    subject: '기계설계',
+    question: '체인 전동 장치의 장점이 아닌 것은?',
+    options: ['미끄러짐 없음', '정확한 속도비', '충격 흡수 우수', '큰 동력 전달'],
+    answer: 2,
+    explanation: '체인은 미끄러짐이 없고 큰 동력 전달이 가능하지만, 벨트보다 충격 흡수가 떨어집니다.',
+    difficulty: '중',
+    tags: ['체인', '전동장치']
+  },
+  {
+    id: 'MECH_089',
+    subject: '열역학',
+    question: '엔탈피(h)와 내부에너지(u)의 관계식은?',
+    options: ['h = u + pv', 'h = u - pv', 'h = u × pv', 'h = u / pv'],
+    answer: 0,
+    explanation: '엔탈피 h = u + pv (내부에너지 + 유동일)입니다.',
+    difficulty: '하',
+    tags: ['엔탈피', '열역학']
+  },
+  {
+    id: 'MECH_090',
+    subject: '기계재료',
+    question: '스테인리스강의 주요 합금 원소는?',
+    options: ['망간', '크롬', '니켈', '크롬과 니켈'],
+    answer: 3,
+    explanation: '스테인리스강은 크롬(Cr) 12% 이상과 니켈(Ni)을 첨가하여 내식성을 향상시킨 합금강입니다.',
+    difficulty: '하',
+    tags: ['스테인리스강', '합금']
+  },
+  {
+    id: 'MECH_091',
+    subject: '유체역학',
+    question: '난류(Turbulent Flow)의 특징이 아닌 것은?',
+    options: ['불규칙적 유동', '높은 마찰 손실', '예측 가능한 유선', '높은 혼합 효과'],
+    answer: 2,
+    explanation: '난류는 불규칙하고 예측이 어려운 유동으로, 높은 마찰 손실과 혼합 효과가 특징입니다.',
+    difficulty: '하',
+    tags: ['난류', '유동']
+  },
+  {
+    id: 'MECH_092',
+    subject: '기계제작법',
+    question: 'MIG 용접의 특징으로 옳은 것은?',
+    options: ['피복 아크 용접', '불활성가스 사용', '슬래그 발생 많음', '비소모성 전극'],
+    answer: 1,
+    explanation: 'MIG(Metal Inert Gas) 용접은 불활성 가스를 사용하는 소모성 전극 아크 용접입니다.',
+    difficulty: '중',
+    tags: ['용접', 'MIG']
+  },
+  {
+    id: 'MECH_093',
+    subject: '기계동력학',
+    question: '관성력의 크기를 결정하는 요소가 아닌 것은?',
+    options: ['질량', '가속도', '속도', '온도'],
+    answer: 3,
+    explanation: '관성력 F = ma (질량 × 가속도)로 결정되며, 온도는 직접 관련 없습니다.',
+    difficulty: '하',
+    tags: ['관성력', '동역학']
+  },
+  {
+    id: 'MECH_094',
+    subject: '재료역학',
+    question: '평면 응력 상태에서 주응력 방향의 전단응력은?',
+    options: ['최대', '최소', '0', '평균값'],
+    answer: 2,
+    explanation: '주응력 방향에서는 전단응력이 0이 됩니다.',
+    difficulty: '상',
+    tags: ['주응력', '응력']
+  },
+  {
+    id: 'MECH_095',
+    subject: '기계설계',
+    question: '평 키(Flat Key)의 주요 용도는?',
+    options: ['축의 지지', '축과 보스의 회전력 전달', '축 정렬', '진동 흡수'],
+    answer: 1,
+    explanation: '평 키는 축과 보스(기어, 풀리 등) 사이의 회전력(토크)을 전달하는 기계요소입니다.',
+    difficulty: '하',
+    tags: ['키', '동력전달']
+  },
+  {
+    id: 'MECH_096',
+    subject: '열역학',
+    question: '압축비가 증가하면 오토 사이클의 열효율은?',
+    options: ['증가', '감소', '일정', '변화 없음'],
+    answer: 0,
+    explanation: '오토 사이클의 열효율은 압축비가 증가할수록 증가합니다.',
+    difficulty: '중',
+    tags: ['오토사이클', '효율']
+  },
+  {
+    id: 'MECH_097',
+    subject: '기계재료',
+    question: '금속의 결정 구조가 아닌 것은?',
+    options: ['BCC', 'FCC', 'HCP', 'ABC'],
+    answer: 3,
+    explanation: '금속의 주요 결정 구조는 BCC(체심입방), FCC(면심입방), HCP(조밀육방)입니다.',
+    difficulty: '중',
+    tags: ['결정구조', '금속']
+  },
+  {
+    id: 'MECH_098',
+    subject: '유체역학',
+    question: '원관 내 완전 발달 층류의 속도 분포는?',
+    options: ['균일 분포', '선형 분포', '포물선 분포', '쌍곡선 분포'],
+    answer: 2,
+    explanation: '원관 내 층류는 중심에서 최대, 벽면에서 0인 포물선 속도 분포를 갖습니다.',
+    difficulty: '상',
+    tags: ['층류', '속도분포']
+  },
+  {
+    id: 'MECH_099',
+    subject: '기계제작법',
+    question: 'CAD/CAM의 장점이 아닌 것은?',
+    options: ['설계 시간 단축', '도면 수정 용이', '가공 자동화', '재료비 절감'],
+    answer: 3,
+    explanation: 'CAD/CAM은 설계와 가공 효율을 높이지만, 재료비 절감과는 직접 관련 없습니다.',
+    difficulty: '중',
+    tags: ['CAD', 'CAM']
+  },
+  {
+    id: 'MECH_100',
+    subject: '기계설계',
+    question: '마찰 클러치에서 마찰력을 증가시키는 방법이 아닌 것은?',
+    options: ['압력 증가', '마찰계수가 큰 재료 사용', '접촉 면적 증가', '회전 속도 증가'],
+    answer: 3,
+    explanation: '마찰력은 압력, 마찰계수, 접촉 면적에 비례하며, 회전 속도와는 무관합니다.',
+    difficulty: '중',
+    tags: ['클러치', '마찰']
   }
 ];
 
