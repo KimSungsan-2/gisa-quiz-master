@@ -499,6 +499,256 @@ export const infoQuestions = [
     explanation: 'ISO/IEC 27001은 정보보안 관리체계(ISMS)에 대한 국제 표준입니다.',
     difficulty: '중',
     tags: ['표준', '보안']
+  },
+  {
+    id: 'INFO_051',
+    subject: '소프트웨어 설계',
+    question: 'GoF 디자인 패턴 중 생성(Creational) 패턴이 아닌 것은?',
+    options: ['Singleton', 'Factory Method', 'Strategy', 'Abstract Factory'],
+    answer: 2,
+    explanation: 'Strategy는 행위(Behavioral) 패턴입니다. 생성 패턴에는 Singleton, Factory Method, Abstract Factory, Builder, Prototype가 있습니다.',
+    difficulty: '중',
+    tags: ['디자인패턴', 'GoF']
+  },
+  {
+    id: 'INFO_052',
+    subject: '데이터베이스 구축',
+    question: '데이터베이스에서 뷰(View)의 특징으로 옳지 않은 것은?',
+    options: ['가상 테이블이다', '독립성을 제공한다', '데이터를 물리적으로 저장한다', '보안성을 향상시킨다'],
+    answer: 2,
+    explanation: '뷰는 가상 테이블로 데이터를 물리적으로 저장하지 않고 쿼리문만 저장합니다.',
+    difficulty: '하',
+    tags: ['View', '데이터베이스']
+  },
+  {
+    id: 'INFO_053',
+    subject: '프로그래밍 언어 활용',
+    question: '다음 Python 코드의 출력 결과는?\n\nx = [1, 2, 3]\ny = x\ny.append(4)\nprint(len(x))',
+    options: ['3', '4', '에러', '0'],
+    answer: 1,
+    explanation: 'Python에서 리스트는 참조 타입이므로 y = x는 같은 객체를 참조합니다. y.append(4)는 x에도 영향을 주므로 x의 길이는 4입니다.',
+    difficulty: '중',
+    tags: ['Python', '참조']
+  },
+  {
+    id: 'INFO_054',
+    subject: '소프트웨어 설계',
+    question: '애자일(Agile) 방법론의 특징이 아닌 것은?',
+    options: ['반복적 개발', '고객과의 협력', '상세한 문서화', '변화에 대한 대응'],
+    answer: 2,
+    explanation: '애자일은 포괄적인 문서보다 작동하는 소프트웨어를 중요시합니다.',
+    difficulty: '하',
+    tags: ['애자일', '방법론']
+  },
+  {
+    id: 'INFO_055',
+    subject: '데이터베이스 구축',
+    question: 'SQL의 DELETE와 TRUNCATE의 차이점으로 옳은 것은?',
+    options: ['DELETE는 롤백 가능, TRUNCATE는 불가능', 'TRUNCATE가 DELETE보다 느리다', 'DELETE는 DDL, TRUNCATE는 DML', 'TRUNCATE는 WHERE 절 사용 가능'],
+    answer: 0,
+    explanation: 'DELETE는 DML로 롤백이 가능하지만, TRUNCATE는 DDL로 롤백이 불가능하고 모든 행을 삭제합니다.',
+    difficulty: '중',
+    tags: ['SQL', 'DELETE', 'TRUNCATE']
+  },
+  {
+    id: 'INFO_056',
+    subject: '정보시스템 구축관리',
+    question: 'TCP/IP 4계층 모델에서 전송 계층에 해당하는 프로토콜은?',
+    options: ['IP', 'TCP', 'HTTP', 'Ethernet'],
+    answer: 1,
+    explanation: 'TCP는 전송 계층 프로토콜입니다. IP는 인터넷 계층, HTTP는 응용 계층, Ethernet은 네트워크 인터페이스 계층입니다.',
+    difficulty: '하',
+    tags: ['TCP/IP', '네트워크']
+  },
+  {
+    id: 'INFO_057',
+    subject: '소프트웨어 설계',
+    question: '소프트웨어 아키텍처 패턴 중 MVC의 구성 요소가 아닌 것은?',
+    options: ['Model', 'View', 'Controller', 'Repository'],
+    answer: 3,
+    explanation: 'MVC는 Model(모델), View(뷰), Controller(컨트롤러)로 구성됩니다. Repository는 별도의 패턴입니다.',
+    difficulty: '하',
+    tags: ['MVC', '아키텍처']
+  },
+  {
+    id: 'INFO_058',
+    subject: '프로그래밍 언어 활용',
+    question: 'Java에서 인터페이스(Interface)의 특징으로 옳지 않은 것은?',
+    options: ['다중 상속 가능', '추상 메서드만 선언 가능', '생성자를 가질 수 있다', '상수 선언 가능'],
+    answer: 2,
+    explanation: '인터페이스는 생성자를 가질 수 없습니다. Java 8부터는 default 메서드와 static 메서드도 가능합니다.',
+    difficulty: '중',
+    tags: ['Java', 'Interface']
+  },
+  {
+    id: 'INFO_059',
+    subject: '데이터베이스 구축',
+    question: '인덱스(Index) 사용의 장점이 아닌 것은?',
+    options: ['검색 속도 향상', '정렬 속도 향상', '데이터 삽입 속도 향상', '조인 성능 향상'],
+    answer: 2,
+    explanation: '인덱스는 검색, 정렬, 조인 성능을 향상시키지만, 데이터 삽입/수정/삭제 시 인덱스 갱신이 필요하여 오히려 속도가 느려집니다.',
+    difficulty: '중',
+    tags: ['Index', '성능']
+  },
+  {
+    id: 'INFO_060',
+    subject: '정보시스템 구축관리',
+    question: 'HTTPS에서 사용하는 기본 포트 번호는?',
+    options: ['80', '443', '8080', '22'],
+    answer: 1,
+    explanation: 'HTTPS는 443 포트를 기본으로 사용합니다. HTTP는 80, SSH는 22 포트입니다.',
+    difficulty: '하',
+    tags: ['HTTPS', '포트']
+  },
+  {
+    id: 'INFO_061',
+    subject: '소프트웨어 설계',
+    question: '블랙박스 테스트 기법이 아닌 것은?',
+    options: ['동등 분할', '경계값 분석', '구문 커버리지', '상태 전이 테스트'],
+    answer: 2,
+    explanation: '구문 커버리지는 화이트박스 테스트 기법입니다. 블랙박스 테스트는 내부 구조를 모르고 입출력만으로 테스트합니다.',
+    difficulty: '중',
+    tags: ['테스트', '블랙박스']
+  },
+  {
+    id: 'INFO_062',
+    subject: '데이터베이스 구축',
+    question: 'BCNF(Boyce-Codd Normal Form)에 대한 설명으로 옳은 것은?',
+    options: ['1NF의 강화 버전', '2NF의 강화 버전', '3NF의 강화 버전', '4NF의 강화 버전'],
+    answer: 2,
+    explanation: 'BCNF는 3NF를 강화한 정규형으로, 모든 결정자가 후보키여야 합니다.',
+    difficulty: '상',
+    tags: ['정규화', 'BCNF']
+  },
+  {
+    id: 'INFO_063',
+    subject: '프로그래밍 언어 활용',
+    question: '다음 중 시간 복잡도가 O(n log n)인 정렬 알고리즘은?',
+    options: ['버블 정렬', '선택 정렬', '퀵 정렬(평균)', '삽입 정렬'],
+    answer: 2,
+    explanation: '퀵 정렬의 평균 시간 복잡도는 O(n log n)입니다. 버블, 선택, 삽입 정렬은 O(n²)입니다.',
+    difficulty: '중',
+    tags: ['알고리즘', '정렬', '시간복잡도']
+  },
+  {
+    id: 'INFO_064',
+    subject: '소프트웨어 설계',
+    question: 'UML 다이어그램 중 객체 간의 동적 상호작용을 표현하는 것은?',
+    options: ['클래스 다이어그램', '시퀀스 다이어그램', '컴포넌트 다이어그램', '배치 다이어그램'],
+    answer: 1,
+    explanation: '시퀀스 다이어그램은 객체 간의 메시지 교환 순서를 시간 흐름에 따라 표현합니다.',
+    difficulty: '하',
+    tags: ['UML', '시퀀스다이어그램']
+  },
+  {
+    id: 'INFO_065',
+    subject: '정보시스템 구축관리',
+    question: 'Git에서 작업 내용을 원격 저장소에 업로드하는 명령어는?',
+    options: ['git pull', 'git push', 'git commit', 'git clone'],
+    answer: 1,
+    explanation: 'git push는 로컬 저장소의 변경사항을 원격 저장소에 업로드합니다.',
+    difficulty: '하',
+    tags: ['Git', '버전관리']
+  },
+  {
+    id: 'INFO_066',
+    subject: '데이터베이스 구축',
+    question: '트랜잭션의 격리 수준(Isolation Level) 중 가장 낮은 수준은?',
+    options: ['READ UNCOMMITTED', 'READ COMMITTED', 'REPEATABLE READ', 'SERIALIZABLE'],
+    answer: 0,
+    explanation: 'READ UNCOMMITTED는 가장 낮은 격리 수준으로 Dirty Read가 발생할 수 있습니다.',
+    difficulty: '상',
+    tags: ['트랜잭션', '격리수준']
+  },
+  {
+    id: 'INFO_067',
+    subject: '프로그래밍 언어 활용',
+    question: 'RESTful API에서 리소스 수정에 주로 사용되는 HTTP 메서드는?',
+    options: ['GET', 'POST', 'PUT', 'DELETE'],
+    answer: 2,
+    explanation: 'PUT은 리소스의 전체 수정에 사용됩니다. PATCH는 부분 수정, POST는 생성, DELETE는 삭제입니다.',
+    difficulty: '하',
+    tags: ['REST', 'HTTP']
+  },
+  {
+    id: 'INFO_068',
+    subject: '소프트웨어 설계',
+    question: '소프트웨어 재사용 기법 중 화이트박스 재사용 방법은?',
+    options: ['상속', '합성', '위임', '인터페이스 구현'],
+    answer: 0,
+    explanation: '상속은 부모 클래스의 내부 구조를 알아야 하므로 화이트박스 재사용입니다. 합성과 위임은 블랙박스 재사용입니다.',
+    difficulty: '중',
+    tags: ['재사용', '상속']
+  },
+  {
+    id: 'INFO_069',
+    subject: '데이터베이스 구축',
+    question: 'NoSQL 데이터베이스 유형이 아닌 것은?',
+    options: ['Key-Value', 'Document', 'Column-Family', 'Relational'],
+    answer: 3,
+    explanation: 'Relational은 관계형 데이터베이스(RDBMS)입니다. NoSQL 유형에는 Key-Value, Document, Column-Family, Graph가 있습니다.',
+    difficulty: '하',
+    tags: ['NoSQL', '데이터베이스']
+  },
+  {
+    id: 'INFO_070',
+    subject: '정보시스템 구축관리',
+    question: 'SSL/TLS에서 사용하는 암호화 방식의 조합으로 옳은 것은?',
+    options: ['대칭키만 사용', '비대칭키만 사용', '대칭키 + 비대칭키 모두 사용', '해시만 사용'],
+    answer: 2,
+    explanation: 'SSL/TLS는 초기 핸드셰이크에서 비대칭키로 세션키를 교환하고, 이후 통신에서 대칭키로 암호화합니다.',
+    difficulty: '중',
+    tags: ['SSL', '암호화']
+  },
+  {
+    id: 'INFO_071',
+    subject: '프로그래밍 언어 활용',
+    question: 'JavaScript에서 비동기 처리를 위한 최신 문법은?',
+    options: ['callback', 'Promise', 'async/await', 'setTimeout'],
+    answer: 2,
+    explanation: 'async/await는 ES2017에 도입된 비동기 처리 문법으로 Promise 기반으로 동작합니다.',
+    difficulty: '중',
+    tags: ['JavaScript', '비동기']
+  },
+  {
+    id: 'INFO_072',
+    subject: '소프트웨어 설계',
+    question: 'DevOps의 핵심 원칙이 아닌 것은?',
+    options: ['지속적 통합(CI)', '지속적 배포(CD)', '자동화', '폭포수 모델'],
+    answer: 3,
+    explanation: 'DevOps는 개발과 운영의 협업, 자동화, CI/CD를 강조합니다. 폭포수 모델은 전통적인 순차적 개발 방법론입니다.',
+    difficulty: '하',
+    tags: ['DevOps', 'CI/CD']
+  },
+  {
+    id: 'INFO_073',
+    subject: '데이터베이스 구축',
+    question: 'SQL Injection 공격을 방지하는 방법으로 옳지 않은 것은?',
+    options: ['Prepared Statement 사용', '입력값 검증', 'SQL 쿼리를 클라이언트에 노출', '최소 권한 원칙'],
+    answer: 2,
+    explanation: 'SQL 쿼리를 클라이언트에 노출하는 것은 보안 위협을 증가시킵니다. Prepared Statement와 입력값 검증이 중요합니다.',
+    difficulty: '중',
+    tags: ['보안', 'SQL Injection']
+  },
+  {
+    id: 'INFO_074',
+    subject: '정보시스템 구축관리',
+    question: 'Docker 컨테이너의 특징으로 옳지 않은 것은?',
+    options: ['격리된 환경 제공', '가상머신보다 가볍다', '호스트 OS 커널 공유', '하이퍼바이저 필요'],
+    answer: 3,
+    explanation: 'Docker는 호스트 OS 커널을 공유하므로 하이퍼바이저가 필요 없습니다. 가상머신과 달리 경량화되어 있습니다.',
+    difficulty: '중',
+    tags: ['Docker', '컨테이너']
+  },
+  {
+    id: 'INFO_075',
+    subject: '프로그래밍 언어 활용',
+    question: '다음 중 함수형 프로그래밍의 특징이 아닌 것은?',
+    options: ['불변성(Immutability)', '순수 함수', '고차 함수', '전역 변수 사용 권장'],
+    answer: 3,
+    explanation: '함수형 프로그래밍은 부작용을 최소화하고 순수 함수를 지향하므로 전역 변수 사용을 지양합니다.',
+    difficulty: '중',
+    tags: ['함수형프로그래밍', '패러다임']
   }
 ];
 

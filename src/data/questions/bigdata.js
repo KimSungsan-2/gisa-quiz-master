@@ -499,6 +499,256 @@ export const bigdataQuestions = [
     explanation: '엘보우 방법은 K-Means 등 군집화에서 최적의 군집 수(K)를 결정하기 위해 사용되는 방법입니다.',
     difficulty: '중',
     tags: ['엘보우 방법', '군집화']
+  },
+  {
+    id: 'BAE_051',
+    subject: '빅데이터 탐색',
+    question: '데이터 전처리에서 이상값(Outlier)을 탐지하는 방법이 아닌 것은?',
+    options: ['IQR(Interquartile Range)', 'Z-Score', 'PCA(주성분분석)', 'Box Plot'],
+    answer: 2,
+    explanation: 'PCA는 차원 축소 기법으로 이상값 탐지 방법이 아닙니다. IQR, Z-Score, Box Plot은 이상값 탐지에 사용됩니다.',
+    difficulty: '중',
+    tags: ['이상값', '전처리']
+  },
+  {
+    id: 'BAE_052',
+    subject: '빅데이터 모델링',
+    question: 'Random Forest의 특징으로 옳은 것은?',
+    options: ['단일 의사결정나무 사용', '배깅(Bagging) 기반', '부스팅(Boosting) 기반', '선형 모델'],
+    answer: 1,
+    explanation: 'Random Forest는 여러 의사결정나무를 배깅 방식으로 결합한 앙상블 모델입니다.',
+    difficulty: '중',
+    tags: ['Random Forest', '앙상블']
+  },
+  {
+    id: 'BAE_053',
+    subject: '빅데이터 결과 해석',
+    question: 'Recall(재현율)의 정의로 옳은 것은?',
+    options: ['TP / (TP + FP)', 'TP / (TP + FN)', 'TN / (TN + FP)', '(TP + TN) / Total'],
+    answer: 1,
+    explanation: 'Recall(재현율)은 실제 Positive 중에서 모델이 Positive로 예측한 비율입니다. TP / (TP + FN)로 계산됩니다.',
+    difficulty: '중',
+    tags: ['평가지표', 'Recall']
+  },
+  {
+    id: 'BAE_054',
+    subject: '빅데이터 탐색',
+    question: '주성분분석(PCA)의 목적은?',
+    options: ['차원 축소', '결측값 처리', '이상값 탐지', '범주형 변수 변환'],
+    answer: 0,
+    explanation: 'PCA는 고차원 데이터를 저차원으로 축소하면서 정보 손실을 최소화하는 차원 축소 기법입니다.',
+    difficulty: '하',
+    tags: ['PCA', '차원축소']
+  },
+  {
+    id: 'BAE_055',
+    subject: '빅데이터 모델링',
+    question: '과적합(Overfitting)을 방지하는 방법이 아닌 것은?',
+    options: ['정규화(Regularization)', '드롭아웃(Dropout)', '데이터 증강', '모델 복잡도 증가'],
+    answer: 3,
+    explanation: '모델 복잡도를 증가시키면 과적합이 더 심해집니다. 정규화, 드롭아웃, 데이터 증강은 과적합 방지 기법입니다.',
+    difficulty: '중',
+    tags: ['과적합', '모델링']
+  },
+  {
+    id: 'BAE_056',
+    subject: '빅데이터 분석 기획',
+    question: 'CRISP-DM의 6단계가 아닌 것은?',
+    options: ['비즈니스 이해', '데이터 이해', '코딩', '배포'],
+    answer: 2,
+    explanation: 'CRISP-DM의 6단계는 비즈니스 이해, 데이터 이해, 데이터 준비, 모델링, 평가, 배포입니다.',
+    difficulty: '중',
+    tags: ['CRISP-DM', '방법론']
+  },
+  {
+    id: 'BAE_057',
+    subject: '빅데이터 탐색',
+    question: '정규분포의 특징으로 옳지 않은 것은?',
+    options: ['평균=중앙값=최빈값', '좌우 대칭', '왜도=0', '첨도는 항상 3'],
+    answer: 3,
+    explanation: '표준 정규분포의 첨도는 3이지만, 모든 정규분포의 첨도가 3은 아닙니다. 평균, 중앙값, 최빈값이 같고 좌우 대칭이며 왜도가 0입니다.',
+    difficulty: '상',
+    tags: ['정규분포', '통계']
+  },
+  {
+    id: 'BAE_058',
+    subject: '빅데이터 모델링',
+    question: 'XGBoost의 특징으로 옳지 않은 것은?',
+    options: ['그래디언트 부스팅 기반', '병렬 처리 지원', '과적합에 매우 약함', '결측값 자동 처리'],
+    answer: 2,
+    explanation: 'XGBoost는 정규화 기능이 내장되어 과적합 방지에 강합니다. 그래디언트 부스팅 기반이며 병렬 처리와 결측값 자동 처리를 지원합니다.',
+    difficulty: '중',
+    tags: ['XGBoost', '부스팅']
+  },
+  {
+    id: 'BAE_059',
+    subject: '빅데이터 결과 해석',
+    question: 'F1-Score의 정의로 옳은 것은?',
+    options: ['Precision + Recall', '2 × (Precision × Recall) / (Precision + Recall)', 'Precision - Recall', 'Accuracy × 2'],
+    answer: 1,
+    explanation: 'F1-Score는 Precision과 Recall의 조화평균입니다. 2 × (Precision × Recall) / (Precision + Recall)로 계산됩니다.',
+    difficulty: '중',
+    tags: ['F1-Score', '평가지표']
+  },
+  {
+    id: 'BAE_060',
+    subject: '빅데이터 탐색',
+    question: '범주형 변수를 수치형으로 변환하는 방법이 아닌 것은?',
+    options: ['Label Encoding', 'One-Hot Encoding', 'Target Encoding', 'Min-Max Scaling'],
+    answer: 3,
+    explanation: 'Min-Max Scaling은 수치형 변수의 정규화 방법입니다. Label Encoding, One-Hot Encoding, Target Encoding은 범주형 변수 변환 방법입니다.',
+    difficulty: '하',
+    tags: ['인코딩', '전처리']
+  },
+  {
+    id: 'BAE_061',
+    subject: '빅데이터 모델링',
+    question: 'K-Means 군집화의 특징으로 옳지 않은 것은?',
+    options: ['K값을 미리 지정해야 함', '유클리드 거리 사용', '계층적 군집화', '중심점 기반'],
+    answer: 2,
+    explanation: 'K-Means는 비계층적 군집화 방법입니다. K값을 미리 지정하고 유클리드 거리와 중심점을 사용합니다.',
+    difficulty: '중',
+    tags: ['K-Means', '군집화']
+  },
+  {
+    id: 'BAE_062',
+    subject: '빅데이터 분석 기획',
+    question: '데이터 웨어하우스의 특징이 아닌 것은?',
+    options: ['주제 중심적', '통합적', '시계열적', '실시간 트랜잭션 처리'],
+    answer: 3,
+    explanation: '데이터 웨어하우스는 분석을 위한 저장소로 실시간 트랜잭션 처리가 아닌 OLAP에 최적화되어 있습니다.',
+    difficulty: '중',
+    tags: ['데이터웨어하우스', 'DW']
+  },
+  {
+    id: 'BAE_063',
+    subject: '빅데이터 탐색',
+    question: '시계열 데이터의 구성 요소가 아닌 것은?',
+    options: ['추세(Trend)', '계절성(Seasonality)', '주기성(Cycle)', '정규성(Normality)'],
+    answer: 3,
+    explanation: '시계열 데이터는 추세, 계절성, 주기성, 불규칙 요소로 구성됩니다. 정규성은 시계열 구성 요소가 아닙니다.',
+    difficulty: '중',
+    tags: ['시계열', '데이터탐색']
+  },
+  {
+    id: 'BAE_064',
+    subject: '빅데이터 모델링',
+    question: 'Convolutional Neural Network(CNN)이 주로 사용되는 분야는?',
+    options: ['자연어 처리', '이미지 처리', '시계열 예측', '추천 시스템'],
+    answer: 1,
+    explanation: 'CNN은 합성곱 신경망으로 이미지 처리 분야에서 우수한 성능을 보입니다.',
+    difficulty: '하',
+    tags: ['CNN', '딥러닝']
+  },
+  {
+    id: 'BAE_065',
+    subject: '빅데이터 결과 해석',
+    question: '혼동 행렬(Confusion Matrix)에서 Type I Error는?',
+    options: ['False Positive', 'False Negative', 'True Positive', 'True Negative'],
+    answer: 0,
+    explanation: 'Type I Error는 실제 Negative를 Positive로 잘못 판단하는 False Positive(FP)입니다.',
+    difficulty: '중',
+    tags: ['혼동행렬', '오류']
+  },
+  {
+    id: 'BAE_066',
+    subject: '빅데이터 탐색',
+    question: '변수 간 상관관계 분석에 사용되는 계수가 아닌 것은?',
+    options: ['피어슨 상관계수', '스피어만 상관계수', '켄달 타우', '엔트로피'],
+    answer: 3,
+    explanation: '엔트로피는 정보량을 측정하는 지표입니다. 피어슨, 스피어만, 켄달 타우는 상관관계 측정 계수입니다.',
+    difficulty: '중',
+    tags: ['상관분석', '통계']
+  },
+  {
+    id: 'BAE_067',
+    subject: '빅데이터 모델링',
+    question: 'LSTM(Long Short-Term Memory)이 RNN보다 우수한 점은?',
+    options: ['계산 속도', '장기 의존성 문제 해결', '파라미터 수 감소', '단순한 구조'],
+    answer: 1,
+    explanation: 'LSTM은 게이트 메커니즘을 통해 RNN의 장기 의존성(Long-term dependency) 문제를 해결합니다.',
+    difficulty: '중',
+    tags: ['LSTM', 'RNN', '딥러닝']
+  },
+  {
+    id: 'BAE_068',
+    subject: '빅데이터 분석 기획',
+    question: 'ETL 프로세스의 단계 순서로 옳은 것은?',
+    options: ['Extract → Transform → Load', 'Transform → Extract → Load', 'Load → Extract → Transform', 'Extract → Load → Transform'],
+    answer: 0,
+    explanation: 'ETL은 Extract(추출) → Transform(변환) → Load(적재) 순서로 데이터를 처리합니다.',
+    difficulty: '하',
+    tags: ['ETL', '데이터처리']
+  },
+  {
+    id: 'BAE_069',
+    subject: '빅데이터 결과 해석',
+    question: 'A/B 테스트에서 통계적 유의성을 판단하기 위해 주로 사용하는 검정은?',
+    options: ['F-검정', 't-검정', '카이제곱 검정', 'ANOVA'],
+    answer: 1,
+    explanation: 'A/B 테스트에서는 두 그룹의 평균 차이를 검정하기 위해 주로 t-검정을 사용합니다.',
+    difficulty: '중',
+    tags: ['A/B테스트', '통계검정']
+  },
+  {
+    id: 'BAE_070',
+    subject: '빅데이터 탐색',
+    question: 'Hadoop의 핵심 구성 요소가 아닌 것은?',
+    options: ['HDFS', 'MapReduce', 'YARN', 'Spark'],
+    answer: 3,
+    explanation: 'Spark는 별도의 빅데이터 처리 프레임워크입니다. Hadoop의 핵심 구성 요소는 HDFS, MapReduce, YARN입니다.',
+    difficulty: '하',
+    tags: ['Hadoop', '빅데이터플랫폼']
+  },
+  {
+    id: 'BAE_071',
+    subject: '빅데이터 모델링',
+    question: 'Gradient Descent의 학습률(Learning Rate)이 너무 크면 발생하는 문제는?',
+    options: ['학습 속도 느림', '지역 최솟값 수렴', '발산(Divergence)', '과적합'],
+    answer: 2,
+    explanation: '학습률이 너무 크면 최솟값을 지나쳐 발산할 수 있습니다. 너무 작으면 학습 속도가 느려집니다.',
+    difficulty: '중',
+    tags: ['경사하강법', '최적화']
+  },
+  {
+    id: 'BAE_072',
+    subject: '빅데이터 결과 해석',
+    question: 'ROC 곡선의 X축과 Y축은?',
+    options: ['X: Precision, Y: Recall', 'X: FPR, Y: TPR', 'X: Accuracy, Y: F1', 'X: Recall, Y: Precision'],
+    answer: 1,
+    explanation: 'ROC 곡선의 X축은 FPR(False Positive Rate), Y축은 TPR(True Positive Rate)입니다.',
+    difficulty: '중',
+    tags: ['ROC', '평가지표']
+  },
+  {
+    id: 'BAE_073',
+    subject: '빅데이터 탐색',
+    question: 'Apache Spark의 주요 특징이 아닌 것은?',
+    options: ['인메모리 처리', '배치/스트리밍 지원', 'SQL 지원', '디스크 기반 처리 전용'],
+    answer: 3,
+    explanation: 'Spark는 인메모리 기반 처리로 빠른 속도를 제공합니다. 배치와 스트리밍 모두 지원하며 Spark SQL도 제공합니다.',
+    difficulty: '하',
+    tags: ['Spark', '빅데이터플랫폼']
+  },
+  {
+    id: 'BAE_074',
+    subject: '빅데이터 모델링',
+    question: '교차 검증(Cross Validation)의 목적은?',
+    options: ['학습 속도 향상', '모델 일반화 성능 평가', '데이터 전처리', '차원 축소'],
+    answer: 1,
+    explanation: '교차 검증은 모델의 일반화 성능을 평가하고 과적합을 방지하기 위해 사용됩니다.',
+    difficulty: '하',
+    tags: ['교차검증', '모델평가']
+  },
+  {
+    id: 'BAE_075',
+    subject: '빅데이터 분석 기획',
+    question: '데이터 레이크(Data Lake)와 데이터 웨어하우스의 주요 차이점은?',
+    options: ['저장 용량', '스키마 정의 시점', '비용', '보안 수준'],
+    answer: 1,
+    explanation: '데이터 레이크는 Schema-on-Read(읽을 때 스키마 정의), 데이터 웨어하우스는 Schema-on-Write(쓸 때 스키마 정의)입니다.',
+    difficulty: '상',
+    tags: ['데이터레이크', '데이터웨어하우스']
   }
 ];
 

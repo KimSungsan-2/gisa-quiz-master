@@ -499,6 +499,256 @@ export const mechanicalQuestions = [
     explanation: '풀리 직경 감소는 접촉각을 줄여 미끄러짐을 증가시킬 수 있습니다.',
     difficulty: '중',
     tags: ['벨트', '전동장치']
+  },
+  {
+    id: 'MECH_051',
+    subject: '기계재료 및 유체역학',
+    question: '철강 재료의 열처리 방법이 아닌 것은?',
+    options: ['담금질(Quenching)', '뜨임(Tempering)', '풀림(Annealing)', '압연(Rolling)'],
+    answer: 3,
+    explanation: '압연은 소성가공 방법입니다. 열처리 방법에는 담금질, 뜨임, 풀림, 불림, 침탄 등이 있습니다.',
+    difficulty: '하',
+    tags: ['열처리', '재료']
+  },
+  {
+    id: 'MECH_052',
+    subject: '기계설계',
+    question: '나사의 효율을 높이는 방법으로 옳은 것은?',
+    options: ['리드각 증가', '마찰계수 증가', '나사산 각도 증가', '피치 감소'],
+    answer: 0,
+    explanation: '나사의 효율은 리드각이 클수록, 마찰계수가 작을수록 증가합니다.',
+    difficulty: '중',
+    tags: ['나사', '기계요소']
+  },
+  {
+    id: 'MECH_053',
+    subject: '유체역학',
+    question: '베르누이 방정식이 성립하기 위한 조건이 아닌 것은?',
+    options: ['정상 흐름', '비압축성 유체', '점성 무시', '난류 흐름'],
+    answer: 3,
+    explanation: '베르누이 방정식은 정상류, 비압축성, 비점성 유체의 층류 흐름에서 성립합니다.',
+    difficulty: '중',
+    tags: ['베르누이', '유체역학']
+  },
+  {
+    id: 'MECH_054',
+    subject: '기계동력학',
+    question: '회전체의 평형 조건이 아닌 것은?',
+    options: ['정적 평형', '동적 평형', '관성 평형', '열적 평형'],
+    answer: 3,
+    explanation: '회전체의 평형은 정적 평형과 동적 평형으로 구분됩니다. 열적 평형은 회전 평형 조건이 아닙니다.',
+    difficulty: '중',
+    tags: ['평형', '회전체']
+  },
+  {
+    id: 'MECH_055',
+    subject: '기계재료',
+    question: '탄소강에서 탄소 함유량이 증가하면 나타나는 현상은?',
+    options: ['강도 증가', '연성 증가', '용접성 향상', '가공성 향상'],
+    answer: 0,
+    explanation: '탄소 함유량이 증가하면 강도와 경도는 증가하지만, 연성, 용접성, 가공성은 감소합니다.',
+    difficulty: '중',
+    tags: ['탄소강', '재료특성']
+  },
+  {
+    id: 'MECH_056',
+    subject: '기계제작법',
+    question: '선반 가공에서 이송속도의 단위는?',
+    options: ['m/min', 'mm/rev', 'rpm', 'mm/sec'],
+    answer: 1,
+    explanation: '선반의 이송속도는 mm/rev(회전당 이송량)로 표시합니다. 절삭속도는 m/min입니다.',
+    difficulty: '하',
+    tags: ['선반', '절삭가공']
+  },
+  {
+    id: 'MECH_057',
+    subject: '기계설계',
+    question: '축의 비틀림 응력을 줄이는 방법이 아닌 것은?',
+    options: ['축 지름 증가', '축 길이 감소', '중공축 사용', '재질 변경'],
+    answer: 1,
+    explanation: '비틀림 응력은 지름에 반비례하므로 지름을 증가시키면 감소합니다. 길이는 비틀림 응력에 직접적인 영향이 없습니다.',
+    difficulty: '중',
+    tags: ['축', '비틀림']
+  },
+  {
+    id: 'MECH_058',
+    subject: '열역학',
+    question: '열역학 제1법칙의 의미는?',
+    options: ['에너지 보존', '엔트로피 증가', '절대온도', '열평형'],
+    answer: 0,
+    explanation: '열역학 제1법칙은 에너지 보존의 법칙입니다. 에너지는 형태만 변할 뿐 생성되거나 소멸되지 않습니다.',
+    difficulty: '하',
+    tags: ['열역학', '법칙']
+  },
+  {
+    id: 'MECH_059',
+    subject: '유체역학',
+    question: '레이놀즈 수(Reynolds Number)로 판단하는 것은?',
+    options: ['유체의 온도', '유체의 압력', '층류/난류', '유체의 밀도'],
+    answer: 2,
+    explanation: '레이놀즈 수는 관성력과 점성력의 비로, 유동이 층류인지 난류인지 판단하는 무차원수입니다.',
+    difficulty: '중',
+    tags: ['레이놀즈수', '유체']
+  },
+  {
+    id: 'MECH_060',
+    subject: '기계설계',
+    question: '용접 이음의 종류가 아닌 것은?',
+    options: ['맞대기 용접', '모살 용접', '플러그 용접', '리벳 용접'],
+    answer: 3,
+    explanation: '리벳은 기계적 체결 방법이지 용접이 아닙니다. 용접 이음에는 맞대기, 모살, 플러그, 슬롯 용접 등이 있습니다.',
+    difficulty: '하',
+    tags: ['용접', '이음']
+  },
+  {
+    id: 'MECH_061',
+    subject: '기계재료',
+    question: '주철의 특징으로 옳지 않은 것은?',
+    options: ['주조성 우수', '감쇠능 양호', '인장강도가 매우 높음', '압축강도가 인장강도보다 큼'],
+    answer: 2,
+    explanation: '주철은 주조성과 감쇠능은 우수하지만 인장강도가 낮고 취성이 큽니다.',
+    difficulty: '중',
+    tags: ['주철', '재료특성']
+  },
+  {
+    id: 'MECH_062',
+    subject: '기계동력학',
+    question: '진동의 3요소가 아닌 것은?',
+    options: ['질량', '스프링', '감쇠', '온도'],
+    answer: 3,
+    explanation: '진동계의 3요소는 질량(관성), 스프링(강성), 감쇠(저항)입니다.',
+    difficulty: '하',
+    tags: ['진동', '동역학']
+  },
+  {
+    id: 'MECH_063',
+    subject: '기계제작법',
+    question: '밀링 가공의 종류가 아닌 것은?',
+    options: ['상향 절삭', '하향 절삭', '정면 절삭', '선삭'],
+    answer: 3,
+    explanation: '선삭은 선반 가공입니다. 밀링 가공은 상향 절삭, 하향 절삭, 정면 절삭 등으로 분류됩니다.',
+    difficulty: '하',
+    tags: ['밀링', '절삭']
+  },
+  {
+    id: 'MECH_064',
+    subject: '열역학',
+    question: '카르노 사이클의 효율을 높이는 방법은?',
+    options: ['고온부 온도 증가', '저온부 온도 증가', '압력 증가', '체적 증가'],
+    answer: 0,
+    explanation: '카르노 효율 = 1 - (T_L/T_H) 이므로, 고온부 온도를 높이거나 저온부 온도를 낮추면 효율이 증가합니다.',
+    difficulty: '중',
+    tags: ['카르노', '효율']
+  },
+  {
+    id: 'MECH_065',
+    subject: '기계설계',
+    question: '기어 전동 장치의 장점이 아닌 것은?',
+    options: ['정확한 속도비', '큰 동력 전달', '충격 흡수', '소음이 적음'],
+    answer: 2,
+    explanation: '기어는 정확한 속도비와 큰 동력 전달이 가능하지만, 벨트에 비해 충격 흡수 능력이 떨어지고 소음이 발생할 수 있습니다.',
+    difficulty: '중',
+    tags: ['기어', '전동장치']
+  },
+  {
+    id: 'MECH_066',
+    subject: '유체역학',
+    question: '펌프의 양정(揚程)이란?',
+    options: ['펌프의 높이', '유량의 크기', '에너지 높이', '펌프의 무게'],
+    answer: 2,
+    explanation: '양정은 단위 무게당 유체에 부여되는 에너지를 높이로 환산한 값입니다.',
+    difficulty: '중',
+    tags: ['펌프', '양정']
+  },
+  {
+    id: 'MECH_067',
+    subject: '기계재료',
+    question: '비철금속이 아닌 것은?',
+    options: ['알루미늄', '구리', '티타늄', '스테인리스강'],
+    answer: 3,
+    explanation: '스테인리스강은 철(Fe)을 기본으로 하는 철강 재료입니다. 알루미늄, 구리, 티타늄은 비철금속입니다.',
+    difficulty: '하',
+    tags: ['비철금속', '재료']
+  },
+  {
+    id: 'MECH_068',
+    subject: '기계설계',
+    question: '볼트 체결에서 토크렌치를 사용하는 목적은?',
+    options: ['체결 시간 단축', '적정 조임력 확보', '볼트 개수 확인', '나사산 보호'],
+    answer: 1,
+    explanation: '토크렌치는 볼트에 정확한 조임 토크를 가해 적정 조임력을 확보하기 위해 사용합니다.',
+    difficulty: '하',
+    tags: ['볼트', '체결']
+  },
+  {
+    id: 'MECH_069',
+    subject: '기계동력학',
+    question: '플라이휠(Flywheel)의 역할은?',
+    options: ['속도 증가', '에너지 저장 및 속도 균일화', '방향 전환', '진동 발생'],
+    answer: 1,
+    explanation: '플라이휠은 회전 관성으로 에너지를 저장하고 회전속도를 균일하게 유지합니다.',
+    difficulty: '하',
+    tags: ['플라이휠', '회전']
+  },
+  {
+    id: 'MECH_070',
+    subject: '기계제작법',
+    question: '연삭 가공의 특징으로 옳지 않은 것은?',
+    options: ['고정밀 가공', '경화된 재료 가공 가능', '가공 속도가 매우 빠름', '우수한 표면 조도'],
+    answer: 2,
+    explanation: '연삭은 고정밀, 고품질 가공이 가능하지만 가공 속도는 선삭이나 밀링보다 느립니다.',
+    difficulty: '중',
+    tags: ['연삭', '가공']
+  },
+  {
+    id: 'MECH_071',
+    subject: '열역학',
+    question: '이상기체 상태방정식 PV=nRT에서 R은?',
+    options: ['비열', '기체상수', '밀도', '점성계수'],
+    answer: 1,
+    explanation: 'R은 기체상수(Gas Constant)로 약 8.314 J/(mol·K)입니다.',
+    difficulty: '하',
+    tags: ['이상기체', '상태방정식']
+  },
+  {
+    id: 'MECH_072',
+    subject: '기계설계',
+    question: '스프링의 강성(Spring Constant)을 증가시키는 방법이 아닌 것은?',
+    options: ['코일 지름 감소', '소선 지름 증가', '감은 횟수 증가', '전단탄성계수가 큰 재료 사용'],
+    answer: 2,
+    explanation: '스프링 강성은 소선 지름에 비례하고 코일 지름과 감은 횟수에 반비례합니다. 감은 횟수를 증가시키면 강성이 감소합니다.',
+    difficulty: '상',
+    tags: ['스프링', '강성']
+  },
+  {
+    id: 'MECH_073',
+    subject: '유체역학',
+    question: '경계층(Boundary Layer)에 대한 설명으로 옳은 것은?',
+    options: ['유속이 일정한 영역', '점성의 영향을 받는 영역', '난류만 존재하는 영역', '압력이 일정한 영역'],
+    answer: 1,
+    explanation: '경계층은 고체 표면 근처에서 점성의 영향으로 유속이 변하는 영역입니다.',
+    difficulty: '중',
+    tags: ['경계층', '유체']
+  },
+  {
+    id: 'MECH_074',
+    subject: '기계재료',
+    question: '경도 시험 방법이 아닌 것은?',
+    options: ['브리넬 경도', '로크웰 경도', '비커스 경도', '샤르피 경도'],
+    answer: 3,
+    explanation: '샤르피는 충격 시험 방법입니다. 경도 시험에는 브리넬, 로크웰, 비커스, 쇼어 등이 있습니다.',
+    difficulty: '중',
+    tags: ['경도', '시험']
+  },
+  {
+    id: 'MECH_075',
+    subject: '기계제작법',
+    question: 'NC 공작기계의 장점이 아닌 것은?',
+    options: ['복잡한 형상 가공 가능', '소품종 대량생산에 적합', '가공 정밀도 향상', '작업자 기능 의존도 감소'],
+    answer: 1,
+    explanation: 'NC 공작기계는 다품종 소량생산에 적합합니다. 복잡한 형상 가공, 높은 정밀도, 자동화가 장점입니다.',
+    difficulty: '중',
+    tags: ['NC', '공작기계']
   }
 ];
 
