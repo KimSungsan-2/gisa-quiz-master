@@ -11,6 +11,7 @@ import LoginScreen from './components/auth/LoginScreen';
 import UserProfile from './components/auth/UserProfile';
 import AllStructuredData from './components/seo/StructuredData';
 import AdBanner from './components/ads/AdBanner';
+import PremiumPage from './components/premium/PremiumPage';
 
 // 유틸리티 import
 import {
@@ -67,7 +68,7 @@ function CertificationQuizApp() {
   const { user, userData, loading, isAuthenticated, updateStats, updateWrongAnswers, updateBookmarks, toggleBookmark: authToggleBookmark } = useAuth();
 
   // 화면 상태
-  const [screen, setScreen] = useState('home'); // home, login, chapterSelect, quiz, result, stats
+  const [screen, setScreen] = useState('home'); // home, login, chapterSelect, quiz, result, stats, premium
   const [selectedCert, setSelectedCert] = useState(null);
   const [quizMode, setQuizMode] = useState('practice'); // practice, mock
   const [showLogin, setShowLogin] = useState(false);
@@ -408,7 +409,15 @@ function CertificationQuizApp() {
       <div className="min-h-screen bg-gradient-to-br from-slate-50 via-gray-50 to-slate-100 p-4 md:p-8">
         <div className="max-w-6xl mx-auto">
           {/* 헤더 */}
-          <div className="flex justify-end mb-4">
+          <div className="flex justify-between items-center mb-4">
+            <button
+              onClick={() => setScreen('premium')}
+              className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white rounded-full shadow-md hover:shadow-lg transition-all font-medium"
+            >
+              <Star className="w-5 h-5 fill-white" />
+              <span>프리미엄</span>
+            </button>
+
             {isAuthenticated ? (
               <UserProfile />
             ) : (
@@ -1062,6 +1071,19 @@ function CertificationQuizApp() {
           </div>
         </div>
       </div>
+    );
+  }
+
+  // 프리미엄 화면
+  if (screen === 'premium') {
+    return (
+      <PremiumPage
+        onBack={() => setScreen('home')}
+        onSubscribe={() => {
+          // TODO: 토스페이먼츠 결제 연동 (Phase 3)
+          alert('결제 기능은 곧 추가됩니다!');
+        }}
+      />
     );
   }
 
