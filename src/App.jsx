@@ -478,13 +478,13 @@ function CertificationQuizApp() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
             {certificates.map((cert) => {
               const certQuestions = sampleData.questions[cert.id] || [];
-              const attemptedQuestions = certQuestions.filter(q =>
-                stats.bySubject && Object.keys(stats.bySubject).some(subject => {
-                  const subjectStat = stats.bySubject[subject];
-                  return subjectStat && subjectStat.total > 0 && cert.subjects.includes(subject);
-                })
-              ).length;
-              const progress = certQuestions.length > 0 ? Math.round((attemptedQuestions / certQuestions.length) * 100) : 0;
+              const attemptedCount = stats.bySubject
+                ? cert.subjects.reduce((sum, subject) => {
+                    const subjectStat = stats.bySubject[subject];
+                    return sum + (subjectStat?.total || 0);
+                  }, 0)
+                : 0;
+              const progress = certQuestions.length > 0 ? Math.min(100, Math.round((attemptedCount / certQuestions.length) * 100)) : 0;
 
               return (
                 <div key={cert.id} className="bg-white rounded-xl p-6 md:p-8 shadow-lg">
