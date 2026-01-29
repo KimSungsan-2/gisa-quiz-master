@@ -4,13 +4,15 @@ import { bigdataQuestions } from './questions/bigdata';
 import { infoQuestions } from './questions/info';
 import { refrigerationQuestions } from './questions/refrigeration';
 import { mechanicalQuestions } from './questions/mechanical';
+import { drivingQuestions } from './questions/driving';
 
 // 모든 문제 데이터
 export const questions = {
   bigdata: bigdataQuestions,
   info: infoQuestions,
   refrigeration: refrigerationQuestions,
-  mechanical: mechanicalQuestions
+  mechanical: mechanicalQuestions,
+  driving: drivingQuestions
 };
 
 // 통합 데이터 객체 (기존 sampleData 형식 호환)

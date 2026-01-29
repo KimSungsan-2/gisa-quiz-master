@@ -20,7 +20,7 @@ function UserProfile() {
     <div className="relative">
       <button
         onClick={() => setShowDropdown(!showDropdown)}
-        className="flex items-center gap-2 px-3 py-2 bg-white rounded-full shadow-md hover:shadow-lg transition-all"
+        className="flex items-center gap-2 px-3 py-2 bg-white rounded-lg shadow-sm hover:shadow-md transition-all border border-gray-200"
       >
         {user.photoURL ? (
           <img
@@ -48,13 +48,13 @@ function UserProfile() {
           />
 
           {/* 드롭다운 메뉴 */}
-          <div className="absolute right-0 mt-2 w-56 bg-white rounded-xl shadow-xl border border-gray-100 py-2 z-20">
+          <div className="absolute right-0 mt-2 w-56 bg-white rounded-lg shadow-md border border-gray-200 py-2 z-20">
             <div className="px-4 py-3 border-b border-gray-100">
               <p className="font-medium text-gray-800">
                 {user.displayName || '사용자'}
               </p>
               <p className="text-sm text-gray-500 truncate">
-                {user.email}
+                {user.email || (user.provider === 'kakao' ? '카카오 로그인' : user.provider === 'naver' ? '네이버 로그인' : '')}
               </p>
             </div>
 

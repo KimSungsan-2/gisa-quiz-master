@@ -31,6 +31,15 @@ export const certificates = [
     subjects: ['재료역학', '열역학', '유체역학', '기계제작법 및 기계동력학'],
     examTime: 150,
     totalQuestions: 100
+  },
+  {
+    id: 'driving',
+    name: '운전면허 필기시험',
+    icon: '🚗',
+    subjects: ['교통법규', '안전운전', '교통표지'],
+    examTime: 40,
+    totalQuestions: 40,
+    supportedLanguages: ['ko', 'vi', 'th']
   }
 ];
 

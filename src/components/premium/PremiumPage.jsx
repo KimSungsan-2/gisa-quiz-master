@@ -2,7 +2,7 @@ import { ArrowLeft, Check, Star, BarChart3, Calendar, TrendingUp, Award, Zap, Sh
 
 export default function PremiumPage({ onBack, onSubscribe }) {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50 p-4 md:p-8">
+    <div className="min-h-screen bg-indigo-50 p-4 md:p-8">
       <div className="max-w-6xl mx-auto">
         {/* 헤더 */}
         <div className="mb-8 flex items-center justify-between">
@@ -17,11 +17,11 @@ export default function PremiumPage({ onBack, onSubscribe }) {
 
         {/* 히어로 섹션 */}
         <div className="text-center mb-12">
-          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-6 py-2 rounded-full mb-6">
+          <div className="inline-flex items-center gap-2 bg-indigo-600 text-white px-6 py-2 rounded-full mb-6">
             <Star className="w-5 h-5 fill-white" />
             <span className="font-bold">프리미엄 플랜</span>
           </div>
-          <h1 className="text-4xl md:text-6xl font-black mb-4 bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
+          <h1 className="text-4xl md:text-6xl font-black mb-4 text-indigo-600">
             광고 없이 집중하고,
             <br />
             약점을 정확히 파악하세요
@@ -31,7 +31,7 @@ export default function PremiumPage({ onBack, onSubscribe }) {
           </p>
 
           {/* 가격 카드 */}
-          <div className="bg-white rounded-3xl shadow-2xl p-8 md:p-12 max-w-2xl mx-auto mb-12">
+          <div className="bg-white rounded-xl shadow-lg p-8 md:p-12 max-w-2xl mx-auto mb-12">
             <div className="text-center mb-8">
               <div className="text-5xl md:text-7xl font-black text-gray-800 mb-2">
                 3,900<span className="text-3xl md:text-4xl">원</span>
@@ -42,7 +42,7 @@ export default function PremiumPage({ onBack, onSubscribe }) {
 
             <button
               onClick={onSubscribe}
-              className="w-full px-8 py-5 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white rounded-2xl font-bold text-xl transition-all transform hover:-translate-y-1 shadow-lg mb-4"
+              className="w-full px-8 py-5 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg font-bold text-xl transition-all transform hover:-translate-y-1 shadow-lg mb-4"
             >
               지금 구독하기
             </button>
@@ -60,9 +60,9 @@ export default function PremiumPage({ onBack, onSubscribe }) {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {/* 광고 제거 */}
-            <div className="bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all">
-              <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center mb-6">
-                <Zap className="w-8 h-8 text-white" />
+            <div className="bg-white rounded-xl p-8 shadow-md hover:shadow-lg transition-all">
+              <div className="w-16 h-16 bg-indigo-100 rounded-lg flex items-center justify-center mb-6">
+                <Zap className="w-8 h-8 text-indigo-600" />
               </div>
               <h3 className="text-2xl font-bold mb-3 text-gray-800">광고 완전 제거</h3>
               <p className="text-gray-600 leading-relaxed">
@@ -71,9 +71,9 @@ export default function PremiumPage({ onBack, onSubscribe }) {
             </div>
 
             {/* 상세 통계 */}
-            <div className="bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all">
-              <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-indigo-500 rounded-2xl flex items-center justify-center mb-6">
-                <BarChart3 className="w-8 h-8 text-white" />
+            <div className="bg-white rounded-xl p-8 shadow-md hover:shadow-lg transition-all">
+              <div className="w-16 h-16 bg-indigo-100 rounded-lg flex items-center justify-center mb-6">
+                <BarChart3 className="w-8 h-8 text-indigo-600" />
               </div>
               <h3 className="text-2xl font-bold mb-3 text-gray-800">상세 통계 대시보드</h3>
               <p className="text-gray-600 leading-relaxed">
@@ -82,9 +82,9 @@ export default function PremiumPage({ onBack, onSubscribe }) {
             </div>
 
             {/* 약점 분석 */}
-            <div className="bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all">
-              <div className="w-16 h-16 bg-gradient-to-br from-red-500 to-pink-500 rounded-2xl flex items-center justify-center mb-6">
-                <TrendingUp className="w-8 h-8 text-white" />
+            <div className="bg-white rounded-xl p-8 shadow-md hover:shadow-lg transition-all">
+              <div className="w-16 h-16 bg-gray-100 rounded-lg flex items-center justify-center mb-6">
+                <TrendingUp className="w-8 h-8 text-gray-700" />
               </div>
               <h3 className="text-2xl font-bold mb-3 text-gray-800">약점 분석</h3>
               <p className="text-gray-600 leading-relaxed">
@@ -93,9 +93,9 @@ export default function PremiumPage({ onBack, onSubscribe }) {
             </div>
 
             {/* 학습 달력 */}
-            <div className="bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all">
-              <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-violet-500 rounded-2xl flex items-center justify-center mb-6">
-                <Calendar className="w-8 h-8 text-white" />
+            <div className="bg-white rounded-xl p-8 shadow-md hover:shadow-lg transition-all">
+              <div className="w-16 h-16 bg-gray-100 rounded-lg flex items-center justify-center mb-6">
+                <Calendar className="w-8 h-8 text-gray-700" />
               </div>
               <h3 className="text-2xl font-bold mb-3 text-gray-800">학습 달력</h3>
               <p className="text-gray-600 leading-relaxed">
@@ -104,9 +104,9 @@ export default function PremiumPage({ onBack, onSubscribe }) {
             </div>
 
             {/* 합격률 계산기 */}
-            <div className="bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all">
-              <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-amber-500 rounded-2xl flex items-center justify-center mb-6">
-                <Award className="w-8 h-8 text-white" />
+            <div className="bg-white rounded-xl p-8 shadow-md hover:shadow-lg transition-all">
+              <div className="w-16 h-16 bg-gray-100 rounded-lg flex items-center justify-center mb-6">
+                <Award className="w-8 h-8 text-gray-700" />
               </div>
               <h3 className="text-2xl font-bold mb-3 text-gray-800">예상 합격률</h3>
               <p className="text-gray-600 leading-relaxed">
@@ -115,9 +115,9 @@ export default function PremiumPage({ onBack, onSubscribe }) {
             </div>
 
             {/* 우선 지원 */}
-            <div className="bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all">
-              <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mb-6">
-                <Shield className="w-8 h-8 text-white" />
+            <div className="bg-white rounded-xl p-8 shadow-md hover:shadow-lg transition-all">
+              <div className="w-16 h-16 bg-gray-100 rounded-lg flex items-center justify-center mb-6">
+                <Shield className="w-8 h-8 text-gray-700" />
               </div>
               <h3 className="text-2xl font-bold mb-3 text-gray-800">우선 지원</h3>
               <p className="text-gray-600 leading-relaxed">
@@ -128,7 +128,7 @@ export default function PremiumPage({ onBack, onSubscribe }) {
         </div>
 
         {/* 비교 테이블 */}
-        <div className="bg-white rounded-3xl shadow-2xl p-8 md:p-12 mb-16">
+        <div className="bg-white rounded-xl shadow-lg p-8 md:p-12 mb-16">
           <h2 className="text-3xl md:text-4xl font-black text-center mb-12 text-gray-800">
             무료 vs 프리미엄
           </h2>
@@ -189,7 +189,7 @@ export default function PremiumPage({ onBack, onSubscribe }) {
         </div>
 
         {/* FAQ */}
-        <div className="bg-white rounded-3xl shadow-2xl p-8 md:p-12 mb-16">
+        <div className="bg-white rounded-xl shadow-lg p-8 md:p-12 mb-16">
           <h2 className="text-3xl md:text-4xl font-black text-center mb-12 text-gray-800">
             자주 묻는 질문
           </h2>
@@ -233,7 +233,7 @@ export default function PremiumPage({ onBack, onSubscribe }) {
         </div>
 
         {/* CTA */}
-        <div className="text-center bg-gradient-to-r from-indigo-600 to-purple-600 rounded-3xl p-12 shadow-2xl">
+        <div className="text-center bg-indigo-600 rounded-xl p-12 shadow-lg">
           <h2 className="text-3xl md:text-4xl font-black text-white mb-4">
             지금 시작하세요
           </h2>
@@ -242,7 +242,7 @@ export default function PremiumPage({ onBack, onSubscribe }) {
           </p>
           <button
             onClick={onSubscribe}
-            className="px-12 py-5 bg-white hover:bg-gray-100 text-indigo-600 rounded-2xl font-bold text-xl transition-all transform hover:-translate-y-1 shadow-lg"
+            className="px-12 py-5 bg-white hover:bg-gray-100 text-indigo-600 rounded-lg font-bold text-xl transition-all transform hover:-translate-y-1 shadow-lg"
           >
             월 3,900원으로 시작하기
           </button>

@@ -2,6 +2,7 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import { authService } from '../services/authService';
 import { firestoreService } from '../services/firestoreService';
+import { socialAuthService } from '../services/socialAuthService';
 
 const AuthContext = createContext(null);
 
@@ -21,14 +22,26 @@ export function AuthProvider({ children }) {
 
   // 인증 상태 변화 감지
   useEffect(() => {
-    const unsubscribe = authService.onAuthStateChange(async (firebaseUser) => {
-      setUser(firebaseUser);
+    // 네이버 콜백 페이지인 경우 콜백 처리
+    if (socialAuthService.isNaverCallback()) {
+      socialAuthService.handleNaverCallback();
+      return;
+    }
 
+    // 저장된 소셜 로그인 사용자 복원
+    const savedSocialUser = socialAuthService.loadSocialUser();
+    if (savedSocialUser) {
+      setUser(savedSocialUser);
+      loadLocalData();
+      setLoading(false);
+    }
+
+    const unsubscribe = authService.onAuthStateChange(async (firebaseUser) => {
       if (firebaseUser) {
-        // 사용자 데이터 로드
+        setUser(firebaseUser);
         await loadUserData(firebaseUser);
-      } else {
-        // 로그아웃 시 로컬 데이터 사용
+      } else if (!savedSocialUser) {
+        setUser(null);
         loadLocalData();
       }
 
@@ -219,6 +232,36 @@ export function AuthProvider({ children }) {
     return true;
   };
 
+  // 카카오 로그인
+  const signInWithKakao = async () => {
+    setAuthError(null);
+    const { user: socialUser, error } = await socialAuthService.signInWithKakao();
+    if (error) {
+      setAuthError(error);
+      return false;
+    }
+    if (socialUser) {
+      setUser(socialUser);
+      loadLocalData();
+    }
+    return true;
+  };
+
+  // 네이버 로그인
+  const signInWithNaver = async () => {
+    setAuthError(null);
+    const { user: socialUser, error } = await socialAuthService.signInWithNaver();
+    if (error) {
+      setAuthError(error);
+      return false;
+    }
+    if (socialUser) {
+      setUser(socialUser);
+      loadLocalData();
+    }
+    return true;
+  };
+
   // 이메일 로그인
   const signInWithEmail = async (email, password) => {
     setAuthError(null);
@@ -243,7 +286,13 @@ export function AuthProvider({ children }) {
 
   // 로그아웃
   const signOut = async () => {
-    await authService.signOut();
+    // 소셜 로그인 사용자인 경우
+    if (user?.provider === 'kakao' || user?.provider === 'naver') {
+      socialAuthService.socialSignOut();
+    } else {
+      await authService.signOut();
+    }
+    setUser(null);
     setUserData(null);
     loadLocalData();
   };
@@ -305,6 +354,8 @@ export function AuthProvider({ children }) {
     authError,
     isAuthenticated: !!user,
     signInWithGoogle,
+    signInWithKakao,
+    signInWithNaver,
     signInWithEmail,
     signUpWithEmail,
     signOut,

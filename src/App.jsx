@@ -21,7 +21,8 @@ import {
   formatTime,
   getDifficultyColor,
   getDifficultyBg,
-  getWeakestTopics
+  getWeakestTopics,
+  getTranslatedQuestion
 } from './utils/quizUtils';
 
 // SEO hook
@@ -72,6 +73,7 @@ function CertificationQuizApp() {
   const [selectedCert, setSelectedCert] = useState(null);
   const [quizMode, setQuizMode] = useState('practice'); // practice, mock
   const [showLogin, setShowLogin] = useState(false);
+  const [selectedLanguage, setSelectedLanguage] = useState('ko'); // 운전면허 다국어
 
   // 퀴즈 상태
   const [currentQuestions, setCurrentQuestions] = useState([]);
@@ -130,7 +132,7 @@ function CertificationQuizApp() {
   // 로딩 화면
   if (loading) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 flex items-center justify-center">
+      <div className="min-h-screen bg-indigo-600 flex items-center justify-center">
         <div className="text-center text-white">
           <div className="text-6xl mb-4">📚</div>
           <p className="text-xl font-medium">로딩 중...</p>
@@ -182,6 +184,7 @@ function CertificationQuizApp() {
     setSelectedCert(certId);
     setQuizMode(mode);
     setMockExamMode(mode === 'mock');
+    setSelectedLanguage('ko');
     setScreen('chapterSelect');
   };
 
@@ -394,6 +397,8 @@ function CertificationQuizApp() {
         mode={quizMode}
         onStart={handleChapterStart}
         onBack={() => setScreen('home')}
+        selectedLanguage={selectedLanguage}
+        onLanguageChange={setSelectedLanguage}
       />
     );
   }
@@ -406,13 +411,13 @@ function CertificationQuizApp() {
     const studyStreak = stats.studyDays?.length || 0;
 
     return (
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-gray-50 to-slate-100 p-4 md:p-8">
+      <div className="min-h-screen bg-gray-50 p-4 md:p-8">
         <div className="max-w-6xl mx-auto">
           {/* 헤더 */}
           <div className="flex justify-between items-center mb-4">
             <button
               onClick={() => setScreen('premium')}
-              className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white rounded-full shadow-md hover:shadow-lg transition-all font-medium"
+              className="flex items-center gap-2 px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-full shadow-md hover:shadow-md transition-all font-medium"
             >
               <Star className="w-5 h-5 fill-white" />
               <span>프리미엄</span>
@@ -423,7 +428,7 @@ function CertificationQuizApp() {
             ) : (
               <button
                 onClick={() => setShowLogin(true)}
-                className="flex items-center gap-2 px-4 py-2 bg-white rounded-full shadow-md hover:shadow-lg transition-all font-medium text-gray-700"
+                className="flex items-center gap-2 px-4 py-2 bg-white rounded-full shadow-md hover:shadow-md transition-all font-medium text-gray-700"
               >
                 <LogIn className="w-5 h-5" />
                 <span>로그인</span>
@@ -480,7 +485,7 @@ function CertificationQuizApp() {
               const progress = certQuestions.length > 0 ? Math.round((attemptedQuestions / certQuestions.length) * 100) : 0;
 
               return (
-                <div key={cert.id} className="bg-white rounded-3xl p-6 md:p-8 shadow-lg">
+                <div key={cert.id} className="bg-white rounded-xl p-6 md:p-8 shadow-lg">
                   <div className="text-5xl md:text-6xl mb-4">{cert.icon}</div>
                   <h3 className="text-xl md:text-2xl font-bold mb-3 text-gray-800">{cert.name}</h3>
                   <div className="text-sm text-gray-500 mb-4">{cert.subjects.length}개 과목 · {certQuestions.length}문제</div>
@@ -491,7 +496,7 @@ function CertificationQuizApp() {
                     </div>
                     <div className="h-2 bg-gray-200 rounded-full overflow-hidden">
                       <div
-                        className="h-full bg-gradient-to-r from-indigo-500 to-purple-500 transition-all duration-500"
+                        className="h-full bg-indigo-600 transition-all duration-500"
                         style={{ width: `${progress}%` }}
                       />
                     </div>
@@ -499,7 +504,7 @@ function CertificationQuizApp() {
                   <div className="space-y-2">
                     <button
                       onClick={() => handleCertSelect(cert.id, 'practice')}
-                      className="w-full px-4 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white rounded-xl font-semibold transition-all"
+                      className="w-full px-4 py-3 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl font-semibold transition-all"
                     >
                       연습 모드
                     </button>
@@ -527,53 +532,53 @@ function CertificationQuizApp() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mb-12">
             <div
               onClick={() => setScreen('stats')}
-              className="cursor-pointer bg-gradient-to-br from-blue-500 to-blue-600 rounded-3xl p-6 md:p-8 text-white shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
+              className="cursor-pointer bg-indigo-600 rounded-xl p-6 md:p-8 text-white shadow-lg hover:shadow-md transition-all duration-300"
             >
               <BarChart3 className="w-10 md:w-12 h-10 md:h-12 mb-4" />
               <h3 className="text-xl md:text-2xl font-bold mb-2">학습 통계</h3>
-              <p className="text-blue-100 text-sm">내 실력 확인</p>
+              <p className="text-white/70 text-sm">내 실력 확인</p>
               <div className="mt-4 text-2xl md:text-3xl font-black">{stats.correct}/{stats.total}</div>
             </div>
 
             <div
               onClick={() => startQuizMode('wrong')}
-              className="cursor-pointer bg-gradient-to-br from-rose-500 to-pink-600 rounded-3xl p-6 md:p-8 text-white shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
+              className="cursor-pointer bg-gray-700 rounded-xl p-6 md:p-8 text-white shadow-lg hover:shadow-md transition-all duration-300"
             >
               <RefreshCw className="w-10 md:w-12 h-10 md:h-12 mb-4" />
               <h3 className="text-xl md:text-2xl font-bold mb-2">오답노트</h3>
-              <p className="text-pink-100 text-sm">틀린 문제 복습</p>
+              <p className="text-white/70 text-sm">틀린 문제 복습</p>
               <div className="mt-4 text-2xl md:text-3xl font-black">{wrongAnswers.length}</div>
             </div>
 
             <div
               onClick={() => startQuizMode('bookmarked')}
-              className="cursor-pointer bg-gradient-to-br from-purple-500 to-purple-600 rounded-3xl p-6 md:p-8 text-white shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
+              className="cursor-pointer bg-gray-600 rounded-xl p-6 md:p-8 text-white shadow-lg hover:shadow-md transition-all duration-300"
             >
               <Star className="w-10 md:w-12 h-10 md:h-12 mb-4" />
               <h3 className="text-xl md:text-2xl font-bold mb-2">북마크</h3>
-              <p className="text-purple-100 text-sm">중요 문제</p>
+              <p className="text-white/70 text-sm">중요 문제</p>
               <div className="mt-4 text-2xl md:text-3xl font-black">{bookmarks.length}</div>
             </div>
 
-            <div className="bg-gradient-to-br from-amber-500 to-orange-600 rounded-3xl p-6 md:p-8 text-white shadow-lg">
+            <div className="bg-gray-500 rounded-xl p-6 md:p-8 text-white shadow-lg">
               <Flame className="w-10 md:w-12 h-10 md:h-12 mb-4" />
               <h3 className="text-xl md:text-2xl font-bold mb-2">연속 정답</h3>
-              <p className="text-amber-100 text-sm">현재 기록</p>
+              <p className="text-white/70 text-sm">현재 기록</p>
               <div className="mt-4 text-2xl md:text-3xl font-black">{stats.streak}🔥</div>
-              <div className="text-sm text-amber-100 mt-2">최고: {stats.maxStreak}</div>
+              <div className="text-sm text-white/70 mt-2">최고: {stats.maxStreak}</div>
             </div>
           </div>
 
           {/* 취약 과목 분석 */}
           {weakTopics.length > 0 && (
-            <div className="bg-white rounded-3xl p-6 md:p-8 shadow-lg">
+            <div className="bg-white rounded-xl p-6 md:p-8 shadow-lg">
               <div className="flex items-center gap-3 mb-6">
                 <Brain className="w-8 h-8 text-red-500" />
                 <h3 className="text-xl md:text-2xl font-bold text-gray-800">취약 과목 분석</h3>
               </div>
               <div className="grid md:grid-cols-3 gap-4">
                 {weakTopics.map(([subject, accuracy], index) => (
-                  <div key={subject} className="bg-red-50 p-6 rounded-2xl border-2 border-red-200">
+                  <div key={subject} className="bg-red-50 p-6 rounded-lg border-2 border-red-200">
                     <div className="flex items-center justify-between mb-2">
                       <span className="font-semibold text-gray-800 text-sm md:text-base">{subject}</span>
                       <span className="text-xl md:text-2xl font-black text-red-600">{Math.round(accuracy)}%</span>
@@ -598,9 +603,10 @@ function CertificationQuizApp() {
     const correctAnswerIndex = shuffledOptionsMap[currentQuestion.id]?.newAnswerIndex ?? currentQuestion.answer;
     const isCorrect = userAnswer === correctAnswerIndex;
     const isBookmarked = bookmarks.includes(currentQuestion.id);
+    const translated = getTranslatedQuestion(currentQuestion, selectedLanguage);
 
     return (
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 p-4 md:p-8">
+      <div className="min-h-screen bg-gray-50 p-4 md:p-8">
         <div className="max-w-4xl mx-auto">
           <div className="mb-8 flex items-center justify-between">
             <button
@@ -614,7 +620,7 @@ function CertificationQuizApp() {
 
           {/* 모의고사 타이머 */}
           {mockExamMode && mockExamTimeLeft !== null && (
-            <div className="bg-white rounded-3xl shadow-xl p-4 md:p-6 mb-6">
+            <div className="bg-white rounded-xl shadow-md p-4 md:p-6 mb-6">
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-3">
                   <Clock className="w-6 md:w-8 h-6 md:h-8 text-red-500" />
@@ -627,9 +633,9 @@ function CertificationQuizApp() {
             </div>
           )}
 
-          <div className="bg-white rounded-3xl shadow-xl overflow-hidden">
+          <div className="bg-white rounded-xl shadow-md overflow-hidden">
             {/* Header */}
-            <div className="bg-gradient-to-r from-indigo-600 to-purple-600 p-6 md:p-8 text-white">
+            <div className="bg-indigo-600 p-6 md:p-8 text-white">
               <div className="flex items-center justify-between mb-4">
                 <div className="flex items-center gap-3">
                   <BookOpen className="w-5 md:w-6 h-5 md:h-6" />
@@ -669,7 +675,7 @@ function CertificationQuizApp() {
             {/* Progress Bar */}
             <div className="h-2 bg-gray-200">
               <div
-                className="h-full bg-gradient-to-r from-indigo-600 to-purple-600 transition-all duration-500"
+                className="h-full bg-indigo-600 transition-all duration-500"
                 style={{ width: `${((currentQuestionIndex + 1) / currentQuestions.length) * 100}%` }}
               />
             </div>
@@ -677,12 +683,16 @@ function CertificationQuizApp() {
             {/* Question */}
             <div className="p-6 md:p-8">
               <h2 className="text-xl md:text-3xl font-bold text-gray-800 mb-8 leading-relaxed whitespace-pre-wrap">
-                {currentQuestion.question}
+                {translated.question}
               </h2>
 
               {/* Options */}
               <div className="space-y-3 md:space-y-4 mb-8">
                 {(shuffledData?.shuffledOptions || currentQuestion.options).map((option, index) => {
+                  // 번역된 선택지 표시
+                  const displayOption = (selectedLanguage !== 'ko' && translated.options)
+                    ? (translated.options[currentQuestion.options.indexOf(option)] || option)
+                    : option;
                   const isSelected = userAnswer === index;
                   const isCorrectOption = index === (shuffledData?.newAnswerIndex ?? currentQuestion.answer);
 
@@ -703,7 +713,7 @@ function CertificationQuizApp() {
                       key={index}
                       onClick={() => handleAnswerSelect(index)}
                       disabled={showExplanation}
-                      className={`w-full text-left p-4 md:p-6 rounded-2xl transition-all duration-300 transform hover:-translate-y-1 ${optionClass} ${showExplanation ? 'cursor-default' : 'cursor-pointer'}`}
+                      className={`w-full text-left p-4 md:p-6 rounded-lg transition-all duration-300 ${optionClass} ${showExplanation ? 'cursor-default' : 'cursor-pointer'}`}
                     >
                       <div className="flex items-center gap-4">
                         <div className={`flex-shrink-0 w-8 md:w-10 h-8 md:h-10 rounded-full flex items-center justify-center font-bold text-base md:text-lg ${
@@ -715,7 +725,7 @@ function CertificationQuizApp() {
                           {index + 1}
                         </div>
                         <div className="flex-1 text-base md:text-lg font-medium text-gray-700">
-                          {option}
+                          {displayOption}
                         </div>
                         {showExplanation && isCorrectOption && (
                           <CheckCircle className="w-5 md:w-6 h-5 md:h-6 text-green-500" />
@@ -731,7 +741,7 @@ function CertificationQuizApp() {
 
               {/* Explanation */}
               {showExplanation && !mockExamMode && (
-                <div className={`p-4 md:p-6 rounded-2xl mb-8 ${isCorrect ? 'bg-green-50 border-2 border-green-200' : 'bg-red-50 border-2 border-red-200'}`}>
+                <div className={`p-4 md:p-6 rounded-lg mb-8 ${isCorrect ? 'bg-green-50 border-2 border-green-200' : 'bg-red-50 border-2 border-red-200'}`}>
                   <div className="flex items-center gap-3 mb-4">
                     {isCorrect ? (
                       <>
@@ -747,7 +757,7 @@ function CertificationQuizApp() {
                   </div>
                   <div className="bg-white p-4 md:p-5 rounded-xl">
                     <p className="text-base md:text-lg font-semibold text-gray-700 mb-2">📝 해설</p>
-                    <p className="text-gray-600 leading-relaxed">{currentQuestion.explanation}</p>
+                    <p className="text-gray-600 leading-relaxed">{translated.explanation}</p>
                   </div>
                 </div>
               )}
@@ -760,7 +770,7 @@ function CertificationQuizApp() {
                     disabled={!isAnswered}
                     className={`w-full px-6 py-4 rounded-xl font-bold text-lg transition-all ${
                       isAnswered
-                        ? 'bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white cursor-pointer shadow-md'
+                        ? 'bg-green-600 hover:bg-green-700 text-white cursor-pointer shadow-md'
                         : 'bg-gray-200 text-gray-400 cursor-not-allowed'
                     }`}
                   >
@@ -785,7 +795,7 @@ function CertificationQuizApp() {
                 {(mockExamMode || showExplanation) && (
                   <button
                     onClick={handleNext}
-                    className="flex-1 px-6 py-3 rounded-xl font-semibold transition-all bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white cursor-pointer"
+                    className="flex-1 px-6 py-3 rounded-xl font-semibold transition-all bg-indigo-600 hover:bg-indigo-700 text-white cursor-pointer"
                   >
                     {currentQuestionIndex < currentQuestions.length - 1 ? '다음 문제 →' : '결과 확인'}
                   </button>
@@ -810,13 +820,13 @@ function CertificationQuizApp() {
     const isPassed = score >= 60;
 
     return (
-      <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50 p-4 md:p-8">
+      <div className="min-h-screen bg-gray-50 p-4 md:p-8">
         <div className="max-w-3xl mx-auto">
-          <div className="bg-white rounded-3xl shadow-2xl p-8 md:p-12 text-center">
+          <div className="bg-white rounded-xl shadow-lg p-8 md:p-12 text-center">
             <div className="text-6xl md:text-8xl mb-6">
               {isPassed ? '🎉' : score >= 40 ? '👍' : '💪'}
             </div>
-            <h2 className="text-3xl md:text-5xl font-black mb-4 bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
+            <h2 className="text-3xl md:text-5xl font-black mb-4 text-indigo-600">
               {isPassed ? '합격입니다!' : score >= 40 ? '조금만 더!' : '다시 도전!'}
             </h2>
             {mockExamMode && (
@@ -828,15 +838,15 @@ function CertificationQuizApp() {
               {score}점
             </div>
             <div className="grid grid-cols-3 gap-4 md:gap-6 mb-8">
-              <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-4 md:p-6 rounded-2xl">
+              <div className="bg-blue-50 p-4 md:p-6 rounded-lg">
                 <div className="text-blue-600 text-xs md:text-sm font-semibold mb-2">정답</div>
                 <div className="text-2xl md:text-4xl font-black text-blue-700">{correctAnswers}</div>
               </div>
-              <div className="bg-gradient-to-br from-red-50 to-red-100 p-4 md:p-6 rounded-2xl">
+              <div className="bg-red-50 p-4 md:p-6 rounded-lg">
                 <div className="text-red-600 text-xs md:text-sm font-semibold mb-2">오답</div>
                 <div className="text-2xl md:text-4xl font-black text-red-700">{answeredQuestions - correctAnswers}</div>
               </div>
-              <div className="bg-gradient-to-br from-purple-50 to-purple-100 p-4 md:p-6 rounded-2xl">
+              <div className="bg-purple-50 p-4 md:p-6 rounded-lg">
                 <div className="text-purple-600 text-xs md:text-sm font-semibold mb-2">정답률</div>
                 <div className="text-2xl md:text-4xl font-black text-purple-700">{score}%</div>
               </div>
@@ -853,7 +863,7 @@ function CertificationQuizApp() {
             <div className="space-y-4">
               <button
                 onClick={() => setScreen('home')}
-                className="w-full px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white rounded-2xl font-bold text-lg transition-all transform hover:-translate-y-1"
+                className="w-full px-8 py-4 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg font-bold text-lg transition-all"
               >
                 홈으로 돌아가기
               </button>
@@ -871,7 +881,7 @@ function CertificationQuizApp() {
                     setMockExamTimeLeft(examTime * 60);
                   }
                 }}
-                className="w-full px-8 py-4 bg-white hover:bg-gray-50 text-indigo-600 border-2 border-indigo-600 rounded-2xl font-bold text-lg transition-all"
+                className="w-full px-8 py-4 bg-white hover:bg-gray-50 text-indigo-600 border-2 border-indigo-600 rounded-lg font-bold text-lg transition-all"
               >
                 다시 풀기
               </button>
@@ -895,7 +905,7 @@ function CertificationQuizApp() {
     const accuracy = stats.total > 0 ? Math.round((stats.correct / stats.total) * 100) : 0;
 
     return (
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 p-4 md:p-8">
+      <div className="min-h-screen bg-gray-50 p-4 md:p-8">
         <div className="max-w-6xl mx-auto">
           <div className="mb-8 flex items-center justify-between">
             <button
@@ -914,26 +924,26 @@ function CertificationQuizApp() {
             </button>
           </div>
 
-          <div className="bg-white rounded-3xl shadow-2xl p-6 md:p-12 mb-8">
+          <div className="bg-white rounded-xl shadow-lg p-6 md:p-12 mb-8">
             <div className="flex items-center gap-4 mb-8 md:mb-12">
               <Trophy className="w-10 md:w-12 h-10 md:h-12 text-yellow-500" />
               <h2 className="text-2xl md:text-4xl font-black text-gray-800">학습 통계</h2>
             </div>
 
             <div className="grid md:grid-cols-3 gap-4 md:gap-6 mb-8 md:mb-12">
-              <div className="bg-gradient-to-br from-green-50 to-green-100 p-6 md:p-8 rounded-2xl">
+              <div className="bg-green-50 p-6 md:p-8 rounded-lg">
                 <div className="text-green-600 font-semibold mb-2">정답률</div>
                 <div className="text-4xl md:text-6xl font-black text-green-700 mb-2">{accuracy}%</div>
                 <div className="text-green-600">{stats.correct} / {stats.total} 문제</div>
               </div>
 
-              <div className="bg-gradient-to-br from-orange-50 to-orange-100 p-6 md:p-8 rounded-2xl">
+              <div className="bg-orange-50 p-6 md:p-8 rounded-lg">
                 <div className="text-orange-600 font-semibold mb-2">최고 연속 정답</div>
                 <div className="text-4xl md:text-6xl font-black text-orange-700 mb-2">{stats.maxStreak}</div>
                 <div className="text-orange-600">현재: {stats.streak} 🔥</div>
               </div>
 
-              <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-6 md:p-8 rounded-2xl">
+              <div className="bg-blue-50 p-6 md:p-8 rounded-lg">
                 <div className="text-blue-600 font-semibold mb-2">학습 일수</div>
                 <div className="text-4xl md:text-6xl font-black text-blue-700 mb-2">{stats.studyDays?.length || 0}</div>
                 <div className="text-blue-600">일 학습</div>
@@ -951,14 +961,14 @@ function CertificationQuizApp() {
                   {Object.entries(stats.bySubject).map(([subject, data]) => {
                     const subjectAccuracy = data.total > 0 ? Math.round((data.correct / data.total) * 100) : 0;
                     return (
-                      <div key={subject} className="bg-gray-50 p-4 md:p-6 rounded-2xl">
+                      <div key={subject} className="bg-gray-50 p-4 md:p-6 rounded-lg">
                         <div className="flex justify-between items-center mb-3">
                           <span className="font-semibold text-gray-800 text-sm md:text-base">{subject}</span>
                           <span className="text-xl md:text-2xl font-black text-indigo-600">{subjectAccuracy}%</span>
                         </div>
                         <div className="h-3 bg-gray-200 rounded-full overflow-hidden">
                           <div
-                            className="h-full bg-gradient-to-r from-indigo-500 to-purple-500 transition-all duration-500"
+                            className="h-full bg-indigo-600 transition-all duration-500"
                             style={{ width: `${subjectAccuracy}%` }}
                           />
                         </div>
@@ -985,7 +995,7 @@ function CertificationQuizApp() {
                     if (!data) return null;
                     const diffAccuracy = data.total > 0 ? Math.round((data.correct / data.total) * 100) : 0;
                     return (
-                      <div key={difficulty} className={`${getDifficultyBg(difficulty)} p-4 md:p-6 rounded-2xl`}>
+                      <div key={difficulty} className={`${getDifficultyBg(difficulty)} p-4 md:p-6 rounded-lg`}>
                         <div className="flex justify-between items-center mb-3">
                           <span className={`font-semibold ${getDifficultyColor(difficulty)}`}>
                             {difficulty}
@@ -1023,7 +1033,7 @@ function CertificationQuizApp() {
                 </h3>
                 <div className="grid md:grid-cols-3 gap-4">
                   {weakTopics.map(([subject, accuracy], index) => (
-                    <div key={subject} className="bg-red-50 p-4 md:p-6 rounded-2xl border-2 border-red-200">
+                    <div key={subject} className="bg-red-50 p-4 md:p-6 rounded-lg border-2 border-red-200">
                       <div className="flex items-center justify-between mb-2">
                         <span className="font-semibold text-gray-800 text-sm">{subject}</span>
                         <span className="text-xl md:text-2xl font-black text-red-600">{Math.round(accuracy)}%</span>
@@ -1043,30 +1053,30 @@ function CertificationQuizApp() {
             <button
               onClick={() => startQuizMode('wrong')}
               disabled={wrongAnswers.length === 0}
-              className="bg-gradient-to-br from-rose-500 to-pink-600 hover:from-rose-600 hover:to-pink-700 disabled:opacity-50 disabled:cursor-not-allowed text-white p-6 md:p-8 rounded-3xl shadow-lg transition-all transform hover:-translate-y-1"
+              className="bg-gray-700 hover:bg-gray-800 disabled:opacity-50 disabled:cursor-not-allowed text-white p-6 md:p-8 rounded-xl shadow-lg transition-all"
             >
               <RefreshCw className="w-8 md:w-10 h-8 md:h-10 mb-3" />
               <div className="text-xl md:text-2xl font-bold mb-2">오답노트</div>
-              <div className="text-pink-100">{wrongAnswers.length}문제 복습하기</div>
+              <div className="text-white/70">{wrongAnswers.length}문제 복습하기</div>
             </button>
 
             <button
               onClick={() => startQuizMode('bookmarked')}
               disabled={bookmarks.length === 0}
-              className="bg-gradient-to-br from-purple-500 to-purple-600 hover:from-purple-600 hover:to-purple-700 disabled:opacity-50 disabled:cursor-not-allowed text-white p-6 md:p-8 rounded-3xl shadow-lg transition-all transform hover:-translate-y-1"
+              className="bg-gray-600 hover:bg-gray-700 disabled:opacity-50 disabled:cursor-not-allowed text-white p-6 md:p-8 rounded-xl shadow-lg transition-all"
             >
               <Star className="w-8 md:w-10 h-8 md:h-10 mb-3" />
               <div className="text-xl md:text-2xl font-bold mb-2">북마크</div>
-              <div className="text-purple-100">{bookmarks.length}문제 풀기</div>
+              <div className="text-white/70">{bookmarks.length}문제 풀기</div>
             </button>
 
             <button
               onClick={() => setScreen('home')}
-              className="bg-gradient-to-br from-indigo-500 to-indigo-600 hover:from-indigo-600 hover:to-indigo-700 text-white p-6 md:p-8 rounded-3xl shadow-lg transition-all transform hover:-translate-y-1"
+              className="bg-indigo-600 hover:bg-indigo-700 text-white p-6 md:p-8 rounded-xl shadow-lg transition-all"
             >
               <Award className="w-8 md:w-10 h-8 md:h-10 mb-3" />
               <div className="text-xl md:text-2xl font-bold mb-2">새로운 학습</div>
-              <div className="text-indigo-100">문제 풀러가기</div>
+              <div className="text-white/70">문제 풀러가기</div>
             </button>
           </div>
         </div>

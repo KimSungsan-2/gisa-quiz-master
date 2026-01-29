@@ -165,6 +165,28 @@ export function calculateAccuracy(correct, total) {
 }
 
 /**
+ * 번역된 문제 데이터 반환
+ * @param {Object} question - 문제 객체
+ * @param {string} lang - 언어 코드 ('ko', 'vi', 'th')
+ * @returns {Object} - 번역된 question, options, explanation
+ */
+export function getTranslatedQuestion(question, lang) {
+  if (!lang || lang === 'ko' || !question.translations?.[lang]) {
+    return {
+      question: question.question,
+      options: question.options,
+      explanation: question.explanation
+    };
+  }
+  const t = question.translations[lang];
+  return {
+    question: t.question || question.question,
+    options: t.options || question.options,
+    explanation: t.explanation || question.explanation
+  };
+}
+
+/**
  * 취약 과목 분석 (정확도 낮은 순으로 정렬)
  */
 export function getWeakestTopics(bySubject, limit = 3) {

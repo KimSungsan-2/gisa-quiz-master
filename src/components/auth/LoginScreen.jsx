@@ -4,7 +4,7 @@ import { Mail, Lock, User, ArrowRight, AlertCircle } from 'lucide-react';
 import { useAuth } from '../../contexts/AuthContext';
 
 function LoginScreen({ onGuestMode }) {
-  const { signInWithGoogle, signInWithEmail, signUpWithEmail, authError } = useAuth();
+  const { signInWithGoogle, signInWithKakao, signInWithNaver, signInWithEmail, signUpWithEmail, authError } = useAuth();
   const [isSignUp, setIsSignUp] = useState(false);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -18,6 +18,26 @@ function LoginScreen({ onGuestMode }) {
     const success = await signInWithGoogle();
     if (!success) {
       setError(authError || 'Google 로그인에 실패했습니다.');
+    }
+    setLoading(false);
+  };
+
+  const handleKakaoLogin = async () => {
+    setLoading(true);
+    setError('');
+    const success = await signInWithKakao();
+    if (!success) {
+      setError(authError || '카카오 로그인에 실패했습니다.');
+    }
+    setLoading(false);
+  };
+
+  const handleNaverLogin = async () => {
+    setLoading(true);
+    setError('');
+    const success = await signInWithNaver();
+    if (!success) {
+      setError(authError || '네이버 로그인에 실패했습니다.');
     }
     setLoading(false);
   };
@@ -41,8 +61,8 @@ function LoginScreen({ onGuestMode }) {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 flex items-center justify-center p-4">
-      <div className="bg-white rounded-3xl shadow-2xl p-8 w-full max-w-md">
+    <div className="min-h-screen bg-gray-100 flex items-center justify-center p-4">
+      <div className="bg-white rounded-xl shadow-lg p-8 w-full max-w-md">
         {/* 로고 */}
         <div className="text-center mb-8">
           <div className="text-5xl mb-4">📚</div>
@@ -83,6 +103,38 @@ function LoginScreen({ onGuestMode }) {
             />
           </svg>
           <span>Google로 계속하기</span>
+        </button>
+
+        {/* 카카오 로그인 */}
+        <button
+          onClick={handleKakaoLogin}
+          disabled={loading}
+          className="w-full flex items-center justify-center gap-3 px-4 py-3 rounded-xl font-medium transition-all disabled:opacity-50 mt-3"
+          style={{ backgroundColor: '#FEE500', color: '#000000' }}
+        >
+          <svg className="w-5 h-5" viewBox="0 0 24 24">
+            <path
+              fill="#000000"
+              d="M12 3C6.477 3 2 6.463 2 10.691c0 2.726 1.8 5.117 4.508 6.467-.152.554-.55 2.013-.63 2.325-.098.383.14.377.296.274.122-.08 1.942-1.318 2.726-1.855.692.097 1.404.149 2.1.149 5.523 0 10-3.463 10-7.691S17.523 3 12 3z"
+            />
+          </svg>
+          <span>카카오로 계속하기</span>
+        </button>
+
+        {/* 네이버 로그인 */}
+        <button
+          onClick={handleNaverLogin}
+          disabled={loading}
+          className="w-full flex items-center justify-center gap-3 px-4 py-3 rounded-xl font-medium text-white transition-all disabled:opacity-50 mt-3"
+          style={{ backgroundColor: '#03C75A' }}
+        >
+          <svg className="w-5 h-5" viewBox="0 0 24 24">
+            <path
+              fill="#FFFFFF"
+              d="M16.273 12.845L7.376 3H3v18h4.726V12.155L16.624 21H21V3h-4.727z"
+            />
+          </svg>
+          <span>네이버로 계속하기</span>
         </button>
 
         {/* 구분선 */}
@@ -136,7 +188,7 @@ function LoginScreen({ onGuestMode }) {
           <button
             type="submit"
             disabled={loading}
-            className="w-full flex items-center justify-center gap-2 px-4 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white rounded-xl font-semibold transition-all disabled:opacity-50"
+            className="w-full flex items-center justify-center gap-2 px-4 py-3 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl font-semibold transition-all disabled:opacity-50"
           >
             <span>{isSignUp ? '회원가입' : '로그인'}</span>
             <ArrowRight className="w-5 h-5" />

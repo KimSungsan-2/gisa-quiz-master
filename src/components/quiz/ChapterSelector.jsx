@@ -1,13 +1,16 @@
 // 챕터(과목) 선택 컴포넌트
 import React, { useState } from 'react';
 import { BookOpen, CheckSquare, Square, PlayCircle, ArrowLeft, Clock } from 'lucide-react';
+import LanguageSelector from './LanguageSelector';
 
 function ChapterSelector({
   certificate,
   questions,
   mode = 'practice', // 'practice' or 'mock'
   onStart,
-  onBack
+  onBack,
+  selectedLanguage,
+  onLanguageChange
 }) {
   const [selectedChapters, setSelectedChapters] = useState([]);
   const [questionCount, setQuestionCount] = useState(10);
@@ -59,7 +62,7 @@ function ChapterSelector({
   const countOptions = [10, 20, 30, 'all'];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-gray-50 to-slate-100 p-4 md:p-8">
+    <div className="min-h-screen bg-gray-50 p-4 md:p-8">
       <div className="max-w-2xl mx-auto">
         {/* 헤더 */}
         <div className="flex items-center gap-4 mb-6">
@@ -81,11 +84,19 @@ function ChapterSelector({
         </div>
 
         {/* 메인 카드 */}
-        <div className="bg-white rounded-3xl shadow-xl p-6 md:p-8">
+        <div className="bg-white rounded-xl shadow-md p-6 md:p-8">
           <div className="flex items-center gap-3 mb-6">
             <BookOpen className="w-7 h-7 text-indigo-600" />
             <h2 className="text-xl font-bold text-gray-800">과목 선택</h2>
           </div>
+
+          {/* 언어 선택 (운전면허만) */}
+          {certificate.supportedLanguages && onLanguageChange && (
+            <LanguageSelector
+              selectedLanguage={selectedLanguage}
+              onSelect={onLanguageChange}
+            />
+          )}
 
           {/* 전체 선택 */}
           <button
@@ -181,7 +192,7 @@ function ChapterSelector({
             <button
               onClick={handleStart}
               disabled={selectedChapters.length === 0 && totalAvailableQuestions === 0}
-              className="flex-1 flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white rounded-xl font-semibold transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+              className="flex-1 flex items-center justify-center gap-2 px-6 py-3 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg font-semibold transition-all disabled:opacity-50 disabled:cursor-not-allowed"
             >
               <PlayCircle className="w-5 h-5" />
               {mode === 'mock' ? '모의고사 시작' : '학습 시작'}
