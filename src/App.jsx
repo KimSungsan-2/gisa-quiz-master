@@ -12,6 +12,7 @@ import UserProfile from './components/auth/UserProfile';
 import AllStructuredData from './components/seo/StructuredData';
 import AdBanner from './components/ads/AdBanner';
 import PremiumPage from './components/premium/PremiumPage';
+import LearningTree from './components/quiz/LearningTree';
 
 // 유틸리티 import
 import {
@@ -24,6 +25,7 @@ import {
   getWeakestTopics,
   getTranslatedQuestion
 } from './utils/quizUtils';
+import { getLearningTree } from './utils/learningTreeUtils';
 
 // SEO hook
 import { useSEO, getScreenSEO } from './hooks/useSEO';
@@ -604,6 +606,7 @@ function CertificationQuizApp() {
     const isCorrect = userAnswer === correctAnswerIndex;
     const isBookmarked = bookmarks.includes(currentQuestion.id);
     const translated = getTranslatedQuestion(currentQuestion, selectedLanguage);
+    const learningTreeData = showExplanation ? getLearningTree(currentQuestion, selectedCert) : null;
 
     return (
       <div className="min-h-screen bg-gray-50 p-4 md:p-8">
@@ -759,6 +762,7 @@ function CertificationQuizApp() {
                     <p className="text-base md:text-lg font-semibold text-gray-700 mb-2">📝 해설</p>
                     <p className="text-gray-600 leading-relaxed">{translated.explanation}</p>
                   </div>
+                  <LearningTree treeData={learningTreeData} />
                 </div>
               )}
 
